@@ -3,11 +3,10 @@ using System.Collections;
 
 public class Shooting : MonoBehaviour {
 
-	public GameObject bullet;
-	public int shotCD;
+	public GameObject bullet; // RS: currently our blue circle sprite
+	public int shotCD; // RS: can be changed in inspector, may not be the best implementation
 
 	private int counter;
-	private Movement movement;
 
 	// Use this for initialization
 	void Start () {
@@ -16,14 +15,18 @@ public class Shooting : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		// RS: if the player wants to shoot, we make sure that it has been 
+		//  long enough of a cooldown
 		if(Input.GetKeyDown(KeyCode.Z) && counter >= shotCD)
 		{
-			// cannot convert this to rigidbody2d
 			GameObject clone;
-			clone = (GameObject) Instantiate(bullet, transform.position, Quaternion.identity);
+			clone = Instantiate(bullet, transform.position, Quaternion.identity) as GameObject;
 
+			// RS: this counter will be reset zero only if the player decides to shoot
+			//  and has waited long enough
 			counter = 0;
 		}
+		// update every frame for our cooldown counter
 		counter++;
 	}
 }

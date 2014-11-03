@@ -7,27 +7,26 @@ public class BulletScript : MonoBehaviour {
 	public float pushForce;
 
 	private int direction;
-
-	// constructor will be passed the direction of the player
-	// this will allow us to apply the force in the proper
-	// direction
-
+	
 	// Use this for initialization
 	void Start () {
+		// RS: upon creating the bullet, we give it a directin based on the players
+		//  direction which is saved in the "Movement" script
 		direction = GameObject.Find ("Player").GetComponent<Movement> ().facing;
 
+		// RS: 1 for Up, 2 for Right, 3 for Down, 4 for Up
 		switch (direction) 
 		{
-			case 1:
+			case 4:
 				rigidbody2D.AddForce (new Vector2 (pushForce, 0));
 				break;
-			case 2:
+			case 3:
 				rigidbody2D.AddForce (new Vector2 (0, -pushForce));
 				break;
-			case 3:
+			case 2:
 				rigidbody2D.AddForce (new Vector2 (-pushForce, 0));
 				break;
-			case 4:
+			case 1:
 				rigidbody2D.AddForce (new Vector2 (0, pushForce));
 				break;
 		}
@@ -41,7 +40,13 @@ public class BulletScript : MonoBehaviour {
 	void OnTriggerEnter(Collider other)
 	{
 		gameObject.SendMessage ("ApplyDamage", damage);
-		Destroy (other.gameObject);
+		Destroy (gameObject);
+	}
+
+	// RS: destroy the bullet once it goes entirely off the screen
+	void OnBecameInvisible()
+	{
+		Destroy (gameObject);
 	}
 
 	// Update is called once per frame

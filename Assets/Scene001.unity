@@ -201,6 +201,10 @@ Prefab:
       propertyPath: bullet
       value: 
       objectReference: {fileID: 5400000, guid: da80662bdae3b1c4098925c73acd8581, type: 2}
+    - target: {fileID: 11400004, guid: f41ec5480c0dde04aba843d02e2b4c6b, type: 2}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 100000, guid: f3f0ca2b0fe94f040ba111efbfdf7422, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f41ec5480c0dde04aba843d02e2b4c6b, type: 2}
   m_RootGameObject: {fileID: 967535949}
@@ -219,6 +223,7 @@ GameObject:
   - 114: {fileID: 967535952}
   - 58: {fileID: 967535951}
   - 50: {fileID: 967535950}
+  - 114: {fileID: 967535956}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -328,3 +333,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &967535956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: f41ec5480c0dde04aba843d02e2b4c6b,
+    type: 2}
+  m_PrefabInternal: {fileID: 579788606}
+  m_GameObject: {fileID: 967535949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17fafded17a9214e8902a3799648b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 100000, guid: f3f0ca2b0fe94f040ba111efbfdf7422, type: 2}
+  shotCD: 15
