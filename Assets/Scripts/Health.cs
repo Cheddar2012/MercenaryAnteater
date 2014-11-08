@@ -12,7 +12,7 @@ public class Health : MonoBehaviour {
 
 	void ApplyDamage (float i) {
 		health -= i;
-		if (health <= 0) 
+		if (health <= 0) // RS:kill
 			Destroy (gameObject);
 	}
 

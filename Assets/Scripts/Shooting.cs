@@ -41,8 +41,9 @@ public class Shooting : MonoBehaviour {
 				break;
 			}
 
+			// RS: means next time player can shoot will be the current time + however long
+			//	the cooldown is
 			timestamp = Time.time + shotCD;
 		}
-		// update every frame for our cooldown counter
 	}
 }

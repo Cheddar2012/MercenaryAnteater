@@ -36,7 +36,6 @@ public class BulletScript : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		Debug.Log ("Trigger");
 		other.BroadcastMessage ("ApplyDamage", damage);
 		Destroy (gameObject);
 	}
