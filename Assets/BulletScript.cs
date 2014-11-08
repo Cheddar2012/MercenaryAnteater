@@ -10,6 +10,8 @@ public class BulletScript : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		damage = 25;
+
 		// RS: upon creating the bullet, we give it a directin based on the players
 		//  direction which is saved in the "Movement" script
 		direction = GameObject.Find ("Player").GetComponent<Movement> ().facing;
@@ -32,14 +34,10 @@ public class BulletScript : MonoBehaviour {
 		}
 	}
 
-	void ApplyDamage(float d)
+	void OnTriggerEnter2D(Collider2D other)
 	{
-		print ("damage dealt");
-	}
-
-	void OnTriggerEnter(Collider other)
-	{
-		gameObject.SendMessage ("ApplyDamage", damage);
+		Debug.Log ("Trigger");
+		other.BroadcastMessage ("ApplyDamage", damage);
 		Destroy (gameObject);
 	}
 

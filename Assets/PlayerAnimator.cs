@@ -35,7 +35,7 @@ public class PlayerAnimator : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (!movement.moving) {
 			switch (movement.facing) {
 			case 1:
