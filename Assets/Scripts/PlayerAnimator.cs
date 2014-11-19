@@ -22,7 +22,7 @@ public class PlayerAnimator : MonoBehaviour {
 	private float numberOfFrames;
 
 	// Which sprite to show in the walking animation
-	private int spriteToShow = 0;
+	public int spriteToShow = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -42,20 +42,20 @@ public class PlayerAnimator : MonoBehaviour {
 				renderer.sprite = walkingSprites[0];
 				break;
 			case 2:
-				renderer.sprite = walkingSprites[2];
-				break;
-			case 3:
 				renderer.sprite = walkingSprites[4];
 				break;
+			case 3:
+				renderer.sprite = walkingSprites[8];
+				break;
 			case 4:
-				renderer.sprite = walkingSprites[6];
+				renderer.sprite = walkingSprites[12];
 				break;
 			}
 		}
 		else {
 			frameTimer -= Time.deltaTime;
 			if (frameTimer <= 0) {
-				spriteToShow = (spriteToShow + 1) % 2;
+				spriteToShow = (spriteToShow + 1) % 4;
 				ResetFrameTimer();
 			}
 			switch (movement.facing) {
@@ -63,13 +63,13 @@ public class PlayerAnimator : MonoBehaviour {
 				renderer.sprite = walkingSprites[spriteToShow];
 				break;
 			case 2:
-				renderer.sprite = walkingSprites[2 + spriteToShow];
-				break;
-			case 3:
 				renderer.sprite = walkingSprites[4 + spriteToShow];
 				break;
+			case 3:
+				renderer.sprite = walkingSprites[8 + spriteToShow];
+				break;
 			case 4:
-				renderer.sprite = walkingSprites[6 + spriteToShow];
+				renderer.sprite = walkingSprites[12 + spriteToShow];
 				break;
 			}
 		}
