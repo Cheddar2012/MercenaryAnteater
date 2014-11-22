@@ -3,16 +3,14 @@ using System.Collections;
 
 public class BulletScript : MonoBehaviour {
 
-	public float damage;
-	public float pushForce;
+	public float damage = 20;
+	public float pushForce = 20;
 
 	private int direction;
 	
 	// Use this for initialization
 	void Start () {
-		damage = 25;
-
-		// RS: upon creating the bullet, we give it a directin based on the players
+		// RS: upon creating the bullet, we give it a direction based on the players
 		//  direction which is saved in the "Movement" script
 		direction = GameObject.Find ("Player").GetComponent<Movement> ().facing;
 
@@ -36,7 +34,8 @@ public class BulletScript : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		other.BroadcastMessage ("ApplyDamage", damage);
+		if(other.tag == "Enemy") // RS: will only deal damage if the unit is an enemy
+			other.BroadcastMessage ("ApplyDamage", damage);
 		Destroy (gameObject);
 	}
 

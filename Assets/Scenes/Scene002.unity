@@ -135,7 +135,7 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 3843917369
+  m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!33 &30715596
 MeshFilter:
@@ -354,9 +354,13 @@ GameObject:
   m_Component:
   - 4: {fileID: 231563154}
   - 212: {fileID: 231563153}
+  - 114: {fileID: 231563155}
+  - 61: {fileID: 231563156}
+  - 114: {fileID: 231563157}
+  - 114: {fileID: 231563158}
   m_Layer: 0
   m_Name: CGD_-_Bush_Viper_0
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -395,6 +399,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &231563155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 231563152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404543907801b0a41940ea89a2227658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  poisoned: 0
+--- !u!61 &231563156
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 231563152}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 3.04999995, y: 2.6099999}
+  m_Center: {x: 1.52499998, y: -1.30499995}
+--- !u!114 &231563157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 231563152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa18255a4641b04f8b4e0bff2149a94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 25
+  agroRange: 150
+--- !u!114 &231563158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 231563152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07946a4891a73f24d81789eda1338497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
+  attackCD: 5
+  attackRange: 100
+  poisonDuration: 3
 --- !u!1001 &235858759
 Prefab:
   m_ObjectHideFlags: 0
@@ -453,9 +509,10 @@ GameObject:
   - 58: {fileID: 262001590}
   - 50: {fileID: 262001589}
   - 114: {fileID: 262001588}
+  - 114: {fileID: 262001595}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -501,8 +558,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: .5
-  m_Center: {x: 0, y: 0}
+  m_Radius: .600000024
+  m_Center: {x: 0, y: -.699999988}
 --- !u!114 &262001591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -532,7 +589,7 @@ MonoBehaviour:
   - {fileID: 21300002, guid: a77f75f4413afe94da219e1bc518252a, type: 3}
   - {fileID: 21300004, guid: a77f75f4413afe94da219e1bc518252a, type: 3}
   - {fileID: 21300006, guid: a77f75f4413afe94da219e1bc518252a, type: 3}
-  framesPerSecond: 3
+  framesPerSecond: 6
   renderer: {fileID: 0}
   movement: {fileID: 0}
   spriteToShow: 0
@@ -548,7 +605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76acafd32c4457f438807bacc6ce6feb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 3
   moving: 0
   facing: 0
 --- !u!212 &262001593
@@ -581,11 +638,24 @@ Transform:
   m_PrefabInternal: {fileID: 1831228651}
   m_GameObject: {fileID: 262001587}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 230.594879, y: -146.044159, z: 0}
+  m_LocalPosition: {x: 230.594879, y: -147.396667, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
+--- !u!114 &262001595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 262001587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404543907801b0a41940ea89a2227658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  poisoned: 0
 --- !u!1 &314039983
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,7 +792,7 @@ Transform:
   m_Children:
   - {fileID: 529827810}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1 &710874010
 GameObject:
   m_ObjectHideFlags: 0
@@ -1374,7 +1444,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f41ec5480c0dde04aba843d02e2b4c6b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -146.044159
+      value: -147.396667
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f41ec5480c0dde04aba843d02e2b4c6b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1398,6 +1468,34 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f41ec5480c0dde04aba843d02e2b4c6b, type: 2}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f41ec5480c0dde04aba843d02e2b4c6b, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: f41ec5480c0dde04aba843d02e2b4c6b, type: 2}
+      propertyPath: framesPerSecond
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f41ec5480c0dde04aba843d02e2b4c6b, type: 2}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800000, guid: f41ec5480c0dde04aba843d02e2b4c6b, type: 2}
+      propertyPath: m_Center.y
+      value: -.699999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800000, guid: f41ec5480c0dde04aba843d02e2b4c6b, type: 2}
+      propertyPath: m_Radius
+      value: .600000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f41ec5480c0dde04aba843d02e2b4c6b, type: 2}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5000000, guid: f41ec5480c0dde04aba843d02e2b4c6b, type: 2}
+      propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1441,9 +1539,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 1862937725}
   - 212: {fileID: 1862937724}
+  - 61: {fileID: 1862937726}
+  - 114: {fileID: 1862937727}
   m_Layer: 0
   m_Name: CGD_-_Lioness
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1477,11 +1577,35 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1862937723}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 133.199997, y: -60.9000015, z: 0}
+  m_LocalPosition: {x: 133.199997, y: -70.8925934, z: 0}
   m_LocalScale: {x: 15, y: 15, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!61 &1862937726
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1862937723}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 4.32000017, y: 5.92999983}
+  m_Center: {x: 0, y: 0}
+--- !u!114 &1862937727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1862937723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404543907801b0a41940ea89a2227658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 200
+  poisoned: 0
 --- !u!1 &1886442607
 GameObject:
   m_ObjectHideFlags: 0

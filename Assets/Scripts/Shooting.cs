@@ -23,21 +23,22 @@ public class Shooting : MonoBehaviour {
 		//  long enough of a cooldown
 		if(Input.GetKeyDown(KeyCode.Z) && timestamp <= Time.time)
 		{
-			GameObject clone;
+			GameObject clone;	
 
 			switch(player.facing)
 			{
 			case 1:
-				Instantiate(bullet, transform.position + multiplier* Vector3.up , Quaternion.identity);
+				clone = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.up , Quaternion.identity);
 				break;
 			case 2:
-				Instantiate(bullet, transform.position + multiplier*Vector3.left , Quaternion.identity);
+				clone = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.left , Quaternion.identity);
 				break;
 			case 3:
-				Instantiate(bullet, transform.position + multiplier*Vector3.down , Quaternion.identity);
+				Debug.Log ("down");
+				clone = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.down , Quaternion.identity);
 				break;
 			case 4:
-				Instantiate(bullet, transform.position + multiplier*Vector3.right , Quaternion.identity);
+				clone = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.right , Quaternion.identity);
 				break;
 			}
 
