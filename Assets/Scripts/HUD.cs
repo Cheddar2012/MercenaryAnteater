@@ -3,8 +3,8 @@ using System.Collections;
 
 public class HUD : MonoBehaviour {
 	
-	GameObject health;
 	Health healthScript;
+	GameObject health;
 
 	// Use this for initialization
 	void Start () {
@@ -12,7 +12,7 @@ public class HUD : MonoBehaviour {
 		health = new GameObject();
 		health.AddComponent("GUIText");
 		health.transform.position = new Vector3(0.11f,0.98f,0.0f);
-		health.guiText.text = "HEALTH";
+		health.guiText.text = "";
 		health.guiText.fontSize = 64;
 	}
 	

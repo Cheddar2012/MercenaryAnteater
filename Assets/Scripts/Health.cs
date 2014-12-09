@@ -47,4 +47,11 @@ public class Health : MonoBehaviour {
 			CancelInvoke("ApplyPoison");
 		}
 	}
+
+	void OnCollisionEnter2D (Collision2D other) {
+		Debug.Log("1.2!");
+		if (other.gameObject.tag == "Heal") {
+			GetComponent<Health>().health = 50;
+		}
+	}
 }
