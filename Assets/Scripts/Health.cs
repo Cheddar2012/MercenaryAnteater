@@ -36,6 +36,7 @@ public class Health : MonoBehaviour {
 	// RS: player takes i damage
 	void ApplyDamage (float i) {
 		health -= i;
+		Debug.Log ("dangage");
 		if (health <= 0) // RS: kill
 			Destroy (gameObject);
 	}
@@ -49,7 +50,6 @@ public class Health : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D (Collision2D other) {
-		Debug.Log("1.2!");
 		if (other.gameObject.tag == "Heal") {
 			GetComponent<Health>().health = 50;
 		}

@@ -36,7 +36,8 @@ public class BulletScript : MonoBehaviour {
 	{
 		if(other.tag == "Enemy") // RS: will only deal damage if the unit is an enemy
 			other.BroadcastMessage ("ApplyDamage", damage);
-		Destroy (gameObject);
+		if(other.tag != "Player")
+			Destroy (gameObject);
 	}
 
 	// RS: destroy the bullet once it goes entirely off the screen
