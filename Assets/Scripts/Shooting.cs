@@ -4,13 +4,18 @@ using System.Collections;
 public class Shooting : MonoBehaviour {
 
 	public GameObject bullet; 	// RS: currently our blue circle sprite
+	public GameObject bullet2;
+	public GameObject bullet3;
+
 	public float shotCD = 0.2f;	// RS: can be changed in inspector, may not be the best implementation
 	public KeyCode code = KeyCode.Z;
 
-	// JH adding code for short range shotgun
+	// JH adding code for rapid fire gun
+	public KeyCode daka = KeyCode.X;
+
+	// JH adding code for shotgun
 	public KeyCode shotgun = KeyCode.V;
-	public GameObject bullet2;
-	public GameObject bullet3;
+
 
 	private float multiplier; 	// RS: is the distance between player and bullet's instantiation
 	private Movement player; 	// RS: gets the player's movement script for "facing"
@@ -28,21 +33,87 @@ public class Shooting : MonoBehaviour {
 		//  long enough of a cooldown
 		if(Input.GetKeyDown (code) && timestamp <= Time.time)
 		{
-			GameObject clone;	
+			GameObject shooter;
 
 			switch(player.facing)
 			{
 			case 1:
-				clone = (GameObject) Instantiate(bullet, transform.position + 25 * multiplier * Vector3.up , Quaternion.identity);
+				shooter = (GameObject) Instantiate(bullet, transform.position + 25 * multiplier * Vector3.up , Quaternion.identity);
 				break;
 			case 2:
-				clone = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.left , Quaternion.identity);
+				shooter = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.left , Quaternion.identity);
 				break;
 			case 3:
-				clone = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.down , Quaternion.identity);
+				shooter = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.down , Quaternion.identity);
 				break;
 			case 4:
-				clone = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.right , Quaternion.identity);
+				shooter = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.right , Quaternion.identity);
+				break;
+			}
+
+			// RS: means next time player can shoot will be the current time + however long
+			//	the cooldown is
+			timestamp = Time.time + shotCD;
+		}
+
+		// JH if/switch for machine gun attack
+		if(Input.GetKeyDown (daka) && timestamp <= Time.time)
+		{
+			GameObject rapid1;
+			GameObject rapid2;
+			GameObject rapid3;
+
+			float rapidTime = 0.5f;
+			float fireTime;
+
+			switch(player.facing)
+			{
+			case 1:
+				rapid1 = (GameObject) Instantiate(bullet, transform.position + 27 * multiplier * Vector3.up , Quaternion.identity);
+
+				rapid2 = (GameObject) Instantiate(bullet, transform.position + 26 * multiplier * Vector3.up , Quaternion.identity);
+				rapid2.rigidbody2D.AddForce(new Vector2(0, -20) );
+
+				rapid3 = (GameObject) Instantiate(bullet, transform.position + 25 * multiplier * Vector3.up , Quaternion.identity);
+				rapid3.rigidbody2D.AddForce(new Vector2(0, -40) );
+
+				break;
+
+			case 2:
+				rapid1 = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.left , Quaternion.identity);
+				rapid1.rigidbody2D.transform.position = new Vector2(rapid1.rigidbody2D.transform.position.x -2, rapid1.rigidbody2D.transform.position.y);
+
+				rapid2 = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.left, Quaternion.identity);
+				rapid2.rigidbody2D.transform.position = new Vector2(rapid2.rigidbody2D.transform.position.x -1, rapid2.rigidbody2D.transform.position.y);
+				rapid2.rigidbody2D.AddForce(new Vector2(20, 0) );
+
+				rapid3 = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.left, Quaternion.identity);
+				rapid3.rigidbody2D.AddForce(new Vector2(40, 0) );
+
+				break;
+
+			case 3:
+				rapid1 = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.down , Quaternion.identity);
+				rapid1.rigidbody2D.transform.position = new Vector2(rapid1.rigidbody2D.transform.position.x, rapid1.rigidbody2D.transform.position.y -2);
+
+				rapid2 = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.down , Quaternion.identity);
+				rapid2.rigidbody2D.transform.position = new Vector2(rapid2.rigidbody2D.transform.position.x, rapid2.rigidbody2D.transform.position.y -1);
+				rapid2.rigidbody2D.AddForce(new Vector2(0, 20) );
+
+				rapid3 = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.down , Quaternion.identity);
+				rapid3.rigidbody2D.AddForce(new Vector2(0, 40) );
+				break;
+
+			case 4:
+				rapid1 = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.right , Quaternion.identity);
+				rapid1.rigidbody2D.transform.position = new Vector2(rapid1.rigidbody2D.transform.position.x + 4, rapid1.rigidbody2D.transform.position.y);
+
+				rapid2 = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.right , Quaternion.identity);
+				rapid2.rigidbody2D.transform.position = new Vector2(rapid2.rigidbody2D.transform.position.x + 2, rapid2.rigidbody2D.transform.position.y);
+				rapid2.rigidbody2D.AddForce(new Vector2(-20, 0) );
+
+				rapid3 = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.right , Quaternion.identity);
+				rapid3.rigidbody2D.AddForce(new Vector2(-40, 0) );
 				break;
 			}
 
@@ -54,75 +125,55 @@ public class Shooting : MonoBehaviour {
 		// JH created a similar if/switch shotgun attacks
 		// shotgun shoots 3 bullets, but the range is short 
 		// need to create a new prefab to be bullets that are short range 
-			if(Input.GetKeyDown (shotgun) && timestamp <= Time.time)
+		if(Input.GetKeyDown (shotgun) && timestamp <= Time.time)
 		{
-			GameObject clone1;
-			GameObject clone2;
-			GameObject clone3;
-			
+			GameObject shell1;
+			GameObject shell2;
+			GameObject shell3;
+
 			switch(player.facing)
 			{
 			case 1:
-				clone1 = (GameObject) Instantiate(bullet, 
-				                                  transform.position + 25 * multiplier * Vector3.up , Quaternion.identity);
+				shell1 = (GameObject) Instantiate(bullet, transform.position + 25 * multiplier * Vector3.up , Quaternion.identity);
 				
-				clone2 = (GameObject) Instantiate(bullet, 
-				                                  transform.position + 25 * multiplier * Vector3.up , Quaternion.identity);
-				clone2.rigidbody2D.AddForce(new Vector2
-				                            (100, 0) );
+				shell2 = (GameObject) Instantiate(bullet, transform.position + 25 * multiplier * Vector3.up , Quaternion.identity);
+				shell2.rigidbody2D.AddForce(new Vector2(100, 0) );
 				
-				clone3 = (GameObject) Instantiate(bullet, 
-				                                  transform.position + 25 * multiplier * Vector3.up , Quaternion.identity);
-				clone3.rigidbody2D.AddForce(new Vector2
-				                            (-100, 0) );
+				shell3 = (GameObject) Instantiate(bullet, transform.position + 25 * multiplier * Vector3.up , Quaternion.identity);
+				shell3.rigidbody2D.AddForce(new Vector2(-100, 0) );
 				break;
 			case 2:
-				clone1 = (GameObject) Instantiate(bullet, 
-				                                  transform.position + multiplier * Vector3.left , Quaternion.identity);
+				shell1 = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.left , Quaternion.identity);
 				
-				clone2 = (GameObject) Instantiate(bullet, 
-				                                  transform.position + multiplier * Vector3.left , Quaternion.identity);
-				clone2.rigidbody2D.AddForce(new Vector2
-				                            (0, 100) );
+				shell2 = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.left , Quaternion.identity);
+				shell2.rigidbody2D.AddForce(new Vector2(0, 100) );
 				
-				clone3 = (GameObject) Instantiate(bullet, 
-				                                  transform.position + multiplier * Vector3.left , Quaternion.identity);
-				clone3.rigidbody2D.AddForce(new Vector2
-				                            (0, -100) );
+				shell3 = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.left , Quaternion.identity);
+				shell3.rigidbody2D.AddForce(new Vector2(0, -100) );
 				break;
 			case 3:
-				clone1 = (GameObject) Instantiate(bullet, 
-				                                  transform.position + multiplier * Vector3.down , Quaternion.identity);
+				shell1 = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.down , Quaternion.identity);
 				
-				clone2 = (GameObject) Instantiate(bullet, 
-				                                  transform.position + multiplier * Vector3.down , Quaternion.identity);
-				clone2.rigidbody2D.AddForce(new Vector2
-				                            (-100, 0) );
+				shell2 = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.down , Quaternion.identity);
+				shell2.rigidbody2D.AddForce(new Vector2(-100, 0) );
 				
-				clone3 = (GameObject) Instantiate(bullet, 
-				                                  transform.position + multiplier * Vector3.down , Quaternion.identity);
-				clone3.rigidbody2D.AddForce(new Vector2
-				                            (100, 0) );
+				shell3 = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.down , Quaternion.identity);
+				shell3.rigidbody2D.AddForce(new Vector2(100, 0) );
 				break;
 			case 4:
-				clone1 = (GameObject) Instantiate(bullet, 
-				                                  transform.position + multiplier * Vector3.right , Quaternion.identity);
+				shell1 = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.right , Quaternion.identity);
 				
-				clone2 = (GameObject) Instantiate(bullet, 
-				                                  transform.position + multiplier * Vector3.right , Quaternion.identity);
-				clone2.rigidbody2D.AddForce(new Vector2
-				                            (0, -100) );
+				shell2 = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.right , Quaternion.identity);
+				shell2.rigidbody2D.AddForce(new Vector2(0, -100) );
 				
-				clone3 = (GameObject) Instantiate(bullet, 
-				                                  transform.position + multiplier * Vector3.right , Quaternion.identity);
-				clone3.rigidbody2D.AddForce(new Vector2
-				                            (0, 100) );
+				shell3 = (GameObject) Instantiate(bullet, transform.position + multiplier * Vector3.right , Quaternion.identity);
+				shell3.rigidbody2D.AddForce(new Vector2(0, 100) );
 				break;
 			}
 			
 			// RS: means next time player can shoot will be the current time + however long
 			//	the cooldown is
-				timestamp = Time.time + shotCD;
+			timestamp = Time.time + shotCD;
 		}
 	}
 }
