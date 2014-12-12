@@ -4,6 +4,7 @@ using System.Collections;
 public class Shooting : MonoBehaviour {
 
 	public GameObject bullet; 	// RS: currently our blue circle sprite
+								// JH changed to a smaller black circle, more like a bullet :-p
 	public GameObject bullet2;
 	public GameObject bullet3;
 

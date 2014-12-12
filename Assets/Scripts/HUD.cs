@@ -26,16 +26,20 @@ public class HUD : MonoBehaviour {
 		rapid = new GameObject();
 		rapid.AddComponent("GUIText");
 		rapid.name = "Rapid Ammo GUI";
-		rapid.transform.position = new Vector3(0.4f, 0.99f, 0.0f);
+		rapid.transform.position = new Vector3(0.35f, 0.99f, 0.0f);
 		rapid.guiText.text = "";
-		rapid.guiText.fontSize = 32;
+		rapid.guiText.fontSize = 26;
+
+		// an element below Rapid Ammo for Grenades
 
 		sGun = new GameObject();
 		sGun.AddComponent("GUIText");
 		sGun.name = "sGun Ammo GUI";
-		sGun.transform.position = new Vector3(0.4f, 0.93f, 0.0f);
+		sGun.transform.position = new Vector3(0.7f, 0.99f, 0.0f);
 		sGun.guiText.text = "";
-		sGun.guiText.fontSize = 32;
+		sGun.guiText.fontSize = 26;
+
+		// an element below S Gun for E Gun
 	}
 	
 	// Update is called once per frame
@@ -48,7 +52,7 @@ public class HUD : MonoBehaviour {
 		health.guiText.text = "Health: " + healthScript.health;
 
 		rapid.guiText.color = Color.red;
-		rapid.guiText.text = "Rapid ammo: " + ammoScript.rapidFire;
+		rapid.guiText.text = "Rapid Gun ammo: " + ammoScript.rapidFire;
 		sGun.guiText.color = Color.red;
 		sGun.guiText.text = "S Gun ammo: " + ammoScript.sGun;
 	}

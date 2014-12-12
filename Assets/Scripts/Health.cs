@@ -49,9 +49,11 @@ public class Health : MonoBehaviour {
 		}
 	}
 
+	/*
 	void OnCollisionEnter2D (Collision2D other) {
 		if (other.gameObject.tag == "Heal") {
 			GetComponent<Health>().health = 50;
 		}
 	}
+	*/
 }
