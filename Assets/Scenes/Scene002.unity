@@ -400,6 +400,9 @@ MonoBehaviour:
   bullet: {fileID: 100000, guid: f3f0ca2b0fe94f040ba111efbfdf7422, type: 2}
   shotCD: .5
   code: 122
+  shotgun: 118
+  bullet2: {fileID: 0}
+  bullet3: {fileID: 0}
 --- !u!50 &262001589
 Rigidbody2D:
   m_ObjectHideFlags: 0
