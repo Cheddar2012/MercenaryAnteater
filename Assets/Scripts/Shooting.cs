@@ -20,11 +20,15 @@ public class Shooting : MonoBehaviour {
 	private float multiplier; 	// RS: is the distance between player and bullet's instantiation
 	private Movement player; 	// RS: gets the player's movement script for "facing"
 	private float timestamp;
+
+	//JH added ammo implementation
+	private Ammo playerAmmo;
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find ("Player").GetComponent<Movement> ();
 		timestamp = Time.time;
 		multiplier = 1;
+		playerAmmo = GameObject.Find("Player").GetComponent<Ammo>();
 	}
 	
 	// Update is called once per frame
@@ -57,14 +61,14 @@ public class Shooting : MonoBehaviour {
 		}
 
 		// JH if/switch for machine gun attack
-		if(Input.GetKeyDown (daka) && timestamp <= Time.time)
+		// fires 3 bullets at one
+		// each bullet has a slightly different start point and a 
+		// slightly different speed
+		if( (Input.GetKeyDown (daka) ) && (timestamp <= Time.time) && (playerAmmo.rapidFire > 0) )
 		{
 			GameObject rapid1;
 			GameObject rapid2;
 			GameObject rapid3;
-
-			float rapidTime = 0.5f;
-			float fireTime;
 
 			switch(player.facing)
 			{
@@ -120,12 +124,15 @@ public class Shooting : MonoBehaviour {
 			// RS: means next time player can shoot will be the current time + however long
 			//	the cooldown is
 			timestamp = Time.time + shotCD;
+
+			// JH costs one bullet to fire rapid fire
+			playerAmmo.rapidFire -=1;
 		}
 
 		// JH created a similar if/switch shotgun attacks
 		// shotgun shoots 3 bullets, but the range is short 
 		// need to create a new prefab to be bullets that are short range 
-		if(Input.GetKeyDown (shotgun) && timestamp <= Time.time)
+		if( (Input.GetKeyDown (shotgun) ) && (timestamp <= Time.time) && (playerAmmo.sGun > 0) )
 		{
 			GameObject shell1;
 			GameObject shell2;
@@ -174,6 +181,9 @@ public class Shooting : MonoBehaviour {
 			// RS: means next time player can shoot will be the current time + however long
 			//	the cooldown is
 			timestamp = Time.time + shotCD;
+
+			// JH costs one shell to fire the S gun
+			playerAmmo.sGun -= 1;
 		}
 	}
 }
