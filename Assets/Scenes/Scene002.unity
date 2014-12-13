@@ -343,9 +343,9 @@ GameObject:
   - 4: {fileID: 231563154}
   - 212: {fileID: 231563153}
   - 114: {fileID: 231563155}
-  - 61: {fileID: 231563156}
   - 114: {fileID: 231563157}
   - 114: {fileID: 231563158}
+  - 58: {fileID: 231563156}
   m_Layer: 0
   m_Name: CGD_-_Bush_Viper_0
   m_TagString: Enemy
@@ -402,18 +402,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   poisoned: 0
---- !u!61 &231563156
-BoxCollider2D:
+--- !u!58 &231563156
+CircleCollider2D:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6100000, guid: 95c6942ac371d3745b1a3973b8fb8c9c,
+  m_PrefabParentObject: {fileID: 5800000, guid: 95c6942ac371d3745b1a3973b8fb8c9c,
     type: 2}
   m_PrefabInternal: {fileID: 1056849902}
   m_GameObject: {fileID: 231563152}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 3.04999995, y: 2.6099999}
-  m_Center: {x: 1.52499998, y: -1.30499995}
+  m_Radius: 1.39999998
+  m_Center: {x: 1.5, y: -1.39999998}
 --- !u!114 &231563157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -576,11 +576,11 @@ GameObject:
   - 212: {fileID: 262001593}
   - 114: {fileID: 262001592}
   - 114: {fileID: 262001591}
-  - 58: {fileID: 262001590}
   - 50: {fileID: 262001589}
   - 114: {fileID: 262001588}
   - 114: {fileID: 262001595}
   - 114: {fileID: 262001596}
+  - 58: {fileID: 262001590}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -601,8 +601,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 100000, guid: f3f0ca2b0fe94f040ba111efbfdf7422, type: 2}
-  bullet2: {fileID: 0}
-  bullet3: {fileID: 0}
+  bullet2: {fileID: 100000, guid: f3f0ca2b0fe94f040ba111efbfdf7422, type: 2}
+  bullet3: {fileID: 100000, guid: f3f0ca2b0fe94f040ba111efbfdf7422, type: 2}
   shotCD: .5
   code: 122
   daka: 120
@@ -626,15 +626,14 @@ Rigidbody2D:
 --- !u!58 &262001590
 CircleCollider2D:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5800000, guid: f41ec5480c0dde04aba843d02e2b4c6b,
-    type: 2}
-  m_PrefabInternal: {fileID: 1831228651}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 262001587}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: .600000024
-  m_Center: {x: 0, y: -.699999988}
+  m_Radius: 1
+  m_Center: {x: 0, y: -.400000006}
 --- !u!114 &262001591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -743,8 +742,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasGun: 0
-  rapidFire: 0
-  sGun: 0
+  rapidFire: 50
+  sGun: 50
 --- !u!1 &266889824
 GameObject:
   m_ObjectHideFlags: 0
@@ -1290,6 +1289,18 @@ Prefab:
     - target: {fileID: 400000, guid: 95c6942ac371d3745b1a3973b8fb8c9c, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800000, guid: 95c6942ac371d3745b1a3973b8fb8c9c, type: 2}
+      propertyPath: m_Radius
+      value: 1.39999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800000, guid: 95c6942ac371d3745b1a3973b8fb8c9c, type: 2}
+      propertyPath: m_Center.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800000, guid: 95c6942ac371d3745b1a3973b8fb8c9c, type: 2}
+      propertyPath: m_Center.y
+      value: -1.39999998
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95c6942ac371d3745b1a3973b8fb8c9c, type: 2}
@@ -2391,7 +2402,8 @@ Prefab:
       propertyPath: shotCD
       value: .5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5800000, guid: f41ec5480c0dde04aba843d02e2b4c6b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f41ec5480c0dde04aba843d02e2b4c6b, type: 2}
   m_RootGameObject: {fileID: 262001587}
   m_IsPrefabParent: 0

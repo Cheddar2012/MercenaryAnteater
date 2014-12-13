@@ -37,8 +37,10 @@ public class Health : MonoBehaviour {
 	void ApplyDamage (float i) {
 		health -= i;
 		Debug.Log ("dangage");
-		if (health <= 0) // RS: kill
+		if (health <= 0) { // RS: kill
+			health = 0;
 			Destroy (gameObject);
+		}
 	}
 
 	// Update is called once per frame

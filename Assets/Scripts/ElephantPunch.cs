@@ -43,6 +43,7 @@ public class ElephantPunch : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		facing = moveScript.facing;
 		if (InPunchRange() && PunchingTime () && !Charging ()) {
 			GameObject clone = (GameObject) Instantiate (trunk, transform.position + Vector3.up * verticalRange, Quaternion.identity);
 			clone.transform.parent = gameObject.transform;

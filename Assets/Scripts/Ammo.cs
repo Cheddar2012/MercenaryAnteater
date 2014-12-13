@@ -10,7 +10,13 @@ public class Ammo : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-	
+		
+	}
+
+	void AddAmmo(int rAmmo, int sAmmo) 
+	{
+		rapidFire += rAmmo;
+		sGun += sAmmo;
 	}
 	
 	// Update is called once per frame

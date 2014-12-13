@@ -117,8 +117,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 100000, guid: f3f0ca2b0fe94f040ba111efbfdf7422, type: 2}
+  bullet2: {fileID: 100000, guid: f3f0ca2b0fe94f040ba111efbfdf7422, type: 2}
+  bullet3: {fileID: 100000, guid: f3f0ca2b0fe94f040ba111efbfdf7422, type: 2}
   shotCD: 1
-  multiplier: 15
+  code: 122
+  daka: 120
+  shotgun: 118
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

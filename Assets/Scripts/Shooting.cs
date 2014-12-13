@@ -20,14 +20,18 @@ public class Shooting : MonoBehaviour {
 
 	private float multiplier; 	// RS: is the distance between player and bullet's instantiation
 	private Movement player; 	// RS: gets the player's movement script for "facing"
-	private float timestamp;
+	private float basicShotStamp;
+	private float rapidShotStamp;
+	private float shotgunShotStamp;
 
 	//JH added ammo implementation
 	private Ammo playerAmmo;
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find ("Player").GetComponent<Movement> ();
-		timestamp = Time.time;
+		basicShotStamp = 0;
+		rapidShotStamp = 0;
+		shotgunShotStamp = 0;
 		multiplier = 1;
 		playerAmmo = GameObject.Find("Player").GetComponent<Ammo>();
 	}
@@ -36,7 +40,7 @@ public class Shooting : MonoBehaviour {
 	void FixedUpdate () {
 		// RS: if the player wants to shoot, we make sure that it has been 
 		//  long enough of a cooldown
-		if(Input.GetKeyDown (code) && timestamp <= Time.time)
+		if(Input.GetKeyDown (code) && basicShotStamp <= Time.time)
 		{
 			GameObject shooter;
 
@@ -58,14 +62,14 @@ public class Shooting : MonoBehaviour {
 
 			// RS: means next time player can shoot will be the current time + however long
 			//	the cooldown is
-			timestamp = Time.time + shotCD;
+			basicShotStamp = Time.time + shotCD;
 		}
 
 		// JH if/switch for machine gun attack
 		// fires 3 bullets at one
 		// each bullet has a slightly different start point and a 
 		// slightly different speed
-		if( (Input.GetKeyDown (daka) ) && (timestamp <= Time.time) && (playerAmmo.rapidFire > 0) )
+		if( (Input.GetKeyDown (daka) ) && (rapidShotStamp <= Time.time) && (playerAmmo.rapidFire > 0) )
 		{
 			GameObject rapid1;
 			GameObject rapid2;
@@ -124,7 +128,7 @@ public class Shooting : MonoBehaviour {
 
 			// RS: means next time player can shoot will be the current time + however long
 			//	the cooldown is
-			timestamp = Time.time + shotCD;
+			rapidShotStamp = Time.time + shotCD;
 
 			// JH costs one bullet to fire rapid fire
 			playerAmmo.rapidFire -=1;
@@ -133,7 +137,7 @@ public class Shooting : MonoBehaviour {
 		// JH created a similar if/switch shotgun attacks
 		// shotgun shoots 3 bullets, but the range is short 
 		// need to create a new prefab to be bullets that are short range 
-		if( (Input.GetKeyDown (shotgun) ) && (timestamp <= Time.time) && (playerAmmo.sGun > 0) )
+		if( (Input.GetKeyDown (shotgun) ) && (shotgunShotStamp <= Time.time) && (playerAmmo.sGun > 0) )
 		{
 			GameObject shell1;
 			GameObject shell2;
@@ -181,7 +185,7 @@ public class Shooting : MonoBehaviour {
 			
 			// RS: means next time player can shoot will be the current time + however long
 			//	the cooldown is
-			timestamp = Time.time + shotCD;
+			shotgunShotStamp = Time.time + shotCD;
 
 			// JH costs one shell to fire the S gun
 			playerAmmo.sGun -= 1;
