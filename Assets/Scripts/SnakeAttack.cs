@@ -3,10 +3,10 @@ using System.Collections;
 
 public class SnakeAttack : MonoBehaviour {
 
-	public int damage = 2;				// RS: damage to deal per second
+	public int damage = 1;				// RS: damage to deal per second
 	public float attackCD = 3;			// RS: seconds between poison resets
 	public float attackRange = 50;		// RS: range to apply poision
-	public float poisonDuration = 3;	// RS: time poison lasts (in seconds)
+	public float poisonDuration = 6;	// RS: time poison lasts (in seconds)
 	
 	private float attackTimestamp;		// RS: game time at which snake can re-poison
 	private GameObject player;			

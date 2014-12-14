@@ -32,6 +32,8 @@ public class PlayerAnimator : MonoBehaviour {
 		ResetFrameTimer();
 
 		CalculateNumberOfFrames();
+
+		renderer.sprite = walkingSprites[0];
 	}
 	
 	// Update is called once per frame

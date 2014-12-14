@@ -9,9 +9,9 @@ public class EnemyShooting : MonoBehaviour {
 	public int multiplier = 5;
 	public int facing{ get; private set; }	// RS: 2 is Left, 4 is Right
 
-	private EnemyMovement em; 			
-	private GameObject player;
-	private float nextShotTime;
+	public EnemyMovement em; 			
+	public GameObject player;
+	public float nextShotTime;
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find ("Player");
@@ -25,23 +25,32 @@ public class EnemyShooting : MonoBehaviour {
 		return nextShotTime < Time.time;
 	}
 
-	bool InAgroRange() {
+	bool InAgroRange() 
+	{
 		return Vector3.Distance (player.transform.position, transform.position) < attackRange;
 	}
 
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 		facing = em.facing;
 
 		if (player != null && InAgroRange() && (player.transform.position.y - transform.position.y) < 3
-		    	&& TimeToShoot()) {
+		    	&& TimeToShoot()) 
+		{
+			print ("FORE");
+
 			GameObject clone;
 
-			if(facing == 2) {
+			if(facing == 2) 
+			{
 				clone = (GameObject) Instantiate(bullet, transform.position + Vector3.left * multiplier, Quaternion.identity);
 			}
 			else
+			{
 				clone = (GameObject) Instantiate(bullet, transform.position + Vector3.right * multiplier, Quaternion.identity);
+			}
+
 			clone.transform.parent = gameObject.transform;
 
 			nextShotTime = Time.time + attackCooldown;			
