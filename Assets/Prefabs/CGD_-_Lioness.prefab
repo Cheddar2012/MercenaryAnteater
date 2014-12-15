@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCooldown: 1
-  bullet: {fileID: 0}
+  bullet: {fileID: 100000, guid: c69c76de297a3e44fa44bd55eb37f84e, type: 2}
   multiplier: 5
   shotForce: 50
 --- !u!114 &11400004
