@@ -8983,9 +8983,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1025235199}
   - 212: {fileID: 1025235198}
-  - 58: {fileID: 1025235197}
   - 114: {fileID: 1025235196}
   - 50: {fileID: 1025235200}
+  - 61: {fileID: 1025235197}
   m_Layer: 0
   m_Name: Bat
   m_TagString: Untagged
@@ -9005,17 +9005,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 594594ad0cf9bd74da8d061f7b2356c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!58 &1025235197
-CircleCollider2D:
+  xDir: 0
+  yDir: 0
+  moving: 0
+  nextMove: 0
+  nextRest: 0
+--- !u!61 &1025235197
+BoxCollider2D:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5800000, guid: c2df68b655a48da4788ebe2cd89913e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1999822760}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1025235195}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: 3
+  m_Size: {x: 4, y: 4}
   m_Center: {x: 0, y: 0}
 --- !u!212 &1025235198
 SpriteRenderer:
@@ -16439,7 +16443,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5800000, guid: c2df68b655a48da4788ebe2cd89913e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c2df68b655a48da4788ebe2cd89913e4, type: 2}
   m_RootGameObject: {fileID: 1025235195}
   m_IsPrefabParent: 0
@@ -16525,7 +16530,7 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
-  Mute: 1
+  Mute: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
