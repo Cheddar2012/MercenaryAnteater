@@ -48,13 +48,13 @@ public class PlayerAnimator : MonoBehaviour {
 				renderer.sprite = walkingSprites[0];
 				break;
 			case 2:
-				renderer.sprite = walkingSprites[4];
+				renderer.sprite = walkingSprites[5];
 				break;
 			case 3:
-				renderer.sprite = walkingSprites[8];
+				renderer.sprite = walkingSprites[9];
 				break;
 			case 4:
-				renderer.sprite = walkingSprites[12];
+				renderer.sprite = walkingSprites[13];
 				break;
 			}
 		}

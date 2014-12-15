@@ -85,22 +85,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkingSprites:
-  - {fileID: 21300000, guid: 3bc8295e8369adc43b16896a7c4cff1a, type: 3}
-  - {fileID: 21300002, guid: 3bc8295e8369adc43b16896a7c4cff1a, type: 3}
-  - {fileID: 21300004, guid: 3bc8295e8369adc43b16896a7c4cff1a, type: 3}
-  - {fileID: 21300000, guid: 3bc8295e8369adc43b16896a7c4cff1a, type: 3}
-  - {fileID: 21300000, guid: f00555c87ee432247a033472fc7cc1d7, type: 3}
-  - {fileID: 21300002, guid: f00555c87ee432247a033472fc7cc1d7, type: 3}
-  - {fileID: 21300004, guid: f00555c87ee432247a033472fc7cc1d7, type: 3}
-  - {fileID: 21300006, guid: f00555c87ee432247a033472fc7cc1d7, type: 3}
-  - {fileID: 21300000, guid: 4b91f2d7a3785944282fb64677ebfbd5, type: 3}
-  - {fileID: 21300002, guid: 4b91f2d7a3785944282fb64677ebfbd5, type: 3}
-  - {fileID: 21300004, guid: 4b91f2d7a3785944282fb64677ebfbd5, type: 3}
-  - {fileID: 21300000, guid: 4b91f2d7a3785944282fb64677ebfbd5, type: 3}
-  - {fileID: 21300000, guid: a77f75f4413afe94da219e1bc518252a, type: 3}
-  - {fileID: 21300002, guid: a77f75f4413afe94da219e1bc518252a, type: 3}
-  - {fileID: 21300004, guid: a77f75f4413afe94da219e1bc518252a, type: 3}
-  - {fileID: 21300006, guid: a77f75f4413afe94da219e1bc518252a, type: 3}
+  - {fileID: 21300004, guid: 4f878192454aaf446b6702a687b0b137, type: 3}
+  - {fileID: 21300006, guid: 4f878192454aaf446b6702a687b0b137, type: 3}
+  - {fileID: 21300004, guid: 4f878192454aaf446b6702a687b0b137, type: 3}
+  - {fileID: 21300002, guid: 4f878192454aaf446b6702a687b0b137, type: 3}
+  - {fileID: 21300002, guid: 1102a439339f0d24b99a8604722515f2, type: 3}
+  - {fileID: 21300004, guid: 1102a439339f0d24b99a8604722515f2, type: 3}
+  - {fileID: 21300006, guid: 1102a439339f0d24b99a8604722515f2, type: 3}
+  - {fileID: 21300008, guid: 1102a439339f0d24b99a8604722515f2, type: 3}
+  - {fileID: 21300002, guid: 91e3d0f9b2b31a840b3e77105620fd3f, type: 3}
+  - {fileID: 21300004, guid: 91e3d0f9b2b31a840b3e77105620fd3f, type: 3}
+  - {fileID: 21300004, guid: 91e3d0f9b2b31a840b3e77105620fd3f, type: 3}
+  - {fileID: 21300006, guid: 91e3d0f9b2b31a840b3e77105620fd3f, type: 3}
+  - {fileID: 21300002, guid: a3199d53a9287f045b0dcda9e654fd4a, type: 3}
+  - {fileID: 21300004, guid: a3199d53a9287f045b0dcda9e654fd4a, type: 3}
+  - {fileID: 21300006, guid: a3199d53a9287f045b0dcda9e654fd4a, type: 3}
+  - {fileID: 21300008, guid: a3199d53a9287f045b0dcda9e654fd4a, type: 3}
   framesPerSecond: 3
   renderer: {fileID: 0}
   movement: {fileID: 0}
@@ -143,7 +143,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 1092625971
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4b91f2d7a3785944282fb64677ebfbd5, type: 3}
+  m_Sprite: {fileID: 21300004, guid: 91e3d0f9b2b31a840b3e77105620fd3f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
