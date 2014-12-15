@@ -1100,7 +1100,7 @@ GameObject:
   - 61: {fileID: 132968150}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1114,7 +1114,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 132968149}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &132968151
@@ -1803,7 +1803,7 @@ GameObject:
   - 61: {fileID: 202797094}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1829,7 +1829,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 202797092}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &202797095
@@ -1919,7 +1919,7 @@ GameObject:
   - 61: {fileID: 204014734}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1945,7 +1945,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 204014732}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &204014735
@@ -1983,7 +1983,7 @@ GameObject:
   - 61: {fileID: 205753086}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2009,7 +2009,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 205753084}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &205753087
@@ -2209,7 +2209,7 @@ GameObject:
   - 61: {fileID: 206916389}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2235,7 +2235,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 206916387}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &206916390
@@ -2529,7 +2529,7 @@ GameObject:
   - 61: {fileID: 224904239}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2555,7 +2555,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 224904237}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &224904240
@@ -3475,7 +3475,7 @@ GameObject:
   - 61: {fileID: 269459072}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3501,7 +3501,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 269459070}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &269459073
@@ -3568,7 +3568,7 @@ GameObject:
   - 61: {fileID: 280757406}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3594,7 +3594,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 280757404}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &280757407
@@ -3676,7 +3676,7 @@ GameObject:
   - 61: {fileID: 300324051}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3690,7 +3690,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 300324050}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &300324052
@@ -4129,7 +4129,7 @@ GameObject:
   - 61: {fileID: 341649371}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4143,7 +4143,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 341649370}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &341649372
@@ -4451,7 +4451,7 @@ GameObject:
   - 61: {fileID: 390528015}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4477,7 +4477,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 390528013}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &390528016
@@ -5153,7 +5153,7 @@ GameObject:
   - 61: {fileID: 512198061}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5179,7 +5179,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 512198059}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &512198062
@@ -5444,7 +5444,7 @@ GameObject:
   - 61: {fileID: 534493355}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5470,7 +5470,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 534493353}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &534493356
@@ -5508,7 +5508,7 @@ GameObject:
   - 61: {fileID: 543491459}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5534,7 +5534,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 543491457}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &543491460
@@ -7412,7 +7412,7 @@ GameObject:
   - 61: {fileID: 831483733}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7438,7 +7438,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 831483731}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &831483734
@@ -7673,7 +7673,7 @@ GameObject:
   - 61: {fileID: 840510723}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7699,7 +7699,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 840510721}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &840510724
@@ -7769,7 +7769,7 @@ GameObject:
   - 61: {fileID: 862724509}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7783,7 +7783,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 862724508}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &862724510
@@ -8201,7 +8201,7 @@ GameObject:
   - 61: {fileID: 881179136}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8227,7 +8227,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 881179134}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &881179137
@@ -8294,7 +8294,7 @@ GameObject:
   - 61: {fileID: 895241479}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8320,7 +8320,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 895241477}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &895241480
@@ -8858,7 +8858,7 @@ GameObject:
   - 61: {fileID: 962126684}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8884,7 +8884,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 962126682}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &962126685
@@ -8922,7 +8922,7 @@ GameObject:
   - 61: {fileID: 1011156875}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8936,7 +8936,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1011156874}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &1011156876
@@ -9244,7 +9244,7 @@ GameObject:
   - 61: {fileID: 1077778766}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9258,7 +9258,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1077778765}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &1077778767
@@ -11786,7 +11786,7 @@ GameObject:
   - 61: {fileID: 1331445567}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11812,7 +11812,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1331445565}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &1331445568
@@ -12112,7 +12112,7 @@ GameObject:
   - 61: {fileID: 1378213799}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12126,7 +12126,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1378213798}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &1378213800
@@ -13232,7 +13232,7 @@ GameObject:
   - 61: {fileID: 1529642592}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13258,7 +13258,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1529642590}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &1529642593
@@ -13296,7 +13296,7 @@ GameObject:
   - 61: {fileID: 1547686047}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13310,7 +13310,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1547686046}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &1547686048
@@ -13360,7 +13360,7 @@ GameObject:
   - 61: {fileID: 1591312181}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13386,7 +13386,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1591312179}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &1591312182
@@ -13424,7 +13424,7 @@ GameObject:
   - 61: {fileID: 1593086420}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13450,7 +13450,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1593086418}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &1593086421
@@ -14209,7 +14209,7 @@ GameObject:
   - 61: {fileID: 1694715573}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14235,7 +14235,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1694715571}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &1694715574
@@ -14501,7 +14501,7 @@ GameObject:
   - 61: {fileID: 1732173722}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14527,7 +14527,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1732173720}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &1732173723
@@ -14613,7 +14613,7 @@ GameObject:
   - 61: {fileID: 1738933853}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14627,7 +14627,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1738933852}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &1738933854
@@ -15385,7 +15385,7 @@ GameObject:
   - 61: {fileID: 1883004509}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15399,7 +15399,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1883004508}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &1883004510
@@ -15553,7 +15553,7 @@ GameObject:
   - 61: {fileID: 1896251369}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15567,7 +15567,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1896251368}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &1896251370
@@ -15617,7 +15617,7 @@ GameObject:
   - 61: {fileID: 1897226092}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15643,7 +15643,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1897226090}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &1897226093
@@ -15733,7 +15733,7 @@ GameObject:
   - 61: {fileID: 1941750364}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15759,7 +15759,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1941750362}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &1941750365
@@ -16763,7 +16763,7 @@ GameObject:
   - 61: {fileID: 2026865424}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16789,7 +16789,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2026865422}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &2026865425
@@ -17449,7 +17449,7 @@ GameObject:
   - 61: {fileID: 2075170167}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17475,7 +17475,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2075170165}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &2075170168
@@ -17600,7 +17600,7 @@ GameObject:
   - 61: {fileID: 2094077921}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17626,7 +17626,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2094077919}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &2094077922
@@ -17914,7 +17914,7 @@ GameObject:
   - 61: {fileID: 2122241750}
   m_Layer: 0
   m_Name: Pit_Sprite
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17928,7 +17928,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2122241749}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
 --- !u!212 &2122241751
