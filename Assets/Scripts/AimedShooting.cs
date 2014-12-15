@@ -12,6 +12,9 @@ public class AimedShooting : MonoBehaviour {
 	private EnemyMovement em; 			
 	private GameObject player;
 	private float nextShotTime;
+
+	public float shotForce = 50;
+
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find ("Player");
@@ -37,11 +40,13 @@ public class AimedShooting : MonoBehaviour {
 		if (player != null && (player.transform.position.y - transform.position.y) < 15
 		    && TimeToShoot()) {
 			GameObject clone;
-			
+
+			Vector3 aim = player.transform.position - transform.position;
 			if(facing == 2) 
 				clone = (GameObject) Instantiate(bullet, transform.position + Vector3.left * multiplier, Quaternion.identity);
 			else
 				clone = (GameObject) Instantiate(bullet, transform.position + Vector3.right * multiplier, Quaternion.identity);
+			clone.rigidbody2D.velocity = aim * shotForce / Vector3.Distance (player.transform.position, transform.position);
 
 			clone.transform.parent = gameObject.transform;
 			nextShotTime = Time.time + attackCooldown;			
