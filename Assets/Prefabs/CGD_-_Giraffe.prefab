@@ -132,7 +132,7 @@ MonoBehaviour:
   shooting: 0
   shootTime: .400000006
   stopShoot: 0
-  shotForce: .400000006
+  shotForce: 50
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
