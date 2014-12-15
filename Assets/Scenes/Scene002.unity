@@ -143,7 +143,7 @@ MonoBehaviour:
   shooting: 0
   shootTime: .400000006
   stopShoot: 0
-  shotForce: .600000024
+  shotForce: .400000006
 --- !u!50 &44619261
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -503,7 +503,7 @@ MonoBehaviour:
   shooting: 0
   shootTime: .400000006
   stopShoot: 0
-  shotForce: .600000024
+  shotForce: .400000006
 --- !u!50 &90979088
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -693,7 +693,7 @@ MonoBehaviour:
   shooting: 0
   shootTime: .400000006
   stopShoot: 0
-  shotForce: .600000024
+  shotForce: .400000006
 --- !u!50 &134308776
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -976,7 +976,7 @@ MonoBehaviour:
   shooting: 0
   shootTime: .400000006
   stopShoot: 0
-  shotForce: .600000024
+  shotForce: .400000006
 --- !u!50 &206157315
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -1207,11 +1207,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 6ad3b5bc127811246a02ad6117f9168d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -404.942932
+      value: -422.055084
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6ad3b5bc127811246a02ad6117f9168d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 304.341003
+      value: 270.116699
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6ad3b5bc127811246a02ad6117f9168d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1925,7 +1925,7 @@ MonoBehaviour:
   shooting: 0
   shootTime: .400000006
   stopShoot: 0
-  shotForce: .600000024
+  shotForce: .400000006
 --- !u!50 &338577078
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -2181,7 +2181,7 @@ MonoBehaviour:
   shooting: 0
   shootTime: .400000006
   stopShoot: 0
-  shotForce: .600000024
+  shotForce: .400000006
 --- !u!50 &358518476
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -2529,7 +2529,7 @@ MonoBehaviour:
   shooting: 0
   shootTime: .400000006
   stopShoot: 0
-  shotForce: .600000024
+  shotForce: .400000006
 --- !u!50 &581545228
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -2719,7 +2719,7 @@ MonoBehaviour:
   shooting: 0
   shootTime: .400000006
   stopShoot: 0
-  shotForce: .600000024
+  shotForce: .400000006
 --- !u!50 &627790645
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -2881,7 +2881,7 @@ MonoBehaviour:
   shooting: 0
   shootTime: .400000006
   stopShoot: 0
-  shotForce: .600000024
+  shotForce: .400000006
 --- !u!50 &642128349
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -3101,7 +3101,7 @@ MonoBehaviour:
   shooting: 0
   shootTime: .400000006
   stopShoot: 0
-  shotForce: .600000024
+  shotForce: .400000006
 --- !u!50 &763576298
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -3263,7 +3263,7 @@ MonoBehaviour:
   shooting: 0
   shootTime: .400000006
   stopShoot: 0
-  shotForce: .600000024
+  shotForce: .400000006
 --- !u!50 &771818889
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -3425,7 +3425,7 @@ MonoBehaviour:
   shooting: 0
   shootTime: .400000006
   stopShoot: 0
-  shotForce: .600000024
+  shotForce: .400000006
 --- !u!50 &783318756
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -3616,7 +3616,7 @@ MonoBehaviour:
   shooting: 0
   shootTime: .400000006
   stopShoot: 0
-  shotForce: .600000024
+  shotForce: .400000006
 --- !u!50 &836503322
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -3806,7 +3806,7 @@ MonoBehaviour:
   shooting: 0
   shootTime: .400000006
   stopShoot: 0
-  shotForce: .600000024
+  shotForce: .400000006
 --- !u!50 &863311503
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -3968,7 +3968,7 @@ MonoBehaviour:
   shooting: 0
   shootTime: .400000006
   stopShoot: 0
-  shotForce: .600000024
+  shotForce: .400000006
 --- !u!50 &869635284
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -4461,7 +4461,7 @@ MonoBehaviour:
   shooting: 0
   shootTime: .400000006
   stopShoot: 0
-  shotForce: .600000024
+  shotForce: .400000006
 --- !u!50 &1102002530
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -4667,7 +4667,7 @@ MonoBehaviour:
   shooting: 0
   shootTime: .400000006
   stopShoot: 0
-  shotForce: .600000024
+  shotForce: .400000006
 --- !u!50 &1146383412
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -5591,7 +5591,7 @@ MonoBehaviour:
   shooting: 0
   shootTime: .400000006
   stopShoot: 0
-  shotForce: .600000024
+  shotForce: .400000006
 --- !u!50 &1230225814
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -5829,7 +5829,7 @@ MonoBehaviour:
   shooting: 0
   shootTime: .400000006
   stopShoot: 0
-  shotForce: .600000024
+  shotForce: .400000006
 --- !u!50 &1268827701
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -6093,7 +6093,7 @@ MonoBehaviour:
   shooting: 0
   shootTime: .400000006
   stopShoot: 0
-  shotForce: .600000024
+  shotForce: .400000006
 --- !u!50 &1343611677
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -6378,7 +6378,7 @@ MonoBehaviour:
   shooting: 0
   shootTime: .400000006
   stopShoot: 0
-  shotForce: .600000024
+  shotForce: .400000006
 --- !u!50 &1504981822
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -6816,7 +6816,7 @@ MonoBehaviour:
   shooting: 0
   shootTime: .400000006
   stopShoot: 0
-  shotForce: .600000024
+  shotForce: .400000006
 --- !u!50 &1692238948
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -7685,7 +7685,7 @@ MonoBehaviour:
   shooting: 0
   shootTime: .400000006
   stopShoot: 0
-  shotForce: .600000024
+  shotForce: .400000006
 --- !u!50 &1965732210
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -7847,7 +7847,7 @@ MonoBehaviour:
   shooting: 0
   shootTime: .400000006
   stopShoot: 0
-  shotForce: .600000024
+  shotForce: .400000006
 --- !u!50 &1987290312
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -7935,7 +7935,7 @@ Transform:
   m_PrefabInternal: {fileID: 236239172}
   m_GameObject: {fileID: 1987290309}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -404.942932, y: 304.341003, z: 0}
+  m_LocalPosition: {x: -422.055084, y: 270.116699, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 579591868}
