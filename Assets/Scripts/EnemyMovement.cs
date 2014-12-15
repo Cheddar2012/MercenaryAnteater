@@ -52,10 +52,13 @@ public class EnemyMovement : MonoBehaviour {
 			if(!mobile)
 				stop = true;
 
-			
+			if (GetComponent<SnakeAnimator>() != null) {
+				Debug.Log("playerInAggroRange: " + playerInAggroRange() + ", stop: " + stop + ", speed: " + speed + ", mobile: " + mobile);
+			}
 			// RS: if within agroRange, enemy will move towards player
 			if (playerInAggroRange() && !stop && speed > 0 && mobile)
 			{
+
 				float step = speed * Time.deltaTime;
 				transform.position = Vector3.MoveTowards(transform.position, 
 				                                         player.transform.position, step);

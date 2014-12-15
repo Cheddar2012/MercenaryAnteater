@@ -118,12 +118,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adac098103ea37e40a1ad82dde81131c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animals:
+  sprites:
   - {fileID: 21300002, guid: c49621aa38c0db040834c43ea43c6254, type: 3}
+  - {fileID: 21300004, guid: c49621aa38c0db040834c43ea43c6254, type: 3}
+  - {fileID: 21300006, guid: c49621aa38c0db040834c43ea43c6254, type: 3}
   - {fileID: 21300008, guid: c49621aa38c0db040834c43ea43c6254, type: 3}
   - {fileID: 21300008, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
+  - {fileID: 21300006, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
+  - {fileID: 21300004, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   - {fileID: 21300002, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
+  framesPerSecond: 10
   renderer: {fileID: 0}
+  movement: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
   sAttack: {fileID: 0}
