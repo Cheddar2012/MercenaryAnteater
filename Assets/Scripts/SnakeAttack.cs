@@ -51,7 +51,6 @@ public class SnakeAttack : MonoBehaviour {
 			inRange = true;
 		}
 
-
 		/*
 		if (coll.gameObject.tag == "Player") 
 		{
