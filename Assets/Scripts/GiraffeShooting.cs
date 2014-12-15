@@ -66,7 +66,7 @@ public class GiraffeShooting : MonoBehaviour {
 			{
 				Vector3 aim = player.transform.position - transform.position;
 				clone = (GameObject) Instantiate(bullet, transform.position - heightAdj + Vector3.left * multiplier, Quaternion.identity);
-				clone.rigidbody2D.AddForce(aim * shotForce);
+				clone.rigidbody2D.velocity = aim * shotForce / Vector3.Distance (player.transform.position, transform.position);
 				numberShots++;
 				shooting = true;
 				stopShoot = Time.time + shootTime;

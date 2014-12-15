@@ -10,10 +10,6 @@ public class EnemyBullet : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		direction = transform.parent.gameObject.GetComponent<EnemyMovement>().facing;
-		if(direction == 2)
-			rigidbody2D.AddForce(new Vector2(-pushForce, 0));
-		else if(direction == 4)
-			rigidbody2D.AddForce(new Vector2(pushForce, 0));
 	}
 
 	
