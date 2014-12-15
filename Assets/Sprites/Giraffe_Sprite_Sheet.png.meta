@@ -51,12 +51,12 @@ TextureImporter:
     - name: Giraffe_Sprite_Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 197
         y: 0
-        width: 450
+        width: 253
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Giraffe_Sprite_Sheet_1
       rect:
@@ -66,7 +66,7 @@ TextureImporter:
         width: 450
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Giraffe_Sprite_Sheet_2
       rect:
@@ -76,17 +76,17 @@ TextureImporter:
         width: 450
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Giraffe_Sprite_Sheet_3
       rect:
         serializedVersion: 2
         x: 1350
         y: 0
-        width: 450
+        width: 247
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
