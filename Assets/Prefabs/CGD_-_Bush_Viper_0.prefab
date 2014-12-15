@@ -83,13 +83,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fa18255a4641b04f8b4e0bff2149a94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  speed: 50
-  agroRange: 250
-=======
   speed: 25
   agroRange: 150
->>>>>>> 607e0f2d94680480d17d5d4f96a0cbb4add806bc
   mobile: 1
 --- !u!114 &11400004
 MonoBehaviour:
