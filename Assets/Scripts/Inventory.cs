@@ -3,17 +3,17 @@ using System.Collections;
 
 public class Inventory : MonoBehaviour 
 {
-	public bool key;
+	public bool blueKey;
 
 	// Use this for initialization
 	void Start () 
 	{
-		key = false;
+		blueKey = false;
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
 	
-	}
+	}	
 }
