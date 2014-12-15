@@ -22,7 +22,9 @@ public class EnemyBullet : MonoBehaviour {
 	{
 		if (col.gameObject.tag == "Player")
 			col.BroadcastMessage ("ApplyDamage", damage);
-		if (col.gameObject.tag != "Enemy")
+
+		// JH Pits no longer destroy bullets
+		if( (col.tag != "Enemy") && (col.tag != "Pit") ) 
 			Destroy (gameObject);
 						
 	}

@@ -36,7 +36,9 @@ public class BulletScript : MonoBehaviour {
 	{
 		if(other.tag == "Enemy") // RS: will only deal damage if the unit is an enemy
 			other.BroadcastMessage ("ApplyDamage", damage);
-		if(other.tag != "Player")
+
+		// JH Pits no longer destroy bullets
+		if( (other.tag != "Player") && (other.tag != "Pit") )
 			Destroy (gameObject);
 	}
 
