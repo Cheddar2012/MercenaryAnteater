@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 25
-  aggroRange: 10
+  aggroRange: 200
   mobile: 1
 --- !u!114 &11400004
 MonoBehaviour:
