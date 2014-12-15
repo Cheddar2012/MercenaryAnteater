@@ -1,14 +1,16 @@
 fileFormatVersion: 2
-guid: 105c12fcb2310ad439e3f2d296be4e43
+guid: c49621aa38c0db040834c43ea43c6254
 TextureImporter:
   fileIDToRecycleName:
-    21300000: CGD_-_Bush_Viper_0
-    21300002: CGD_-_Bush_Viper_1
-    21300004: CGD_-_Bush_Viper_2
+    21300000: CGD_-_Bush_Viper_Left
+    21300002: CGD_-_Bush_Viper_Left_0
+    21300004: CGD_-_Bush_Viper_Left_1
+    21300006: CGD_-_Bush_Viper_Left_2
+    21300008: CGD_-_Bush_Viper_Left_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -28,7 +30,7 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: 16
+    aniso: 1
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -46,34 +48,44 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: CGD_-_Bush_Viper_0
+    - name: CGD_-_Bush_Viper_Left_0
       rect:
         serializedVersion: 2
-        x: 45
-        y: 716
-        width: 305
-        height: 261
-      alignment: 1
+        x: 101
+        y: 179
+        width: 308
+        height: 263
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: CGD_-_Bush_Viper_1
+    - name: CGD_-_Bush_Viper_Left_1
       rect:
         serializedVersion: 2
-        x: 603
-        y: 706
-        width: 396
-        height: 276
-      alignment: 1
+        x: 505
+        y: 142
+        width: 332
+        height: 306
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: CGD_-_Bush_Viper_2
+    - name: CGD_-_Bush_Viper_Left_2
       rect:
         serializedVersion: 2
-        x: 384
-        y: 292
-        width: 327
-        height: 304
-      alignment: 1
+        x: 864
+        y: 161
+        width: 399
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CGD_-_Bush_Viper_Left_3
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 159
+        width: 418
+        height: 282
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 

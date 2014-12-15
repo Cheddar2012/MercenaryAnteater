@@ -41,7 +41,7 @@ public class GiraffeShooting : MonoBehaviour {
 		return nextShotTime < Time.time;
 	}
 	
-	bool InAgroRange() 
+	bool InAggroRange() 
 	{
 		return Vector3.Distance (player.transform.position, transform.position) < attackRange;
 	}
@@ -51,7 +51,7 @@ public class GiraffeShooting : MonoBehaviour {
 	{
 		facing = em.facing;
 		
-		if (player != null && InAgroRange() && TimeToShoot() ) 
+		if (player != null && InAggroRange() && TimeToShoot() ) 
 		{
 			// print ("FORE");
 			

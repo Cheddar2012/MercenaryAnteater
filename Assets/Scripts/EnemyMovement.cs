@@ -7,7 +7,7 @@ public class EnemyMovement : MonoBehaviour {
 	//	"agroRange". 
 	
 	public float speed = 15.0f;				// RS: movespeed
-	public float agroRange = 10.0f;			// RS: distance to trigger following
+	public float aggroRange = 10.0f;		// RS: distance to trigger following
 	public bool mobile = true;				// RS: tells if player CAN move
 	public bool moving {get; private set;}	// RS: tells if moving
 
@@ -54,8 +54,7 @@ public class EnemyMovement : MonoBehaviour {
 
 			
 			// RS: if within agroRange, enemy will move towards player
-			if (Vector3.Distance (player.transform.position, transform.position) <= agroRange 
-			    && !stop && speed > 0 && mobile)
+			if (playerInAggroRange() && !stop && speed > 0 && mobile)
 			{
 				float step = speed * Time.deltaTime;
 				transform.position = Vector3.MoveTowards(transform.position, 
@@ -65,5 +64,9 @@ public class EnemyMovement : MonoBehaviour {
 			else
 				moving = false;
 		}
+	}
+
+	public bool playerInAggroRange() {
+		return (Vector3.Distance (player.transform.position, transform.position) <= aggroRange);
 	}
 }
