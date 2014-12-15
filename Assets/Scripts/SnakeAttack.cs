@@ -36,9 +36,12 @@ public class SnakeAttack : MonoBehaviour {
 
 	// RS: if the snake can attack, tell set poision damage and tell player he is poisned
 	//	then set cooldown for attack
-	void OnCollisionStay2D(Collision2D coll) {
-		if (coll.gameObject.tag == "Player") {
-			if (Time.time >= attackTimestamp) {
+	void OnCollisionStay2D(Collision2D coll) 
+	{
+		if (coll.gameObject.tag == "Player") 
+		{
+			if (Time.time >= attackTimestamp) 
+			{
 				player.BroadcastMessage("SetPoisonDamage", damage);
 				player.BroadcastMessage ("PoisonPlayer", poisonDuration);
 				attackTimestamp = Time.time + poisonDuration;
