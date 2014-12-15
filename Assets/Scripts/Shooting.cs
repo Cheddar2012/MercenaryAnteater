@@ -26,6 +26,8 @@ public class Shooting : MonoBehaviour {
 
 	//JH added ammo implementation
 	private Ammo playerAmmo;
+	Health health;
+
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find ("Player").GetComponent<Movement> ();
@@ -34,13 +36,14 @@ public class Shooting : MonoBehaviour {
 		shotgunShotStamp = 0;
 		multiplier = 1;
 		playerAmmo = GameObject.Find("Player").GetComponent<Ammo>();
+		health = GameObject.Find("Player").GetComponent<Health>();
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
 		// RS: if the player wants to shoot, we make sure that it has been 
 		//  long enough of a cooldown
-		if(Input.GetKeyDown (code) && basicShotStamp <= Time.time)
+		if(Input.GetKeyDown (code) && (basicShotStamp <= Time.time) && (health.health > 0) )
 		{
 			GameObject shooter;
 
@@ -69,7 +72,7 @@ public class Shooting : MonoBehaviour {
 		// fires 3 bullets at one
 		// each bullet has a slightly different start point and a 
 		// slightly different speed
-		if( (Input.GetKeyDown (daka) ) && (rapidShotStamp <= Time.time) && (playerAmmo.rapidFire > 0) )
+		if( (Input.GetKeyDown (daka) ) && (rapidShotStamp <= Time.time) && (playerAmmo.rapidFire > 0) && (health.health > 0))
 		{
 			GameObject rapid1;
 			GameObject rapid2;
@@ -137,7 +140,7 @@ public class Shooting : MonoBehaviour {
 		// JH created a similar if/switch shotgun attacks
 		// shotgun shoots 3 bullets, but the range is short 
 		// need to create a new prefab to be bullets that are short range 
-		if( (Input.GetKeyDown (shotgun) ) && (shotgunShotStamp <= Time.time) && (playerAmmo.sGun > 0) )
+		if( (Input.GetKeyDown (shotgun) ) && (shotgunShotStamp <= Time.time) && (playerAmmo.sGun > 0) && (health.health > 0) )
 		{
 			GameObject shell1;
 			GameObject shell2;

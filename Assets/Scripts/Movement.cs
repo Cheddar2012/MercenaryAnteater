@@ -15,40 +15,47 @@ public class Movement : MonoBehaviour
 	 */
 	public bool moving;
 	public int facing;
+
+	Health health;
 	
 	// Use this for initialization
 	void Start () 
 	{
 		moving = false;
 		facing = 3;
+
+		health = GameObject.Find("Player").GetComponent<Health>();
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
-		if(Input.GetKey(KeyCode.UpArrow) )
+		if(health.health > 0)
 		{
-			moving = true;
-			facing = 1;
-		}
-		else if(Input.GetKey(KeyCode.LeftArrow) )
-		{
-			moving = true;
-			facing = 2;
-		}
-		else if(Input.GetKey(KeyCode.DownArrow) )
-		{
-			moving = true;
-			facing = 3;
-		}
-		else if(Input.GetKey(KeyCode.RightArrow) )
-		{
-			moving = true;
-			facing = 4;
-		}
-		else
-		{
-			moving = false;
+			if(Input.GetKey(KeyCode.UpArrow) ) 
+			{
+				moving = true;
+				facing = 1;
+			}
+			else if(Input.GetKey(KeyCode.LeftArrow) )
+			{
+				moving = true;
+				facing = 2;
+			}
+			else if(Input.GetKey(KeyCode.DownArrow) )
+			{
+				moving = true;
+				facing = 3;
+			}
+			else if(Input.GetKey(KeyCode.RightArrow) )
+			{
+				moving = true;
+				facing = 4;
+			}
+			else
+			{
+				moving = false;
+			}
 		}
 
 		if (moving) {

@@ -24,10 +24,13 @@ public class PlayerAnimator : MonoBehaviour {
 	// Which sprite to show in the walking animation
 	public int spriteToShow = 0;
 
+	Health health;
+
 	// Use this for initialization
 	void Start () {
 		renderer = (SpriteRenderer)GetComponent("SpriteRenderer");
 		movement = (Movement)GetComponent("Movement");
+		health = GameObject.Find("Player").GetComponent<Health>();
 
 		ResetFrameTimer();
 
@@ -38,7 +41,8 @@ public class PlayerAnimator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (!movement.moving) {
+		if ( (!movement.moving) && (health.health > 0) ) 
+		{
 			switch (movement.facing) {
 			case 1:
 				renderer.sprite = walkingSprites[0];
@@ -54,7 +58,8 @@ public class PlayerAnimator : MonoBehaviour {
 				break;
 			}
 		}
-		else {
+		else if(health.health > 0)
+		{
 			frameTimer -= Time.deltaTime;
 			if (frameTimer <= 0) {
 				spriteToShow = (spriteToShow + 1) % 4;

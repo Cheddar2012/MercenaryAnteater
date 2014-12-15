@@ -8,6 +8,9 @@ public class Health : MonoBehaviour {
 
 	private float poisonDamage;		// RS: damage to deal over time
 	private float poisonedTime;		// RS: marker for when poison ends
+
+	GameObject message;
+
 	// Use this for initialization
 	void Start () {
 		poisoned = false;
@@ -39,7 +42,24 @@ public class Health : MonoBehaviour {
 		Debug.Log ("dangage");
 		if (health <= 0) { // RS: kill
 			health = 0;
-			Destroy (gameObject);
+
+			if(gameObject.tag != "Player")
+			{
+				Destroy (gameObject);
+			}
+
+			else
+			{
+				message = new GameObject();
+				message.AddComponent("GUIText");
+				message.transform.position = new Vector3(0.25f, 0.5f, 0);
+				
+				message.guiText.fontSize = 60;
+				message.guiText.color = Color.blue;
+				message.guiText.text = "YOU DIED";
+				
+				Application.LoadLevel("Scene002");
+			}
 		}
 	}
 
