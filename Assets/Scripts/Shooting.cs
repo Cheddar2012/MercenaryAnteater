@@ -24,6 +24,9 @@ public class Shooting : MonoBehaviour {
 	private float rapidShotStamp;
 	private float shotgunShotStamp;
 
+	bool shooting = false;
+	float shootingTime = 0.5f;
+
 	//JH added ammo implementation
 	private Ammo playerAmmo;
 	Health health;

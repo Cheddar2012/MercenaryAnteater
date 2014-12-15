@@ -10,7 +10,7 @@ public class Ammo : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		
+		hasGun = true;
 	}
 
 	void AddAmmo(int rAmmo, int sAmmo) 
