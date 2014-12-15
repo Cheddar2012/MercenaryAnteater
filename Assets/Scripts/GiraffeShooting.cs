@@ -16,8 +16,10 @@ public class GiraffeShooting : MonoBehaviour {
 	public int shotCap;
 
 	public bool shooting;
-	float shootTime = 0.4f;
-	float stopShoot;
+	public float shootTime = 0.4f;
+	public float stopShoot;
+
+	public float shotForce = 0.6f;
 
 	// Use this for initialization
 	void Start () {
@@ -62,14 +64,18 @@ public class GiraffeShooting : MonoBehaviour {
 			// increment number of shots
 			if(facing == 2) 
 			{
+				Vector3 aim = player.transform.position - transform.position;
 				clone = (GameObject) Instantiate(bullet, transform.position - heightAdj + Vector3.left * multiplier, Quaternion.identity);
+				clone.rigidbody2D.AddForce(aim);
 				numberShots++;
 				shooting = true;
 				stopShoot = Time.time + shootTime;
 			}
 			else
 			{
+				Vector3 aim = player.transform.position - transform.position;
 				clone = (GameObject) Instantiate(bullet, transform.position - heightAdj + Vector3.right * multiplier, Quaternion.identity);
+				clone.rigidbody2D.AddForce(aim);
 				numberShots++;
 				shooting = true;
 				stopShoot = Time.time + shootTime;
