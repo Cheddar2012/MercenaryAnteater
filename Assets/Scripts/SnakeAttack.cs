@@ -19,6 +19,8 @@ public class SnakeAttack : MonoBehaviour {
 	
 	private float attackTimestamp;		// RS: game time at which snake can re-poison
 
+	private float attackWait = 2.9f;
+
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find ("Player");
@@ -36,11 +38,12 @@ public class SnakeAttack : MonoBehaviour {
 	//	then set cooldown for attack
 	void OnCollisionStay2D(Collision2D coll) {
 		if (coll.gameObject.tag == "Player") {
-
 			if (Time.time >= attackTimestamp) {
 				player.BroadcastMessage("SetPoisonDamage", damage);
 				player.BroadcastMessage ("PoisonPlayer", poisonDuration);
 				attackTimestamp = Time.time + poisonDuration;
+				attacking = true;
+				stopAttack = Time.time + attackTime;
 			}
 		}
 	}
@@ -49,15 +52,10 @@ public class SnakeAttack : MonoBehaviour {
 	void Update () {
 		facing = em.facing;
 
-		if (player != null && em.playerInAggroRange() && !attacking ) 
-		{
-			attacking = true;
-			stopAttack = Time.time + attackTime;
-		}
+
 
 		if(Time.time > stopAttack)
 		{
-			Debug.Log("Swag");
 			attacking = false;
 		}
 	}

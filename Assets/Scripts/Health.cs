@@ -39,7 +39,6 @@ public class Health : MonoBehaviour {
 	// RS: player takes i damage
 	void ApplyDamage (float i) {
 		health -= i;
-		Debug.Log ("dangage");
 		if (health <= 0) { // RS: kill
 			health = 0;
 
