@@ -48,6 +48,10 @@ public class EnemyMovement : MonoBehaviour {
 			{
 				facing = 4;		// RS: face right
 			}
+
+			if(!mobile)
+				stop = true;
+
 			
 			// RS: if within agroRange, enemy will move towards player
 			if (Vector3.Distance (player.transform.position, transform.position) <= agroRange 
@@ -58,6 +62,8 @@ public class EnemyMovement : MonoBehaviour {
 				                                         player.transform.position, step);
 				moving = true;
 			}
+			else
+				moving = false;
 		}
 	}
 }

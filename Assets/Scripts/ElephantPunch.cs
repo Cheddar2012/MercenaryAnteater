@@ -6,12 +6,13 @@ public class ElephantPunch : MonoBehaviour {
 	public bool punching { get; set; }
 	public GameObject trunk;
 
+	private GameObject clone;
 	private float punchCD;
 	private float punchRange;
 	private float punchTime;
 	private bool moving;
 	private EnemyMovement moveScript;
-	private EnemyCharge chargeScript;
+	private ElephantCharge chargeScript;
 	private GameObject player;
 	private int verticalRange;
 	// Use this for initialization
@@ -24,7 +25,7 @@ public class ElephantPunch : MonoBehaviour {
 		moveScript = gameObject.GetComponent<EnemyMovement> ();
 		facing = moveScript.facing;
 		verticalRange = 25;
-		chargeScript = gameObject.GetComponent<EnemyCharge> ();
+		chargeScript = gameObject.GetComponent<ElephantCharge> ();
 	}
 
 	bool Charging() {
@@ -40,15 +41,19 @@ public class ElephantPunch : MonoBehaviour {
 		bool height = Mathf.Abs (player.transform.position.y - transform.position.y) < verticalRange * 2;
 		return range && height;
 	}
-	
+
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		facing = moveScript.facing;
+
 		if (InPunchRange() && PunchingTime () && !Charging ()) {
-			GameObject clone = (GameObject) Instantiate (trunk, transform.position + Vector3.up * verticalRange, Quaternion.identity);
+			clone = (GameObject) Instantiate (trunk, transform.position + Vector3.up * verticalRange, Quaternion.identity);
 			clone.transform.parent = gameObject.transform;
 			punchTime = Time.time + punchCD;
 			punching = true;
 		}
+
+		if (clone == null)
+			punching = false;
 	}
 }
