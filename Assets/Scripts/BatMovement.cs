@@ -20,13 +20,20 @@ public class BatMovement : MonoBehaviour {
 	}
 
 	void ChangeDirection() {
+		if (xDir == 1 && yDir == 1)
+			yDir = -1;
+		else if (xDir == 1 && yDir == -1)
+			xDir = -1;
+		else if (xDir == -1 && yDir == -1)
+			yDir = 1;
+		else 
+			xDir = 1;
 
-
+		transform.position -= new Vector3 (0.5f, 0.5f, 0.0f);
 	}
 
 	void Move() {
 		transform.position += new Vector3 (xDir * speed, yDir * speed, 0);
-
 	}
 
 	void OnCollisionEnter2D (Collision2D col){
