@@ -21,6 +21,12 @@ public class SnakeAttack : MonoBehaviour {
 
 	private float attackWait = 2.9f;
 
+	// JH trying something different with snake attack
+	// giving him a bool called "in range" that is used to determine
+	// if he should keep attacking or not
+	// inRange is set by onCollisionEnter and onCollisionExit
+	bool inRange;
+
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find ("Player");
@@ -32,22 +38,40 @@ public class SnakeAttack : MonoBehaviour {
 		stopAttack = 0.0f;
 
 		attackTimestamp = Time.time;
+
+		inRange = false;
 	}
 
 	// RS: if the snake can attack, tell set poision damage and tell player he is poisned
 	//	then set cooldown for attack
-	void OnCollisionStay2D(Collision2D coll) 
+	void OnCollisionEnter2D(Collision2D coll) 
 	{
+		if (coll.gameObject.tag == "Player")
+		{
+			inRange = true;
+		}
+
+
+		/*
 		if (coll.gameObject.tag == "Player") 
 		{
 			if (Time.time >= attackTimestamp) 
 			{
 				player.BroadcastMessage("SetPoisonDamage", damage);
 				player.BroadcastMessage ("PoisonPlayer", poisonDuration);
-				attackTimestamp = Time.time + poisonDuration;
+				attackTimestamp = Time.time + attackWait;
 				attacking = true;
 				stopAttack = Time.time + attackTime;
 			}
+		}
+		*/
+	}
+
+	void OnCollisionExit2D(Collision2D coll)
+	{
+		if (coll.gameObject.tag == "Player")
+		{
+			inRange = false;
 		}
 	}
 
@@ -55,7 +79,14 @@ public class SnakeAttack : MonoBehaviour {
 	void Update () {
 		facing = em.facing;
 
-
+		if( (inRange) && (Time.time >= attackTimestamp) )
+		{
+			player.BroadcastMessage("SetPoisonDamage", damage);
+			player.BroadcastMessage ("PoisonPlayer", poisonDuration);
+			attackTimestamp = Time.time + attackWait;
+			attacking = true;
+			stopAttack = Time.time + attackTime;
+		}
 
 		if(Time.time > stopAttack)
 		{
