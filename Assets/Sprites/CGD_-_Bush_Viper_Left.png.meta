@@ -1,11 +1,12 @@
 fileFormatVersion: 2
-guid: 105c12fcb2310ad439e3f2d296be4e43
+guid: c49621aa38c0db040834c43ea43c6254
 TextureImporter:
   fileIDToRecycleName:
-    21300000: CGD_-_Bush_Viper_0
-    21300002: CGD_-_Bush_Viper_1
-    21300004: CGD_-_Bush_Viper_2
-    21300006: CGD_-_Bush_Viper_3
+    21300000: CGD_-_Bush_Viper_Left
+    21300002: CGD_-_Bush_Viper_Left_0
+    21300004: CGD_-_Bush_Viper_Left_1
+    21300006: CGD_-_Bush_Viper_Left_2
+    21300008: CGD_-_Bush_Viper_Left_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -47,7 +48,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: CGD_-_Bush_Viper_0
+    - name: CGD_-_Bush_Viper_Left_0
       rect:
         serializedVersion: 2
         x: 101
@@ -57,7 +58,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: CGD_-_Bush_Viper_1
+    - name: CGD_-_Bush_Viper_Left_1
       rect:
         serializedVersion: 2
         x: 505
@@ -67,7 +68,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: CGD_-_Bush_Viper_2
+    - name: CGD_-_Bush_Viper_Left_2
       rect:
         serializedVersion: 2
         x: 864
@@ -77,7 +78,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: CGD_-_Bush_Viper_3
+    - name: CGD_-_Bush_Viper_Left_3
       rect:
         serializedVersion: 2
         x: 1295

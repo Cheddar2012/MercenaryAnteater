@@ -10,10 +10,11 @@ GameObject:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
   - 114: {fileID: 11400000}
+  - 58: {fileID: 5800000}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400004}
-  - 58: {fileID: 5800000}
   - 50: {fileID: 5000000}
+  - 114: {fileID: 11400006}
   m_Layer: 0
   m_Name: CGD_-_Bush_Viper_0 1
   m_TagString: Enemy
@@ -101,6 +102,31 @@ MonoBehaviour:
   attackCD: 5
   attackRange: 100
   poisonDuration: 3
+  attacking: 0
+  attackTime: .400000006
+  stopAttack: 0
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adac098103ea37e40a1ad82dde81131c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animals:
+  - {fileID: 21300002, guid: c49621aa38c0db040834c43ea43c6254, type: 3}
+  - {fileID: 21300008, guid: c49621aa38c0db040834c43ea43c6254, type: 3}
+  - {fileID: 21300008, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
+  - {fileID: 21300002, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
+  renderer: {fileID: 0}
+  spriteToShow: 0
+  player: {fileID: 0}
+  sAttack: {fileID: 0}
+  attackTime: .300000012
+  direction: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -121,7 +147,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 1092625971
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 105c12fcb2310ad439e3f2d296be4e43, type: 3}
+  m_Sprite: {fileID: 21300002, guid: c49621aa38c0db040834c43ea43c6254, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
