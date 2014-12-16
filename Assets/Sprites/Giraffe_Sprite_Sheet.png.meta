@@ -51,40 +51,40 @@ TextureImporter:
     - name: Giraffe_Sprite_Sheet_0
       rect:
         serializedVersion: 2
-        x: 197
-        y: 0
-        width: 253
-        height: 480
+        x: 212
+        y: 1
+        width: 234
+        height: 473
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Giraffe_Sprite_Sheet_1
       rect:
         serializedVersion: 2
-        x: 450
-        y: 0
-        width: 450
-        height: 480
+        x: 456
+        y: 4
+        width: 438
+        height: 475
       alignment: 9
-      pivot: {x: .657706141, y: .493279517}
+      pivot: {x: .735880136, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Giraffe_Sprite_Sheet_2
       rect:
         serializedVersion: 2
-        x: 900
-        y: 0
-        width: 450
-        height: 480
+        x: 903
+        y: 1
+        width: 437
+        height: 473
       alignment: 9
-      pivot: {x: .342293829, y: .493279517}
+      pivot: {x: .267684817, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Giraffe_Sprite_Sheet_3
       rect:
         serializedVersion: 2
-        x: 1356
+        x: 1357
         y: 0
-        width: 247
-        height: 480
+        width: 226
+        height: 470
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
