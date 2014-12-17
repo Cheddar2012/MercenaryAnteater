@@ -4,7 +4,7 @@ using System.Collections;
 public class EnemyBullet : MonoBehaviour {
 	
 	public float damage = 15;
-	public float pushForce = 20;
+	public float pushForce = 200;
 	
 	public int direction{ get; set; }
 	// Use this for initialization

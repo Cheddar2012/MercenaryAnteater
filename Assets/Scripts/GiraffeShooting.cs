@@ -19,7 +19,7 @@ public class GiraffeShooting : MonoBehaviour {
 	public float shootTime = 0.4f;
 	public float stopShoot;
 
-	public float shotForce = 50;
+	public float shotForce = 150;
 
 	// Use this for initialization
 	void Start () {
@@ -57,7 +57,8 @@ public class GiraffeShooting : MonoBehaviour {
 			
 			GameObject clone;
 			
-			Vector3 heightAdj = new Vector3(0, 15, 0);
+			Vector3 leftAdj = new Vector3(-30, -15, 0);
+			Vector3 rightAdj = new Vector3(30, -15, 0);
 
 			// JH 
 			// fire the bullet
@@ -65,11 +66,11 @@ public class GiraffeShooting : MonoBehaviour {
 			Vector3 aim = player.transform.position - transform.position;
 			if(facing == 2) 
 			{
-				clone = (GameObject) Instantiate(bullet, transform.position - heightAdj + Vector3.left * multiplier, Quaternion.identity);
+				clone = (GameObject) Instantiate(bullet, (transform.position + leftAdj) + Vector3.left * multiplier, Quaternion.identity);
 			}
 			else
 			{
-				clone = (GameObject) Instantiate(bullet, transform.position - heightAdj + Vector3.right * multiplier, Quaternion.identity);
+				clone = (GameObject) Instantiate(bullet, (transform.position + rightAdj) + Vector3.right * multiplier, Quaternion.identity);
 			}
 			clone.rigidbody2D.velocity = aim * shotForce / Vector3.Distance (player.transform.position, transform.position);
 			numberShots++;
