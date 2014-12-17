@@ -3231,12 +3231,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 100000, guid: f3f0ca2b0fe94f040ba111efbfdf7422, type: 2}
-  bullet2: {fileID: 0}
-  bullet3: {fileID: 0}
+  bullet2: {fileID: 100000, guid: f3f0ca2b0fe94f040ba111efbfdf7422, type: 2}
+  bullet3: {fileID: 100000, guid: f3f0ca2b0fe94f040ba111efbfdf7422, type: 2}
   shotCD: .200000003
   code: 122
   daka: 120
   shotgun: 118
+  shooting: 0
 --- !u!50 &262001589
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -3293,6 +3294,10 @@ MonoBehaviour:
   - {fileID: 21300004, guid: a3199d53a9287f045b0dcda9e654fd4a, type: 3}
   - {fileID: 21300006, guid: a3199d53a9287f045b0dcda9e654fd4a, type: 3}
   - {fileID: 21300008, guid: a3199d53a9287f045b0dcda9e654fd4a, type: 3}
+  - {fileID: 21300024, guid: 344b0a2c99af8a046ba108d61c2a53e7, type: 3}
+  - {fileID: 21300008, guid: 344b0a2c99af8a046ba108d61c2a53e7, type: 3}
+  - {fileID: 21300014, guid: 344b0a2c99af8a046ba108d61c2a53e7, type: 3}
+  - {fileID: 21300028, guid: 344b0a2c99af8a046ba108d61c2a53e7, type: 3}
   framesPerSecond: 6
   renderer: {fileID: 0}
   movement: {fileID: 0}
@@ -14959,6 +14964,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11400002, guid: f41ec5480c0dde04aba843d02e2b4c6b, type: 2}
+      propertyPath: walkingSprites.Array.size
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f41ec5480c0dde04aba843d02e2b4c6b, type: 2}
       propertyPath: m_LocalPosition.x
       value: 305
@@ -15031,6 +15040,34 @@ Prefab:
       propertyPath: shotCD
       value: .5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: f41ec5480c0dde04aba843d02e2b4c6b, type: 2}
+      propertyPath: bullet2
+      value: 
+      objectReference: {fileID: 100000, guid: f3f0ca2b0fe94f040ba111efbfdf7422, type: 2}
+    - target: {fileID: 11400006, guid: f41ec5480c0dde04aba843d02e2b4c6b, type: 2}
+      propertyPath: bullet3
+      value: 
+      objectReference: {fileID: 100000, guid: f3f0ca2b0fe94f040ba111efbfdf7422, type: 2}
+    - target: {fileID: 11400002, guid: f41ec5480c0dde04aba843d02e2b4c6b, type: 2}
+      propertyPath: walkingSprites.Array.data[16]
+      value: 
+      objectReference: {fileID: 21300024, guid: 344b0a2c99af8a046ba108d61c2a53e7,
+        type: 3}
+    - target: {fileID: 11400002, guid: f41ec5480c0dde04aba843d02e2b4c6b, type: 2}
+      propertyPath: walkingSprites.Array.data[17]
+      value: 
+      objectReference: {fileID: 21300008, guid: 344b0a2c99af8a046ba108d61c2a53e7,
+        type: 3}
+    - target: {fileID: 11400002, guid: f41ec5480c0dde04aba843d02e2b4c6b, type: 2}
+      propertyPath: walkingSprites.Array.data[18]
+      value: 
+      objectReference: {fileID: 21300014, guid: 344b0a2c99af8a046ba108d61c2a53e7,
+        type: 3}
+    - target: {fileID: 11400002, guid: f41ec5480c0dde04aba843d02e2b4c6b, type: 2}
+      propertyPath: walkingSprites.Array.data[19]
+      value: 
+      objectReference: {fileID: 21300028, guid: 344b0a2c99af8a046ba108d61c2a53e7,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 5800000, guid: f41ec5480c0dde04aba843d02e2b4c6b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f41ec5480c0dde04aba843d02e2b4c6b, type: 2}

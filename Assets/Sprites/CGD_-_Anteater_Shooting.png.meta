@@ -15,6 +15,10 @@ TextureImporter:
     21300020: CGD_-_Anteater_Shooting_9
     21300022: CGD_-_Anteater_Shooting_10
     21300024: CGD_-_Anteater_Shooting_11
+    21300026: CGD_-_Anteater_Shooting_12
+    21300028: CGD_-_Anteater_Shooting_13
+    21300030: CGD_-_Anteater_Shooting_14
+    21300032: CGD_-_Anteater_Shooting_15
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -60,121 +64,161 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 13
-        y: 414
-        width: 345
-        height: 297
-      alignment: 0
-      pivot: {x: .5, y: .5}
+        y: 417
+        width: 335
+        height: 294
+      alignment: 9
+      pivot: {x: .699999988, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CGD_-_Anteater_Shooting_1
       rect:
         serializedVersion: 2
         x: 81
-        y: 97
-        width: 341
-        height: 309
-      alignment: 0
-      pivot: {x: .5, y: .5}
+        y: 127
+        width: 330
+        height: 286
+      alignment: 9
+      pivot: {x: .699999988, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CGD_-_Anteater_Shooting_2
       rect:
         serializedVersion: 2
         x: 410
-        y: 422
-        width: 533
-        height: 285
-      alignment: 0
-      pivot: {x: .5, y: .5}
+        y: 431
+        width: 527
+        height: 287
+      alignment: 9
+      pivot: {x: .699999988, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CGD_-_Anteater_Shooting_3
       rect:
         serializedVersion: 2
-        x: 466
-        y: 137
-        width: 570
-        height: 289
-      alignment: 0
-      pivot: {x: .5, y: .5}
+        x: 467
+        y: 143
+        width: 531
+        height: 288
+      alignment: 9
+      pivot: {x: .699999988, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CGD_-_Anteater_Shooting_4
       rect:
         serializedVersion: 2
-        x: 1052
-        y: 410
-        width: 212
-        height: 310
+        x: 1095
+        y: 420
+        width: 137
+        height: 304
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CGD_-_Anteater_Shooting_5
       rect:
         serializedVersion: 2
-        x: 1108
-        y: 101
-        width: 160
-        height: 309
+        x: 1114
+        y: 111
+        width: 131
+        height: 306
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CGD_-_Anteater_Shooting_6
       rect:
         serializedVersion: 2
-        x: 1357
-        y: 97
-        width: 156
-        height: 309
+        x: 1367
+        y: 110
+        width: 148
+        height: 304
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CGD_-_Anteater_Shooting_7
       rect:
         serializedVersion: 2
-        x: 1336
-        y: 414
-        width: 169
-        height: 293
+        x: 1348
+        y: 419
+        width: 168
+        height: 303
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CGD_-_Anteater_Shooting_8
       rect:
         serializedVersion: 2
-        x: 1645
-        y: 366
-        width: 169
-        height: 305
+        x: 1664
+        y: 372
+        width: 145
+        height: 296
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CGD_-_Anteater_Shooting_9
       rect:
         serializedVersion: 2
-        x: 1665
-        y: 13
-        width: 165
-        height: 309
+        x: 1675
+        y: 26
+        width: 146
+        height: 296
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CGD_-_Anteater_Shooting_10
       rect:
         serializedVersion: 2
-        x: 1942
-        y: 354
-        width: 225
-        height: 365
+        x: 1927
+        y: 377
+        width: 222
+        height: 341
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CGD_-_Anteater_Shooting_11
       rect:
         serializedVersion: 2
-        x: 1954
-        y: 13
-        width: 221
-        height: 341
-      alignment: 0
-      pivot: {x: .5, y: .5}
+        x: 1937
+        y: 33
+        width: 220
+        height: 337
+      alignment: 9
+      pivot: {x: .701837718, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CGD_-_Anteater_Shooting_12
+      rect:
+        serializedVersion: 2
+        x: 2392
+        y: 370
+        width: 533
+        height: 276
+      alignment: 9
+      pivot: {x: .300000012, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CGD_-_Anteater_Shooting_13
+      rect:
+        serializedVersion: 2
+        x: 2331
+        y: 77
+        width: 535
+        height: 279
+      alignment: 9
+      pivot: {x: .300000012, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CGD_-_Anteater_Shooting_14
+      rect:
+        serializedVersion: 2
+        x: 2918
+        y: 63
+        width: 325
+        height: 279
+      alignment: 9
+      pivot: {x: .300000012, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CGD_-_Anteater_Shooting_15
+      rect:
+        serializedVersion: 2
+        x: 2979
+        y: 352
+        width: 323
+        height: 279
+      alignment: 9
+      pivot: {x: .300000012, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

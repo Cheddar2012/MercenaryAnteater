@@ -25,12 +25,14 @@ public class PlayerAnimator : MonoBehaviour {
 	public int spriteToShow = 0;
 
 	Health health;
+	Shooting shoot;
 
 	// Use this for initialization
 	void Start () {
 		renderer = (SpriteRenderer)GetComponent("SpriteRenderer");
 		movement = (Movement)GetComponent("Movement");
 		health = GameObject.Find("Player").GetComponent<Health>();
+		shoot = GameObject.Find("Player").GetComponent<Shooting>();
 
 		ResetFrameTimer();
 
@@ -58,6 +60,7 @@ public class PlayerAnimator : MonoBehaviour {
 				break;
 			}
 		}
+
 		else if(health.health > 0)
 		{
 			frameTimer -= Time.deltaTime;
@@ -77,6 +80,28 @@ public class PlayerAnimator : MonoBehaviour {
 				break;
 			case 4:
 				renderer.sprite = walkingSprites[12 + spriteToShow];
+				break;
+			}
+		}
+
+		if(shoot.shooting)
+		{
+			switch(movement.facing)
+			{
+			case 1:
+				renderer.sprite = walkingSprites[16];
+				break;
+				
+			case 2:
+				renderer.sprite = walkingSprites[17];
+				break;
+				
+			case 3:
+				renderer.sprite = walkingSprites[18];
+				break;
+				
+			case 4: 
+				renderer.sprite = walkingSprites[19];
 				break;
 			}
 		}
