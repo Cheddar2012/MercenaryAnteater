@@ -10,7 +10,7 @@ public class BatAnimator : MonoBehaviour
 	public int framesPerSecond = 10;
 
 	// The object's SpriteRenderer
-	public SpriteRenderer renderer;
+	public SpriteRenderer batRend;
 
 	// This enemy object's EnemyMovement script
 	public BatMovement batMove;
@@ -27,10 +27,10 @@ public class BatAnimator : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		renderer = (SpriteRenderer)GetComponent("SpriteRenderer");
+		batRend = (SpriteRenderer)GetComponent("SpriteRenderer");
 		batMove = (BatMovement)GetComponent("BatMovement");
 		ResetFrameTimer();
-		renderer.sprite = bats[2];
+		batRend.sprite = bats[2];
 	}
 	
 	// Update is called once per frame
@@ -45,12 +45,12 @@ public class BatAnimator : MonoBehaviour
 				ResetFrameTimer();
 			}
 
-			renderer.sprite = bats[spriteToShow];
+			batRend.sprite = bats[spriteToShow];
 		}
 
 		else
 		{
-			renderer.sprite = bats[2];
+			batRend.sprite = bats[2];
 		}
 	}
 

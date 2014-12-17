@@ -10,7 +10,7 @@ public class SnakeAnimator : MonoBehaviour {
 	public int framesPerSecond = 10;
 
 	// The object's SpriteRenderer
-	public SpriteRenderer renderer;
+	public SpriteRenderer snakeRend;
 
 	// This enemy object's EnemyMovement script
 	public EnemyMovement movement;
@@ -36,12 +36,12 @@ public class SnakeAnimator : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		renderer = (SpriteRenderer)GetComponent("SpriteRenderer");
+		snakeRend = (SpriteRenderer)GetComponent("SpriteRenderer");
 		movement = (EnemyMovement)GetComponent("EnemyMovement");
 
 		ResetFrameTimer();
 
-		renderer.sprite = sprites[0];
+		snakeRend.sprite = sprites[0];
 
 		sAttack = (SnakeAttack)GetComponent("SnakeAttack");
 
@@ -58,10 +58,10 @@ public class SnakeAnimator : MonoBehaviour {
 			{
 				switch (movement.facing) {
 				case 2:
-					renderer.sprite = sprites[0];
+					snakeRend.sprite = sprites[0];
 					break;
 				case 4:
-					renderer.sprite = sprites[4];
+					snakeRend.sprite = sprites[4];
 					break;
 				}
 			}
@@ -73,10 +73,10 @@ public class SnakeAnimator : MonoBehaviour {
 				}
 				switch (movement.facing) {
 				case 2:
-					renderer.sprite = sprites[spriteToShow];
+					snakeRend.sprite = sprites[spriteToShow];
 					break;
 				case 4:
-					renderer.sprite = sprites[4 + spriteToShow];
+					snakeRend.sprite = sprites[4 + spriteToShow];
 					break;
 				}
 			}
@@ -86,12 +86,12 @@ public class SnakeAnimator : MonoBehaviour {
 		{
 			if(movement.facing == 2)
 			{
-				renderer.sprite = sprites[3];
+				snakeRend.sprite = sprites[3];
 			}
 			
 			else
 			{
-				renderer.sprite = sprites[7];
+				snakeRend.sprite = sprites[7];
 			}
 			
 			attackTime = Time.time + attackTime;

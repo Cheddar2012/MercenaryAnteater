@@ -187,12 +187,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 32752530}
   - 212: {fileID: 32752529}
+  - 114: {fileID: 32752525}
   - 58: {fileID: 32752528}
   - 114: {fileID: 32752527}
   - 114: {fileID: 32752526}
-  - 114: {fileID: 32752525}
   m_Layer: 0
-  m_Name: Bat
+  m_Name: CGD_-_Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -229,7 +229,7 @@ MonoBehaviour:
   - {fileID: 21300002, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   - {fileID: 21300006, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   framesPerSecond: 5
-  renderer: {fileID: 0}
+  batRend: {fileID: 0}
   batMove: {fileID: 0}
   spriteToShow: 0
 --- !u!114 &32752527
@@ -368,8 +368,8 @@ GameObject:
   - 114: {fileID: 44619264}
   - 61: {fileID: 44619263}
   - 114: {fileID: 44619262}
-  - 50: {fileID: 44619261}
   - 114: {fileID: 44619260}
+  - 50: {fileID: 44619261}
   - 114: {fileID: 44619259}
   m_Layer: 0
   m_Name: CGD_-_Giraffe
@@ -395,7 +395,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300008, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300006, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
-  renderer: {fileID: 0}
+  giraffeRend: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
   gShoot: {fileID: 0}
@@ -772,8 +772,8 @@ GameObject:
   - 114: {fileID: 90979091}
   - 61: {fileID: 90979090}
   - 114: {fileID: 90979089}
-  - 50: {fileID: 90979088}
   - 114: {fileID: 90979087}
+  - 50: {fileID: 90979088}
   - 114: {fileID: 90979086}
   m_Layer: 0
   m_Name: CGD_-_Giraffe
@@ -799,7 +799,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300008, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300006, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
-  renderer: {fileID: 0}
+  giraffeRend: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
   gShoot: {fileID: 0}
@@ -1046,7 +1046,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   - {fileID: 21300002, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   framesPerSecond: 10
-  renderer: {fileID: 0}
+  snakeRend: {fileID: 0}
   movement: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
@@ -1334,8 +1334,8 @@ GameObject:
   - 114: {fileID: 134308779}
   - 61: {fileID: 134308778}
   - 114: {fileID: 134308777}
-  - 50: {fileID: 134308776}
   - 114: {fileID: 134308775}
+  - 50: {fileID: 134308776}
   - 114: {fileID: 134308774}
   m_Layer: 0
   m_Name: CGD_-_Giraffe
@@ -1361,7 +1361,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300008, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300006, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
-  renderer: {fileID: 0}
+  giraffeRend: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
   gShoot: {fileID: 0}
@@ -1493,12 +1493,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 148824705}
   - 212: {fileID: 148824704}
+  - 114: {fileID: 148824700}
   - 58: {fileID: 148824703}
   - 114: {fileID: 148824702}
   - 114: {fileID: 148824701}
-  - 114: {fileID: 148824700}
   m_Layer: 0
-  m_Name: Bat
+  m_Name: CGD_-_Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1535,7 +1535,7 @@ MonoBehaviour:
   - {fileID: 21300002, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   - {fileID: 21300006, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   framesPerSecond: 5
-  renderer: {fileID: 0}
+  batRend: {fileID: 0}
   batMove: {fileID: 0}
   spriteToShow: 0
 --- !u!114 &148824702
@@ -1803,12 +1803,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 176011801}
   - 212: {fileID: 176011800}
+  - 114: {fileID: 176011796}
   - 58: {fileID: 176011799}
   - 114: {fileID: 176011798}
   - 114: {fileID: 176011797}
-  - 114: {fileID: 176011796}
   m_Layer: 0
-  m_Name: Bat
+  m_Name: CGD_-_Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1845,7 +1845,7 @@ MonoBehaviour:
   - {fileID: 21300002, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   - {fileID: 21300006, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   framesPerSecond: 5
-  renderer: {fileID: 0}
+  batRend: {fileID: 0}
   batMove: {fileID: 0}
   spriteToShow: 0
 --- !u!114 &176011798
@@ -1964,7 +1964,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   - {fileID: 21300002, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   framesPerSecond: 10
-  renderer: {fileID: 0}
+  snakeRend: {fileID: 0}
   movement: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
@@ -2513,8 +2513,8 @@ GameObject:
   - 114: {fileID: 206157318}
   - 61: {fileID: 206157317}
   - 114: {fileID: 206157316}
-  - 50: {fileID: 206157315}
   - 114: {fileID: 206157314}
+  - 50: {fileID: 206157315}
   - 114: {fileID: 206157313}
   m_Layer: 0
   m_Name: CGD_-_Giraffe
@@ -2540,7 +2540,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300008, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300006, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
-  renderer: {fileID: 0}
+  giraffeRend: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
   gShoot: {fileID: 0}
@@ -2863,7 +2863,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   - {fileID: 21300002, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   framesPerSecond: 10
-  renderer: {fileID: 0}
+  snakeRend: {fileID: 0}
   movement: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
@@ -3204,7 +3204,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   - {fileID: 21300002, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   framesPerSecond: 10
-  renderer: {fileID: 0}
+  snakeRend: {fileID: 0}
   movement: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
@@ -3540,7 +3540,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   - {fileID: 21300002, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   framesPerSecond: 10
-  renderer: {fileID: 0}
+  snakeRend: {fileID: 0}
   movement: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
@@ -3765,7 +3765,7 @@ MonoBehaviour:
   - {fileID: 21300014, guid: 344b0a2c99af8a046ba108d61c2a53e7, type: 3}
   - {fileID: 21300028, guid: 344b0a2c99af8a046ba108d61c2a53e7, type: 3}
   framesPerSecond: 6
-  renderer: {fileID: 0}
+  playerRend: {fileID: 0}
   movement: {fileID: 0}
   spriteToShow: 0
 --- !u!114 &262001592
@@ -4388,8 +4388,8 @@ GameObject:
   - 114: {fileID: 338577081}
   - 61: {fileID: 338577080}
   - 114: {fileID: 338577079}
-  - 50: {fileID: 338577078}
   - 114: {fileID: 338577077}
+  - 50: {fileID: 338577078}
   - 114: {fileID: 338577076}
   m_Layer: 0
   m_Name: CGD_-_Giraffe
@@ -4415,7 +4415,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300008, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300006, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
-  renderer: {fileID: 0}
+  giraffeRend: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
   gShoot: {fileID: 0}
@@ -4708,8 +4708,8 @@ GameObject:
   - 114: {fileID: 358518479}
   - 61: {fileID: 358518478}
   - 114: {fileID: 358518477}
-  - 50: {fileID: 358518476}
   - 114: {fileID: 358518475}
+  - 50: {fileID: 358518476}
   - 114: {fileID: 358518474}
   m_Layer: 0
   m_Name: CGD_-_Giraffe
@@ -4735,7 +4735,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300008, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300006, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
-  renderer: {fileID: 0}
+  giraffeRend: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
   gShoot: {fileID: 0}
@@ -4919,12 +4919,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 390236354}
   - 212: {fileID: 390236353}
+  - 114: {fileID: 390236349}
   - 58: {fileID: 390236352}
   - 114: {fileID: 390236351}
   - 114: {fileID: 390236350}
-  - 114: {fileID: 390236349}
   m_Layer: 0
-  m_Name: Bat
+  m_Name: CGD_-_Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4961,7 +4961,7 @@ MonoBehaviour:
   - {fileID: 21300002, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   - {fileID: 21300006, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   framesPerSecond: 5
-  renderer: {fileID: 0}
+  batRend: {fileID: 0}
   batMove: {fileID: 0}
   spriteToShow: 0
 --- !u!114 &390236351
@@ -5144,7 +5144,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   - {fileID: 21300002, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   framesPerSecond: 10
-  renderer: {fileID: 0}
+  snakeRend: {fileID: 0}
   movement: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
@@ -5317,12 +5317,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 455746240}
   - 212: {fileID: 455746239}
+  - 114: {fileID: 455746235}
   - 58: {fileID: 455746238}
   - 114: {fileID: 455746237}
   - 114: {fileID: 455746236}
-  - 114: {fileID: 455746235}
   m_Layer: 0
-  m_Name: Bat
+  m_Name: CGD_-_Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5359,7 +5359,7 @@ MonoBehaviour:
   - {fileID: 21300002, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   - {fileID: 21300006, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   framesPerSecond: 5
-  renderer: {fileID: 0}
+  batRend: {fileID: 0}
   batMove: {fileID: 0}
   spriteToShow: 0
 --- !u!114 &455746237
@@ -5522,7 +5522,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   - {fileID: 21300002, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   framesPerSecond: 10
-  renderer: {fileID: 0}
+  snakeRend: {fileID: 0}
   movement: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
@@ -5788,7 +5788,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   - {fileID: 21300002, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   framesPerSecond: 10
-  renderer: {fileID: 0}
+  snakeRend: {fileID: 0}
   movement: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
@@ -6079,7 +6079,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   - {fileID: 21300002, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   framesPerSecond: 10
-  renderer: {fileID: 0}
+  snakeRend: {fileID: 0}
   movement: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
@@ -6459,8 +6459,8 @@ GameObject:
   - 114: {fileID: 581545231}
   - 61: {fileID: 581545230}
   - 114: {fileID: 581545229}
-  - 50: {fileID: 581545228}
   - 114: {fileID: 581545227}
+  - 50: {fileID: 581545228}
   - 114: {fileID: 581545226}
   m_Layer: 0
   m_Name: CGD_-_Giraffe
@@ -6486,7 +6486,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300008, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300006, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
-  renderer: {fileID: 0}
+  giraffeRend: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
   gShoot: {fileID: 0}
@@ -6704,8 +6704,8 @@ GameObject:
   - 114: {fileID: 627790648}
   - 61: {fileID: 627790647}
   - 114: {fileID: 627790646}
-  - 50: {fileID: 627790645}
   - 114: {fileID: 627790644}
+  - 50: {fileID: 627790645}
   - 114: {fileID: 627790643}
   m_Layer: 0
   m_Name: CGD_-_Giraffe
@@ -6731,7 +6731,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300008, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300006, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
-  renderer: {fileID: 0}
+  giraffeRend: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
   gShoot: {fileID: 0}
@@ -6866,8 +6866,8 @@ GameObject:
   - 114: {fileID: 642128352}
   - 61: {fileID: 642128351}
   - 114: {fileID: 642128350}
-  - 50: {fileID: 642128349}
   - 114: {fileID: 642128348}
+  - 50: {fileID: 642128349}
   - 114: {fileID: 642128347}
   m_Layer: 0
   m_Name: CGD_-_Giraffe
@@ -6893,7 +6893,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300008, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300006, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
-  renderer: {fileID: 0}
+  giraffeRend: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
   gShoot: {fileID: 0}
@@ -7060,7 +7060,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   - {fileID: 21300002, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   framesPerSecond: 10
-  renderer: {fileID: 0}
+  snakeRend: {fileID: 0}
   movement: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
@@ -7221,12 +7221,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 683939612}
   - 212: {fileID: 683939611}
+  - 114: {fileID: 683939607}
   - 58: {fileID: 683939610}
   - 114: {fileID: 683939609}
   - 114: {fileID: 683939608}
-  - 114: {fileID: 683939607}
   m_Layer: 0
-  m_Name: Bat
+  m_Name: CGD_-_Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7263,7 +7263,7 @@ MonoBehaviour:
   - {fileID: 21300002, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   - {fileID: 21300006, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   framesPerSecond: 5
-  renderer: {fileID: 0}
+  batRend: {fileID: 0}
   batMove: {fileID: 0}
   spriteToShow: 0
 --- !u!114 &683939609
@@ -7424,12 +7424,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 711177305}
   - 212: {fileID: 711177304}
+  - 114: {fileID: 711177300}
   - 58: {fileID: 711177303}
   - 114: {fileID: 711177302}
   - 114: {fileID: 711177301}
-  - 114: {fileID: 711177300}
   m_Layer: 0
-  m_Name: Bat
+  m_Name: CGD_-_Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7466,7 +7466,7 @@ MonoBehaviour:
   - {fileID: 21300002, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   - {fileID: 21300006, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   framesPerSecond: 5
-  renderer: {fileID: 0}
+  batRend: {fileID: 0}
   batMove: {fileID: 0}
   spriteToShow: 0
 --- !u!114 &711177302
@@ -7629,7 +7629,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   - {fileID: 21300002, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   framesPerSecond: 10
-  renderer: {fileID: 0}
+  snakeRend: {fileID: 0}
   movement: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
@@ -7758,12 +7758,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 729775314}
   - 212: {fileID: 729775313}
+  - 114: {fileID: 729775309}
   - 58: {fileID: 729775312}
   - 114: {fileID: 729775311}
   - 114: {fileID: 729775310}
-  - 114: {fileID: 729775309}
   m_Layer: 0
-  m_Name: Bat
+  m_Name: CGD_-_Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7800,7 +7800,7 @@ MonoBehaviour:
   - {fileID: 21300002, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   - {fileID: 21300006, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   framesPerSecond: 5
-  renderer: {fileID: 0}
+  batRend: {fileID: 0}
   batMove: {fileID: 0}
   spriteToShow: 0
 --- !u!114 &729775311
@@ -7932,12 +7932,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 744282708}
   - 212: {fileID: 744282707}
+  - 114: {fileID: 744282703}
   - 58: {fileID: 744282706}
   - 114: {fileID: 744282705}
   - 114: {fileID: 744282704}
-  - 114: {fileID: 744282703}
   m_Layer: 0
-  m_Name: Bat
+  m_Name: CGD_-_Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7974,7 +7974,7 @@ MonoBehaviour:
   - {fileID: 21300002, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   - {fileID: 21300006, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   framesPerSecond: 5
-  renderer: {fileID: 0}
+  batRend: {fileID: 0}
   batMove: {fileID: 0}
   spriteToShow: 0
 --- !u!114 &744282705
@@ -8061,8 +8061,8 @@ GameObject:
   - 114: {fileID: 763576301}
   - 61: {fileID: 763576300}
   - 114: {fileID: 763576299}
-  - 50: {fileID: 763576298}
   - 114: {fileID: 763576297}
+  - 50: {fileID: 763576298}
   - 114: {fileID: 763576296}
   m_Layer: 0
   m_Name: CGD_-_Giraffe
@@ -8088,7 +8088,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300008, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300006, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
-  renderer: {fileID: 0}
+  giraffeRend: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
   gShoot: {fileID: 0}
@@ -8223,8 +8223,8 @@ GameObject:
   - 114: {fileID: 771818892}
   - 61: {fileID: 771818891}
   - 114: {fileID: 771818890}
-  - 50: {fileID: 771818889}
   - 114: {fileID: 771818888}
+  - 50: {fileID: 771818889}
   - 114: {fileID: 771818887}
   m_Layer: 0
   m_Name: CGD_-_Giraffe
@@ -8250,7 +8250,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300008, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300006, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
-  renderer: {fileID: 0}
+  giraffeRend: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
   gShoot: {fileID: 0}
@@ -8473,8 +8473,8 @@ GameObject:
   - 114: {fileID: 783318759}
   - 61: {fileID: 783318758}
   - 114: {fileID: 783318757}
-  - 50: {fileID: 783318756}
   - 114: {fileID: 783318755}
+  - 50: {fileID: 783318756}
   - 114: {fileID: 783318754}
   m_Layer: 0
   m_Name: CGD_-_Giraffe
@@ -8500,7 +8500,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300008, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300006, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
-  renderer: {fileID: 0}
+  giraffeRend: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
   gShoot: {fileID: 0}
@@ -8918,8 +8918,8 @@ GameObject:
   - 114: {fileID: 836503325}
   - 61: {fileID: 836503324}
   - 114: {fileID: 836503323}
-  - 50: {fileID: 836503322}
   - 114: {fileID: 836503321}
+  - 50: {fileID: 836503322}
   - 114: {fileID: 836503320}
   m_Layer: 0
   m_Name: CGD_-_Giraffe
@@ -8945,7 +8945,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300008, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300006, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
-  renderer: {fileID: 0}
+  giraffeRend: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
   gShoot: {fileID: 0}
@@ -9174,12 +9174,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 858558474}
   - 212: {fileID: 858558473}
+  - 114: {fileID: 858558469}
   - 58: {fileID: 858558472}
   - 114: {fileID: 858558471}
   - 114: {fileID: 858558470}
-  - 114: {fileID: 858558469}
   m_Layer: 0
-  m_Name: Bat
+  m_Name: CGD_-_Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9216,7 +9216,7 @@ MonoBehaviour:
   - {fileID: 21300002, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   - {fileID: 21300006, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   framesPerSecond: 5
-  renderer: {fileID: 0}
+  batRend: {fileID: 0}
   batMove: {fileID: 0}
   spriteToShow: 0
 --- !u!114 &858558471
@@ -9367,8 +9367,8 @@ GameObject:
   - 114: {fileID: 863311506}
   - 61: {fileID: 863311505}
   - 114: {fileID: 863311504}
-  - 50: {fileID: 863311503}
   - 114: {fileID: 863311502}
+  - 50: {fileID: 863311503}
   - 114: {fileID: 863311501}
   m_Layer: 0
   m_Name: CGD_-_Giraffe
@@ -9394,7 +9394,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300008, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300006, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
-  renderer: {fileID: 0}
+  giraffeRend: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
   gShoot: {fileID: 0}
@@ -9573,8 +9573,8 @@ GameObject:
   - 114: {fileID: 869635287}
   - 61: {fileID: 869635286}
   - 114: {fileID: 869635285}
-  - 50: {fileID: 869635284}
   - 114: {fileID: 869635283}
+  - 50: {fileID: 869635284}
   - 114: {fileID: 869635282}
   m_Layer: 0
   m_Name: CGD_-_Giraffe
@@ -9600,7 +9600,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300008, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300006, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
-  renderer: {fileID: 0}
+  giraffeRend: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
   gShoot: {fileID: 0}
@@ -9732,12 +9732,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 870666893}
   - 212: {fileID: 870666892}
+  - 114: {fileID: 870666888}
   - 58: {fileID: 870666891}
   - 114: {fileID: 870666890}
   - 114: {fileID: 870666889}
-  - 114: {fileID: 870666888}
   m_Layer: 0
-  m_Name: Bat
+  m_Name: CGD_-_Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9774,7 +9774,7 @@ MonoBehaviour:
   - {fileID: 21300002, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   - {fileID: 21300006, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   framesPerSecond: 5
-  renderer: {fileID: 0}
+  batRend: {fileID: 0}
   batMove: {fileID: 0}
   spriteToShow: 0
 --- !u!114 &870666890
@@ -10355,7 +10355,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   - {fileID: 21300002, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   framesPerSecond: 10
-  renderer: {fileID: 0}
+  snakeRend: {fileID: 0}
   movement: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
@@ -10519,7 +10519,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   - {fileID: 21300002, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   framesPerSecond: 10
-  renderer: {fileID: 0}
+  snakeRend: {fileID: 0}
   movement: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
@@ -10756,12 +10756,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 999399248}
   - 212: {fileID: 999399247}
+  - 114: {fileID: 999399243}
   - 58: {fileID: 999399246}
   - 114: {fileID: 999399245}
   - 114: {fileID: 999399244}
-  - 114: {fileID: 999399243}
   m_Layer: 0
-  m_Name: Bat
+  m_Name: CGD_-_Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10798,7 +10798,7 @@ MonoBehaviour:
   - {fileID: 21300002, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   - {fileID: 21300006, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   framesPerSecond: 5
-  renderer: {fileID: 0}
+  batRend: {fileID: 0}
   batMove: {fileID: 0}
   spriteToShow: 0
 --- !u!114 &999399245
@@ -11152,12 +11152,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 1074296346}
   - 212: {fileID: 1074296345}
+  - 114: {fileID: 1074296341}
   - 58: {fileID: 1074296344}
   - 114: {fileID: 1074296343}
   - 114: {fileID: 1074296342}
-  - 114: {fileID: 1074296341}
   m_Layer: 0
-  m_Name: Bat
+  m_Name: CGD_-_Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11194,7 +11194,7 @@ MonoBehaviour:
   - {fileID: 21300002, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   - {fileID: 21300006, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   framesPerSecond: 5
-  renderer: {fileID: 0}
+  batRend: {fileID: 0}
   batMove: {fileID: 0}
   spriteToShow: 0
 --- !u!114 &1074296343
@@ -11342,12 +11342,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 1085904614}
   - 212: {fileID: 1085904613}
+  - 114: {fileID: 1085904609}
   - 58: {fileID: 1085904612}
   - 114: {fileID: 1085904611}
   - 114: {fileID: 1085904610}
-  - 114: {fileID: 1085904609}
   m_Layer: 0
-  m_Name: Bat
+  m_Name: CGD_-_Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11384,7 +11384,7 @@ MonoBehaviour:
   - {fileID: 21300002, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   - {fileID: 21300006, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   framesPerSecond: 5
-  renderer: {fileID: 0}
+  batRend: {fileID: 0}
   batMove: {fileID: 0}
   spriteToShow: 0
 --- !u!114 &1085904611
@@ -11547,7 +11547,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   - {fileID: 21300002, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   framesPerSecond: 10
-  renderer: {fileID: 0}
+  snakeRend: {fileID: 0}
   movement: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
@@ -11789,12 +11789,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 1099546036}
   - 212: {fileID: 1099546035}
+  - 114: {fileID: 1099546031}
   - 58: {fileID: 1099546034}
   - 114: {fileID: 1099546033}
   - 114: {fileID: 1099546032}
-  - 114: {fileID: 1099546031}
   m_Layer: 0
-  m_Name: Bat
+  m_Name: CGD_-_Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11831,7 +11831,7 @@ MonoBehaviour:
   - {fileID: 21300002, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   - {fileID: 21300006, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   framesPerSecond: 5
-  renderer: {fileID: 0}
+  batRend: {fileID: 0}
   batMove: {fileID: 0}
   spriteToShow: 0
 --- !u!114 &1099546033
@@ -11970,8 +11970,8 @@ GameObject:
   - 114: {fileID: 1102002533}
   - 61: {fileID: 1102002532}
   - 114: {fileID: 1102002531}
-  - 50: {fileID: 1102002530}
   - 114: {fileID: 1102002529}
+  - 50: {fileID: 1102002530}
   - 114: {fileID: 1102002528}
   m_Layer: 0
   m_Name: CGD_-_Giraffe
@@ -11997,7 +11997,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300008, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300006, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
-  renderer: {fileID: 0}
+  giraffeRend: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
   gShoot: {fileID: 0}
@@ -12224,12 +12224,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 1124864455}
   - 212: {fileID: 1124864454}
+  - 114: {fileID: 1124864450}
   - 58: {fileID: 1124864453}
   - 114: {fileID: 1124864452}
   - 114: {fileID: 1124864451}
-  - 114: {fileID: 1124864450}
   m_Layer: 0
-  m_Name: Bat
+  m_Name: CGD_-_Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12266,7 +12266,7 @@ MonoBehaviour:
   - {fileID: 21300002, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   - {fileID: 21300006, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   framesPerSecond: 5
-  renderer: {fileID: 0}
+  batRend: {fileID: 0}
   batMove: {fileID: 0}
   spriteToShow: 0
 --- !u!114 &1124864452
@@ -12353,8 +12353,8 @@ GameObject:
   - 114: {fileID: 1146383415}
   - 61: {fileID: 1146383414}
   - 114: {fileID: 1146383413}
-  - 50: {fileID: 1146383412}
   - 114: {fileID: 1146383411}
+  - 50: {fileID: 1146383412}
   - 114: {fileID: 1146383410}
   m_Layer: 0
   m_Name: CGD_-_Giraffe
@@ -12380,7 +12380,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300008, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300006, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
-  renderer: {fileID: 0}
+  giraffeRend: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
   gShoot: {fileID: 0}
@@ -13220,7 +13220,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   - {fileID: 21300002, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   framesPerSecond: 10
-  renderer: {fileID: 0}
+  snakeRend: {fileID: 0}
   movement: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
@@ -13396,8 +13396,8 @@ GameObject:
   - 114: {fileID: 1230225817}
   - 61: {fileID: 1230225816}
   - 114: {fileID: 1230225815}
-  - 50: {fileID: 1230225814}
   - 114: {fileID: 1230225813}
+  - 50: {fileID: 1230225814}
   - 114: {fileID: 1230225812}
   m_Layer: 0
   m_Name: CGD_-_Giraffe
@@ -13423,7 +13423,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300008, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300006, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
-  renderer: {fileID: 0}
+  giraffeRend: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
   gShoot: {fileID: 0}
@@ -13735,8 +13735,8 @@ GameObject:
   - 114: {fileID: 1268827704}
   - 61: {fileID: 1268827703}
   - 114: {fileID: 1268827702}
-  - 50: {fileID: 1268827701}
   - 114: {fileID: 1268827700}
+  - 50: {fileID: 1268827701}
   - 114: {fileID: 1268827699}
   m_Layer: 0
   m_Name: CGD_-_Giraffe
@@ -13762,7 +13762,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300008, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300006, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
-  renderer: {fileID: 0}
+  giraffeRend: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
   gShoot: {fileID: 0}
@@ -14050,7 +14050,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   - {fileID: 21300002, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   framesPerSecond: 10
-  renderer: {fileID: 0}
+  snakeRend: {fileID: 0}
   movement: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
@@ -14324,12 +14324,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 1334739420}
   - 212: {fileID: 1334739419}
+  - 114: {fileID: 1334739415}
   - 58: {fileID: 1334739418}
   - 114: {fileID: 1334739417}
   - 114: {fileID: 1334739416}
-  - 114: {fileID: 1334739415}
   m_Layer: 0
-  m_Name: Bat
+  m_Name: CGD_-_Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14366,7 +14366,7 @@ MonoBehaviour:
   - {fileID: 21300002, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   - {fileID: 21300006, guid: a43259d4da4a05c44a73ef23c7695543, type: 3}
   framesPerSecond: 5
-  renderer: {fileID: 0}
+  batRend: {fileID: 0}
   batMove: {fileID: 0}
   spriteToShow: 0
 --- !u!114 &1334739417
@@ -14453,8 +14453,8 @@ GameObject:
   - 114: {fileID: 1343611680}
   - 61: {fileID: 1343611679}
   - 114: {fileID: 1343611678}
-  - 50: {fileID: 1343611677}
   - 114: {fileID: 1343611676}
+  - 50: {fileID: 1343611677}
   - 114: {fileID: 1343611675}
   m_Layer: 0
   m_Name: CGD_-_Giraffe
@@ -14480,7 +14480,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300008, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300006, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
-  renderer: {fileID: 0}
+  giraffeRend: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
   gShoot: {fileID: 0}
@@ -15120,7 +15120,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   - {fileID: 21300002, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   framesPerSecond: 10
-  renderer: {fileID: 0}
+  snakeRend: {fileID: 0}
   movement: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
@@ -15284,7 +15284,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   - {fileID: 21300002, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   framesPerSecond: 10
-  renderer: {fileID: 0}
+  snakeRend: {fileID: 0}
   movement: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
@@ -15460,8 +15460,8 @@ GameObject:
   - 114: {fileID: 1504981825}
   - 61: {fileID: 1504981824}
   - 114: {fileID: 1504981823}
-  - 50: {fileID: 1504981822}
   - 114: {fileID: 1504981821}
+  - 50: {fileID: 1504981822}
   - 114: {fileID: 1504981820}
   m_Layer: 0
   m_Name: CGD_-_Giraffe
@@ -15487,7 +15487,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300008, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300006, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
-  renderer: {fileID: 0}
+  giraffeRend: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
   gShoot: {fileID: 0}
@@ -16737,8 +16737,8 @@ GameObject:
   - 114: {fileID: 1692238951}
   - 61: {fileID: 1692238950}
   - 114: {fileID: 1692238949}
-  - 50: {fileID: 1692238948}
   - 114: {fileID: 1692238947}
+  - 50: {fileID: 1692238948}
   - 114: {fileID: 1692238946}
   m_Layer: 0
   m_Name: CGD_-_Giraffe
@@ -16764,7 +16764,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300008, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300006, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
-  renderer: {fileID: 0}
+  giraffeRend: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
   gShoot: {fileID: 0}
@@ -18699,7 +18699,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   - {fileID: 21300002, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   framesPerSecond: 10
-  renderer: {fileID: 0}
+  snakeRend: {fileID: 0}
   movement: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
@@ -18831,8 +18831,8 @@ GameObject:
   - 114: {fileID: 1965732213}
   - 61: {fileID: 1965732212}
   - 114: {fileID: 1965732211}
-  - 50: {fileID: 1965732210}
   - 114: {fileID: 1965732209}
+  - 50: {fileID: 1965732210}
   - 114: {fileID: 1965732208}
   m_Layer: 0
   m_Name: CGD_-_Giraffe
@@ -18858,7 +18858,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300008, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300006, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
-  renderer: {fileID: 0}
+  giraffeRend: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
   gShoot: {fileID: 0}
@@ -19037,8 +19037,8 @@ GameObject:
   - 114: {fileID: 1987290315}
   - 61: {fileID: 1987290314}
   - 114: {fileID: 1987290313}
-  - 50: {fileID: 1987290312}
   - 114: {fileID: 1987290311}
+  - 50: {fileID: 1987290312}
   - 114: {fileID: 1987290310}
   m_Layer: 0
   m_Name: CGD_-_Giraffe
@@ -19064,7 +19064,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300008, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
   - {fileID: 21300006, guid: 05f1d3d62dd149e40a3cb1f377269bab, type: 3}
-  renderer: {fileID: 0}
+  giraffeRend: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
   gShoot: {fileID: 0}
@@ -19187,6 +19187,145 @@ Transform:
   m_Children: []
   m_Father: {fileID: 579591868}
   m_RootOrder: 0
+--- !u!1 &1994335085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1994335086}
+  - 212: {fileID: 1994335093}
+  - 114: {fileID: 1994335092}
+  - 61: {fileID: 1994335091}
+  - 114: {fileID: 1994335090}
+  - 114: {fileID: 1994335089}
+  - 50: {fileID: 1994335088}
+  - 114: {fileID: 1994335087}
+  m_Layer: 0
+  m_Name: CGD_-_Rabbit
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1994335086
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1994335085}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 341.298615, y: -163.887985, z: 0}
+  m_LocalScale: {x: 20, y: 20, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+--- !u!114 &1994335087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1994335085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bb8bc8665528a843896c31e094bccd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &1994335088
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1994335085}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!114 &1994335089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1994335085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52c092474bd4e4b41bbe39486726f382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 500
+  attackCooldown: 1
+  bullet: {fileID: 100000, guid: a6efb7f42b455da4187c30cd001a555e, type: 2}
+  multiplier: 5
+  rm: {fileID: 0}
+  player: {fileID: 0}
+  nextShotTime: 0
+--- !u!114 &1994335090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1994335085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15d430193c5a1224c8f8d9b6310d9759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 15
+  aggroRange: 100
+  mobile: 0
+  facing: 0
+--- !u!61 &1994335091
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1994335085}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 2, y: 2.42000008}
+  m_Center: {x: -.5, y: 0}
+--- !u!114 &1994335092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1994335085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404543907801b0a41940ea89a2227658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  poisoned: 0
+--- !u!212 &1994335093
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1994335085}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 1092625971
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300004, guid: 684812b26ba059f4093551905e487881, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1998181593
 GameObject:
   m_ObjectHideFlags: 0
@@ -19440,7 +19579,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   - {fileID: 21300002, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   framesPerSecond: 10
-  renderer: {fileID: 0}
+  snakeRend: {fileID: 0}
   movement: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
@@ -19712,7 +19851,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   - {fileID: 21300002, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   framesPerSecond: 10
-  renderer: {fileID: 0}
+  snakeRend: {fileID: 0}
   movement: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
@@ -19876,7 +20015,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   - {fileID: 21300002, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   framesPerSecond: 10
-  renderer: {fileID: 0}
+  snakeRend: {fileID: 0}
   movement: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
@@ -20040,7 +20179,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   - {fileID: 21300002, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   framesPerSecond: 10
-  renderer: {fileID: 0}
+  snakeRend: {fileID: 0}
   movement: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}
@@ -20820,7 +20959,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   - {fileID: 21300002, guid: 66c97802a8d070d4a92afe377b047162, type: 3}
   framesPerSecond: 10
-  renderer: {fileID: 0}
+  snakeRend: {fileID: 0}
   movement: {fileID: 0}
   spriteToShow: 0
   player: {fileID: 0}

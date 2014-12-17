@@ -34,7 +34,7 @@ public class Shooting : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		player = GameObject.Find ("Player").GetComponent<Movement> ();
+		player = GameObject.Find ("Player").GetComponent<Movement>();
 		shotStamp = 0;
 		multiplier = 1;
 		shooting = false;
@@ -48,8 +48,6 @@ public class Shooting : MonoBehaviour {
 		//  long enough of a cooldown
 		if(Input.GetKeyDown (code) && (! shooting) && (health.health > 0) )
 		{
-
-
 			GameObject shooter;
 
 			switch(player.facing)

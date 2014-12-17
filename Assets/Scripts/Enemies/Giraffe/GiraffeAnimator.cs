@@ -5,7 +5,7 @@ public class GiraffeAnimator : MonoBehaviour
 {
 	// JH borrowed this from playerAnimator
 	public Sprite[] animals;
-	public SpriteRenderer renderer;
+	public SpriteRenderer giraffeRend;
 	public int spriteToShow;
 	public GameObject player;
 
@@ -20,7 +20,7 @@ public class GiraffeAnimator : MonoBehaviour
 	void Start () 
 	{
 		player = GameObject.Find ("Player");
-		renderer = (SpriteRenderer)GetComponent("SpriteRenderer");
+		giraffeRend = (SpriteRenderer)GetComponent("SpriteRenderer");
 		gShoot = (GiraffeShooting)GetComponent("GiraffeShooting");
 		direction = 2;
 	}
@@ -35,14 +35,14 @@ public class GiraffeAnimator : MonoBehaviour
 			if( (player.transform.position.x - transform.position.x < 0) )
 			{
 				direction = 2;
-				renderer.sprite = animals[0];
+				giraffeRend.sprite = animals[0];
 			}
 			
 			// jh facing right
 			else
 			{
 				direction = 4;
-				renderer.sprite = animals[2];
+				giraffeRend.sprite = animals[2];
 			}
 		}
 
@@ -51,12 +51,12 @@ public class GiraffeAnimator : MonoBehaviour
 		{
 			if(direction == 2)
 			{
-				renderer.sprite = animals[1];
+				giraffeRend.sprite = animals[1];
 			}
 
 			else
 			{
-				renderer.sprite = animals[3];
+				giraffeRend.sprite = animals[3];
 			}
 
 			shootTime = Time.time + shootTime;

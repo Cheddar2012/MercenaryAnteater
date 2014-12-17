@@ -9,7 +9,7 @@ public class EnemyBullet : MonoBehaviour {
 	public int direction{ get; set; }
 	// Use this for initialization
 	void Start () {
-		direction = transform.parent.gameObject.GetComponent<EnemyMovement>().facing;
+		// direction = transform.parent.gameObject.GetComponent<EnemyMovement>().facing;
 	}
 
 	

@@ -9,12 +9,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
+  - 114: {fileID: 11400004}
   - 58: {fileID: 5800000}
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400002}
-  - 114: {fileID: 11400004}
   m_Layer: 0
-  m_Name: Bat
+  m_Name: CGD_-_Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

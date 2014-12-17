@@ -4,12 +4,11 @@ using System.Collections;
 public class AntHill : MonoBehaviour {
 
 	Health thisHealth;
-	private GameObject player;
 
 	// Use this for initialization
 	void Start () 
 	{
-		player = GameObject.Find("Player");
+
 	}
 	
 	// Update is called once per frame

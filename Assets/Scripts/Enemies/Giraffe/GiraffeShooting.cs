@@ -19,7 +19,7 @@ public class GiraffeShooting : MonoBehaviour {
 	public float shootTime = 0.4f;
 	public float stopShoot;
 
-	public float shotForce = 150;
+	public int shotForce = 150;
 
 	// Use this for initialization
 	void Start () {
@@ -51,7 +51,7 @@ public class GiraffeShooting : MonoBehaviour {
 	{
 		facing = em.facing;
 		
-		if (player != null && InAggroRange() && TimeToShoot() ) 
+		if (InAggroRange() && TimeToShoot() ) 
 		{
 			// print ("FORE");
 			

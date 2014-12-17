@@ -4,7 +4,7 @@ using System.Collections;
 public class BulletScript : MonoBehaviour {
 
 	public float damage = 10;
-	public float pushForce = 250;
+	public float pushForce = 1;
 
 	private int direction;
 	

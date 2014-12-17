@@ -38,7 +38,7 @@ public class EnemyShooting : MonoBehaviour {
 		if (player != null && InAgroRange() && (player.transform.position.y - transform.position.y) < 3
 		    	&& TimeToShoot()) 
 		{
-			print ("FORE");
+			// print ("FORE");
 
 			GameObject clone;
 

@@ -10,7 +10,7 @@ public class PlayerAnimator : MonoBehaviour {
 	public int framesPerSecond = 10;
 
 	// The player object's SpriteRenderer
-	public SpriteRenderer renderer;
+	public SpriteRenderer playerRend;
 
 	// This player object's Movement script
 	public Movement movement;
@@ -29,7 +29,7 @@ public class PlayerAnimator : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		renderer = (SpriteRenderer)GetComponent("SpriteRenderer");
+		playerRend = (SpriteRenderer)GetComponent("SpriteRenderer");
 		movement = (Movement)GetComponent("Movement");
 		health = GameObject.Find("Player").GetComponent<Health>();
 		shoot = GameObject.Find("Player").GetComponent<Shooting>();
@@ -38,7 +38,7 @@ public class PlayerAnimator : MonoBehaviour {
 
 		CalculateNumberOfFrames();
 
-		renderer.sprite = walkingSprites[0];
+		playerRend.sprite = walkingSprites[0];
 	}
 	
 	// Update is called once per frame
@@ -47,16 +47,16 @@ public class PlayerAnimator : MonoBehaviour {
 		{
 			switch (movement.facing) {
 			case 1:
-				renderer.sprite = walkingSprites[0];
+				playerRend.sprite = walkingSprites[0];
 				break;
 			case 2:
-				renderer.sprite = walkingSprites[5];
+				playerRend.sprite = walkingSprites[5];
 				break;
 			case 3:
-				renderer.sprite = walkingSprites[9];
+				playerRend.sprite = walkingSprites[9];
 				break;
 			case 4:
-				renderer.sprite = walkingSprites[13];
+				playerRend.sprite = walkingSprites[13];
 				break;
 			}
 		}
@@ -70,16 +70,16 @@ public class PlayerAnimator : MonoBehaviour {
 			}
 			switch (movement.facing) {
 			case 1:
-				renderer.sprite = walkingSprites[spriteToShow];
+				playerRend.sprite = walkingSprites[spriteToShow];
 				break;
 			case 2:
-				renderer.sprite = walkingSprites[4 + spriteToShow];
+				playerRend.sprite = walkingSprites[4 + spriteToShow];
 				break;
 			case 3:
-				renderer.sprite = walkingSprites[8 + spriteToShow];
+				playerRend.sprite = walkingSprites[8 + spriteToShow];
 				break;
 			case 4:
-				renderer.sprite = walkingSprites[12 + spriteToShow];
+				playerRend.sprite = walkingSprites[12 + spriteToShow];
 				break;
 			}
 		}
@@ -89,19 +89,19 @@ public class PlayerAnimator : MonoBehaviour {
 			switch(movement.facing)
 			{
 			case 1:
-				renderer.sprite = walkingSprites[16];
+				playerRend.sprite = walkingSprites[16];
 				break;
 				
 			case 2:
-				renderer.sprite = walkingSprites[17];
+				playerRend.sprite = walkingSprites[17];
 				break;
 				
 			case 3:
-				renderer.sprite = walkingSprites[18];
+				playerRend.sprite = walkingSprites[18];
 				break;
 				
 			case 4: 
-				renderer.sprite = walkingSprites[19];
+				playerRend.sprite = walkingSprites[19];
 				break;
 			}
 		}
