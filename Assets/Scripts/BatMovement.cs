@@ -18,51 +18,70 @@ public class BatMovement : MonoBehaviour {
 	public float nextMove;
 	public float nextRest;
 
+	public int upDist;
+	public int leftDist;
+	public int downDist;
+	public int rightDist;
+
+	public float top; 
+	public float left;
+	public float bottom;
+	public float right;
+
 	// Use this for initialization
 	void Start () {
 		speed = 2;
 		damage = 5;
 		xDir = 1;
 		yDir = 1;
-		xPrev = xDir;
-		yPrev = yDir;
+		// xPrev = xDir;
+		// yPrev = yDir;
 
 		moving = true;
 		nextRest = 8.0f;
 		nextMove = 11.0f;
+
+		upDist = leftDist = downDist = rightDist = 300;
+
+		top = transform.position.y + upDist;
+		left = transform.position.x - leftDist;
+		bottom = transform.position.y - downDist;
+		right = transform.position.x + rightDist;
 	}
 
 	void ChangeDirection() {
 		xDir = Random.Range(-0.9f, 0.9f);
 		yDir = Random.Range(-0.9f, 0.9f);
 
-		/*
-		// a series of conditions to set minimum speed to 0.2f in any direction
-		if((xDir < 0 ) && (xDir > -0.5f) )
-		{
-			xDir = -0.5f;
-		}
-
-		if( (xDir >= 0) && (xDir < 0.5f) ) // 
-		{
-			xDir = 0.5f;
-		}
-
-		if((yDir < 0 ) && (yDir > -0.5f) )
-		{
-			yDir = -0.5f;
-		}
-		
-		if( (yDir >= 0) && (yDir < 0.5f) )
-		{
-			yDir = 0.5f;
-		}
-		*/
+		speed = Random.Range (1,5);
 
 		// transform.position -= new Vector3 (0.5f, 0.5f, 0.0f);
 	}
 
-	void Move() {
+	void Move() 
+	{
+		if(transform.position.y > top)
+		{
+			yDir = -1;
+			// xDir = Random.Range(-0.9f, 0.9f);
+		}
+
+		else if(transform.position.y < bottom)
+		{
+			yDir = 1;
+		}
+
+		if(transform.position.x > right)
+		{
+			xDir = -1;
+			// yDir = Random.Range(-0.9f, 0.9f);
+		}
+
+		else if(transform.position.x < left)
+		{
+			xDir = 1;
+		}
+
 		transform.position += new Vector3 (xDir * speed, yDir * speed, 0);
 	}
 
@@ -100,6 +119,8 @@ public class BatMovement : MonoBehaviour {
 			// do nothing
 		}
 
+		// if at rest and time to start moving again, 
+		// start moving again
 		if(!moving && Time.time > nextMove)
 		{
 			moving = true;

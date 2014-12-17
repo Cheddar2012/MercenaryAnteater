@@ -3,8 +3,8 @@ using System.Collections;
 
 public class BulletScript : MonoBehaviour {
 
-	public float damage = 20;
-	public float pushForce = 20;
+	public float damage = 10;
+	public float pushForce = 250;
 
 	private int direction;
 	

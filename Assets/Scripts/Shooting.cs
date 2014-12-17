@@ -17,12 +17,8 @@ public class Shooting : MonoBehaviour {
 	// JH adding code for shotgun
 	public KeyCode shotgun = KeyCode.V;
 
-
 	private float multiplier; 	// RS: is the distance between player and bullet's instantiation
 	private Movement player; 	// RS: gets the player's movement script for "facing"
-	private float basicShotStamp;
-	private float rapidShotStamp;
-	private float shotgunShotStamp;
 
 	private float shotStamp;
 
@@ -39,9 +35,6 @@ public class Shooting : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find ("Player").GetComponent<Movement> ();
-		basicShotStamp = 0;
-		rapidShotStamp = 0;
-		shotgunShotStamp = 0;
 		shotStamp = 0;
 		multiplier = 1;
 		shooting = false;
