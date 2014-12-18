@@ -6,14 +6,16 @@ public class RabbitMovement : MonoBehaviour {
 	// RS: The enemy will run towards the player if the player is within
 	//	"agroRange". 
 	
-	public float speed = 15.0f;				// RS: movespeed
-	public float aggroRange = 100.0f;		// RS: distance to trigger following
+	public float speed = 25.0f;				// RS: movespeed
+	public float aggroRange = 300.0f;		// RS: distance to trigger following
 	public bool mobile = true;				// RS: tells if player CAN move
 	public bool moving {get; private set;}	// RS: tells if moving
 	
 	public int facing;	// RS: direction facing: 2-Left, 4-Right
 	private bool stop;						// RS: whether enemy is stopped or not
 	private GameObject player;
+
+	RabbitShooting rabShoot;
 	// Use this for initialization
 	void Start () {
 		// JH starts facing to the right
@@ -21,6 +23,7 @@ public class RabbitMovement : MonoBehaviour {
 		stop = false;
 		player = GameObject.Find ("Player");
 		moving = false;
+		rabShoot = GetComponent<RabbitShooting>();
 	}
 	
 	void OnCollisionEnter2D(Collision2D col)
@@ -76,7 +79,7 @@ public class RabbitMovement : MonoBehaviour {
 		*/
 
 		// RS: if within agroRange, enemy will move towards player
-		if (playerInAggroRange() && !stop && speed > 0 && mobile)
+		if (playerInAggroRange() && !stop && (speed > 0) && mobile && (!rabShoot.shooting) )
 		{
 			float step = speed * Time.deltaTime;
 			transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);

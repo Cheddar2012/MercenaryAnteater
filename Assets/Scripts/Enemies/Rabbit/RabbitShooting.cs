@@ -3,14 +3,19 @@ using System.Collections;
 
 public class RabbitShooting : MonoBehaviour {
 	
-	public int attackRange = 500;
-	public int attackCooldown = 2;
+	public int attackRange = 200;
+	public int attackCooldown = 3;
 	public GameObject bullet;
 	public int multiplier = 5;
 	
 	public RabbitMovement rm; 			
 	public GameObject player;
 	public float nextShotTime;
+
+	public float shootingTime = 0.5f;
+	public float shotEnds;
+
+	public bool shooting;
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find ("Player");
@@ -43,31 +48,41 @@ public class RabbitShooting : MonoBehaviour {
 					Vector3 upAdj = new Vector3(0, -5, 0) + Vector3.up;
 					clone = (GameObject) Instantiate(bullet, transform.position + upAdj * multiplier, Quaternion.identity);
 					clone.transform.parent = gameObject.transform;
-					clone.rigidbody2D.AddForce(new Vector2(0, 2) );
+					clone.transform.Rotate(new Vector3(0, 0, 1), 270);
+					clone.rigidbody2D.AddForce(new Vector2(0, 1.5f) );
 					break;
 				case 2: 
 					Vector3 leftAdj = new Vector3(-5, 0, 0) + Vector3.left;
 					clone = (GameObject) Instantiate(bullet, transform.position + leftAdj * multiplier, Quaternion.identity);
 					clone.transform.parent = gameObject.transform;
-					clone.rigidbody2D.AddForce(new Vector2(-2, 0) );
+					clone.rigidbody2D.AddForce(new Vector2(-1.5f, 0) );
 					break;
-				case 3:
+				case 3: 
 					Vector3 downAdj = new Vector3(0, 5, 0) + Vector3.down;
 					clone = (GameObject) Instantiate(bullet, transform.position + downAdj * multiplier, Quaternion.identity);
 					clone.transform.parent = gameObject.transform;
-					clone.rigidbody2D.AddForce(new Vector2(0, -2) );
+					clone.transform.Rotate(new Vector3(0, 0, 1), 90);
+					clone.rigidbody2D.AddForce(new Vector2(0, -1.5f) );
 					break;
 				case 4:
 					Vector3 rightAdj = new Vector3(5, 0, 0) + Vector3.right;
 					clone = (GameObject) Instantiate(bullet, transform.position + rightAdj * multiplier, Quaternion.identity);
 					clone.transform.parent = gameObject.transform;
-					clone.rigidbody2D.AddForce(new Vector2(2, 0) );
+					clone.transform.Rotate(Vector3.up, 180);
+					clone.rigidbody2D.AddForce(new Vector2(1.5f, 0) );
 					break;
 			}
+
+			shooting = true;
 			
-			nextShotTime = Time.time + attackCooldown;			
+			nextShotTime = Time.time + attackCooldown;
+			shotEnds = Time.time + shootingTime;
 		}
-		
+
+		if(Time.time > shotEnds)
+		{
+			shooting = false;
+		}
 	}
 }
 
