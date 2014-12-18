@@ -32,6 +32,8 @@ public class Shooting : MonoBehaviour {
 	private Ammo playerAmmo;
 	Health health;
 
+	int pushForce = 250;
+
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find ("Player").GetComponent<Movement>();
@@ -44,6 +46,7 @@ public class Shooting : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+
 		// RS: if the player wants to shoot, we make sure that it has been 
 		//  long enough of a cooldown
 		if(Input.GetKeyDown (code) && (! shooting) && (health.health > 0) )
@@ -54,15 +57,19 @@ public class Shooting : MonoBehaviour {
 			{
 			case 1:
 				shooter = (GameObject) Instantiate(bullet, (transform.position + firingUpAdj) + 25 * multiplier * Vector3.up , Quaternion.identity);
+				shooter.rigidbody2D.velocity = new Vector2(0, pushForce);
 				break;
 			case 2:
 				shooter = (GameObject) Instantiate(bullet, (transform.position + firingLeftAdj) + multiplier * Vector3.left , Quaternion.identity);
+				shooter.rigidbody2D.velocity = new Vector2(-pushForce, 0);
 				break;
 			case 3:
 				shooter = (GameObject) Instantiate(bullet, (transform.position + firingDownAdj) + multiplier * Vector3.down , Quaternion.identity);
+				shooter.rigidbody2D.velocity = new Vector2(0, -pushForce);
 				break;
 			case 4:
 				shooter = (GameObject) Instantiate(bullet, (transform.position + firingRightAdj) + multiplier * Vector3.right , Quaternion.identity);
+				shooter.rigidbody2D.velocity = new Vector2(pushForce, 0);
 				break;
 			}
 
@@ -85,51 +92,55 @@ public class Shooting : MonoBehaviour {
 			switch(player.facing)
 			{
 			case 1:
-				rapid1 = (GameObject) Instantiate(bullet, (transform.position + firingUpAdj) + 27 * multiplier * Vector3.up , Quaternion.identity);
+				rapid1 = (GameObject) Instantiate(bullet, (transform.position + firingUpAdj) + 35 * multiplier * Vector3.up , Quaternion.identity);
+				rapid1.rigidbody2D.velocity = (new Vector2(0, pushForce) );
 
-				rapid2 = (GameObject) Instantiate(bullet, (transform.position + firingUpAdj) + 26 * multiplier * Vector3.up , Quaternion.identity);
-				rapid2.rigidbody2D.AddForce(new Vector2(0, -20) );
+				rapid2 = (GameObject) Instantiate(bullet, (transform.position + firingUpAdj) + 30 * multiplier * Vector3.up , Quaternion.identity);
+				rapid2.rigidbody2D.velocity = (new Vector2(0, pushForce - 40) );
 
 				rapid3 = (GameObject) Instantiate(bullet, (transform.position + firingUpAdj) + 25 * multiplier * Vector3.up , Quaternion.identity);
-				rapid3.rigidbody2D.AddForce(new Vector2(0, -40) );
-
+				rapid3.rigidbody2D.velocity = (new Vector2(0, pushForce - 80) );
 				break;
 
 			case 2:
-				rapid1 = (GameObject) Instantiate(bullet, (transform.position + firingLeftAdj) + multiplier * Vector3.left , Quaternion.identity);
-				rapid1.rigidbody2D.transform.position = new Vector2(rapid1.rigidbody2D.transform.position.x -2, rapid1.rigidbody2D.transform.position.y);
+				Vector3 fire1left = firingLeftAdj + new Vector3(-10, 0, 0);
+				rapid1 = (GameObject) Instantiate(bullet, (transform.position + fire1left) + multiplier * Vector3.left , Quaternion.identity);
+				rapid1.rigidbody2D.velocity = (new Vector2(-pushForce, 0) );
 
-				rapid2 = (GameObject) Instantiate(bullet, (transform.position + firingLeftAdj) + multiplier * Vector3.left, Quaternion.identity);
-				rapid2.rigidbody2D.transform.position = new Vector2(rapid2.rigidbody2D.transform.position.x -1, rapid2.rigidbody2D.transform.position.y);
-				rapid2.rigidbody2D.AddForce(new Vector2(20, 0) );
+				Vector3 fire2left = firingLeftAdj + new Vector3(-5, 0, 0);
+				rapid2 = (GameObject) Instantiate(bullet, (transform.position + fire2left) + multiplier * Vector3.left, Quaternion.identity);
+				rapid2.rigidbody2D.velocity = (new Vector2(-pushForce + 40, 0) );
+
 
 				rapid3 = (GameObject) Instantiate(bullet, (transform.position + firingLeftAdj) + multiplier * Vector3.left, Quaternion.identity);
-				rapid3.rigidbody2D.AddForce(new Vector2(40, 0) );
+				rapid3.rigidbody2D.velocity = (new Vector2(-pushForce + 80, 0) );
 
 				break;
 
 			case 3:
-				rapid1 = (GameObject) Instantiate(bullet, (transform.position + firingDownAdj) + multiplier * Vector3.down , Quaternion.identity);
-				rapid1.rigidbody2D.transform.position = new Vector2(rapid1.rigidbody2D.transform.position.x, rapid1.rigidbody2D.transform.position.y -2);
+				Vector3 fire1down = firingDownAdj + new Vector3(0, -10, 0);
+				rapid1 = (GameObject) Instantiate(bullet, (transform.position + fire1down) + multiplier * Vector3.down , Quaternion.identity);
+				rapid1.rigidbody2D.velocity = (new Vector2(0, -pushForce) );
 
-				rapid2 = (GameObject) Instantiate(bullet, (transform.position + firingDownAdj) + multiplier * Vector3.down , Quaternion.identity);
-				rapid2.rigidbody2D.transform.position = new Vector2(rapid2.rigidbody2D.transform.position.x, rapid2.rigidbody2D.transform.position.y -1);
-				rapid2.rigidbody2D.AddForce(new Vector2(0, 20) );
+				Vector3 fire2down = firingDownAdj + new Vector3(0, -5, 0);
+				rapid2 = (GameObject) Instantiate(bullet, (transform.position + fire2down) + multiplier * Vector3.down , Quaternion.identity);
+				rapid2.rigidbody2D.velocity = (new Vector2(0, -pushForce + 40) );
 
 				rapid3 = (GameObject) Instantiate(bullet, (transform.position + firingDownAdj) + multiplier * Vector3.down , Quaternion.identity);
-				rapid3.rigidbody2D.AddForce(new Vector2(0, 40) );
+				rapid3.rigidbody2D.velocity = (new Vector2(0, -pushForce + 80) );
 				break;
 
 			case 4:
-				rapid1 = (GameObject) Instantiate(bullet, (transform.position + firingRightAdj) + multiplier * Vector3.right , Quaternion.identity);
-				rapid1.rigidbody2D.transform.position = new Vector2(rapid1.rigidbody2D.transform.position.x + 4, rapid1.rigidbody2D.transform.position.y);
+				Vector3 fire1right = firingRightAdj + new Vector3(10, 0, 0);
+				rapid1 = (GameObject) Instantiate(bullet, (transform.position + fire1right) + multiplier * Vector3.right , Quaternion.identity);
+				rapid1.rigidbody2D.velocity = (new Vector2(pushForce, 0) );
 
-				rapid2 = (GameObject) Instantiate(bullet, (transform.position + firingRightAdj) + multiplier * Vector3.right , Quaternion.identity);
-				rapid2.rigidbody2D.transform.position = new Vector2(rapid2.rigidbody2D.transform.position.x + 2, rapid2.rigidbody2D.transform.position.y);
-				rapid2.rigidbody2D.AddForce(new Vector2(-20, 0) );
+				Vector3 fire2right = firingRightAdj + new Vector3(5, 0, 0); // 
+				rapid2 = (GameObject) Instantiate(bullet, (transform.position + fire2right) + multiplier * Vector3.right , Quaternion.identity);
+				rapid2.rigidbody2D.velocity = (new Vector2(pushForce - 40, 0) );
 
 				rapid3 = (GameObject) Instantiate(bullet, (transform.position + firingRightAdj) + multiplier * Vector3.right , Quaternion.identity);
-				rapid3.rigidbody2D.AddForce(new Vector2(-40, 0) );
+				rapid3.rigidbody2D.velocity = (new Vector2(pushForce - 80, 0) );
 				break;
 			}
 
@@ -155,39 +166,43 @@ public class Shooting : MonoBehaviour {
 			{
 			case 1:
 				shell1 = (GameObject) Instantiate(bullet, (transform.position + firingUpAdj) + 25 * multiplier * Vector3.up , Quaternion.identity);
+				shell1.rigidbody2D.velocity = new Vector2(0, pushForce);
 				
 				shell2 = (GameObject) Instantiate(bullet, (transform.position + firingUpAdj) + 25 * multiplier * Vector3.up , Quaternion.identity);
-				shell2.rigidbody2D.AddForce(new Vector2(100, 0) );
+				shell2.rigidbody2D.velocity = (new Vector2(100, pushForce) );
 				
 				shell3 = (GameObject) Instantiate(bullet, (transform.position + firingUpAdj) + 25 * multiplier * Vector3.up , Quaternion.identity);
-				shell3.rigidbody2D.AddForce(new Vector2(-100, 0) );
+				shell3.rigidbody2D.velocity += (new Vector2(-100, pushForce) );
 				break;
 			case 2:
 				shell1 = (GameObject) Instantiate(bullet, (transform.position + firingLeftAdj) + multiplier * Vector3.left , Quaternion.identity);
-				
+				shell1.rigidbody2D.velocity = new Vector2(-pushForce, 0);
+
 				shell2 = (GameObject) Instantiate(bullet, (transform.position + firingLeftAdj) + multiplier * Vector3.left , Quaternion.identity);
-				shell2.rigidbody2D.AddForce(new Vector2(0, 100) );
+				shell2.rigidbody2D.velocity = (new Vector2(-pushForce, 100) );
 				
 				shell3 = (GameObject) Instantiate(bullet, (transform.position + firingLeftAdj) + multiplier * Vector3.left , Quaternion.identity);
-				shell3.rigidbody2D.AddForce(new Vector2(0, -100) );
+				shell3.rigidbody2D.velocity = (new Vector2(-pushForce, -100) );
 				break;
 			case 3:
 				shell1 = (GameObject) Instantiate(bullet, (transform.position + firingDownAdj) + multiplier * Vector3.down , Quaternion.identity);
-				
+				shell1.rigidbody2D.velocity = new Vector2(0, -pushForce);
+
 				shell2 = (GameObject) Instantiate(bullet, (transform.position + firingDownAdj) + multiplier * Vector3.down , Quaternion.identity);
-				shell2.rigidbody2D.AddForce(new Vector2(-100, 0) );
+				shell2.rigidbody2D.velocity = (new Vector2(-100, -pushForce) );
 				
 				shell3 = (GameObject) Instantiate(bullet, (transform.position + firingDownAdj) + multiplier * Vector3.down , Quaternion.identity);
-				shell3.rigidbody2D.AddForce(new Vector2(100, 0) );
+				shell3.rigidbody2D.velocity = (new Vector2(100, -pushForce) );
 				break;
 			case 4:
 				shell1 = (GameObject) Instantiate(bullet, (transform.position + firingRightAdj) + multiplier * Vector3.right , Quaternion.identity);
-				
+				shell1.rigidbody2D.velocity = new Vector2(pushForce, 0);
+
 				shell2 = (GameObject) Instantiate(bullet, (transform.position + firingRightAdj) + multiplier * Vector3.right , Quaternion.identity);
-				shell2.rigidbody2D.AddForce(new Vector2(0, -100) );
+				shell2.rigidbody2D.velocity = (new Vector2(pushForce, -100) );
 				
 				shell3 = (GameObject) Instantiate(bullet, (transform.position + firingRightAdj) + multiplier * Vector3.right , Quaternion.identity);
-				shell3.rigidbody2D.AddForce(new Vector2(0, 100) );
+				shell3.rigidbody2D.velocity = (new Vector2(pushForce, 100) );
 				break;
 			}
 			

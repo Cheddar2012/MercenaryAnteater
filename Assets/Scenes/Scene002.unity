@@ -280,6 +280,7 @@ MonoBehaviour:
   shootingTime: .5
   shotEnds: 0
   shooting: 0
+  shootForce: 120
 --- !u!114 &24865565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,6 +436,7 @@ MonoBehaviour:
   shootingTime: .5
   shotEnds: 0
   shooting: 0
+  shootForce: 120
 --- !u!114 &29018588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -507,11 +509,11 @@ Transform:
   m_PrefabInternal: {fileID: 794991577}
   m_GameObject: {fileID: 29018584}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3245.06006, y: -1383.29822, z: 0}
+  m_LocalPosition: {x: -2.45874023, y: -152.362183, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 834190937}
+  m_RootOrder: 8
 --- !u!1 &32752524
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,6 +794,7 @@ MonoBehaviour:
   shootingTime: .5
   shotEnds: 0
   shooting: 0
+  shootForce: 120
 --- !u!114 &38988230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1502,7 +1505,7 @@ Transform:
   m_Children:
   - {fileID: 275843878}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
 --- !u!1 &123936517
 GameObject:
   m_ObjectHideFlags: 0
@@ -3950,7 +3953,7 @@ Transform:
   m_LocalScale: {x: 15, y: 15, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!114 &242063960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4295,6 +4298,7 @@ MonoBehaviour:
   shootingTime: .5
   shotEnds: 0
   shooting: 0
+  shootForce: 120
 --- !u!114 &247939245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4367,11 +4371,11 @@ Transform:
   m_PrefabInternal: {fileID: 562222326}
   m_GameObject: {fileID: 247939241}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3161.4187, y: -1242.25598, z: 0}
+  m_LocalPosition: {x: -86.1000977, y: -11.3199463, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_Father: {fileID: 834190937}
+  m_RootOrder: 9
 --- !u!1 &260721573
 GameObject:
   m_ObjectHideFlags: 0
@@ -4474,6 +4478,7 @@ MonoBehaviour:
   shootingTime: .5
   shotEnds: 0
   shooting: 0
+  shootForce: 120
 --- !u!114 &260721578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4696,7 +4701,7 @@ Transform:
   m_LocalScale: {x: 20, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!114 &262001595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4722,8 +4727,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasGun: 0
-  rapidFire: 0
-  sGun: 0
+  rapidFire: 20
+  sGun: 20
 --- !u!114 &262001597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5701,6 +5706,7 @@ MonoBehaviour:
   shootingTime: .5
   shotEnds: 0
   shooting: 0
+  shootForce: 120
 --- !u!114 &341263207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6588,6 +6594,7 @@ MonoBehaviour:
   shootingTime: .5
   shotEnds: 0
   shooting: 0
+  shootForce: 120
 --- !u!114 &426581664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7183,6 +7190,7 @@ MonoBehaviour:
   shootingTime: .5
   shotEnds: 0
   shooting: 0
+  shootForce: 120
 --- !u!114 &495625379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7590,7 +7598,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
 --- !u!1 &520123892
 GameObject:
   m_ObjectHideFlags: 0
@@ -7888,15 +7896,15 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 834190937}
     m_Modifications:
     - target: {fileID: 400000, guid: b4e2b5164ed8c1943964f521754395fa, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3161.4187
+      value: -86.1000977
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b4e2b5164ed8c1943964f521754395fa, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1242.25598
+      value: -11.3199463
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b4e2b5164ed8c1943964f521754395fa, type: 2}
       propertyPath: m_LocalPosition.z
@@ -7920,7 +7928,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b4e2b5164ed8c1943964f521754395fa, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b4e2b5164ed8c1943964f521754395fa, type: 2}
@@ -10366,15 +10374,15 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 834190937}
     m_Modifications:
     - target: {fileID: 400000, guid: b4e2b5164ed8c1943964f521754395fa, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3245.06006
+      value: -2.45874023
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b4e2b5164ed8c1943964f521754395fa, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1383.29822
+      value: -152.362183
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b4e2b5164ed8c1943964f521754395fa, type: 2}
       propertyPath: m_LocalPosition.z
@@ -10398,7 +10406,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b4e2b5164ed8c1943964f521754395fa, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b4e2b5164ed8c1943964f521754395fa, type: 2}
@@ -10798,6 +10806,7 @@ MonoBehaviour:
   shootingTime: .5
   shotEnds: 0
   shooting: 0
+  shootForce: 120
 --- !u!114 &832312403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10896,6 +10905,8 @@ Transform:
   - {fileID: 1738933855}
   - {fileID: 862724511}
   - {fileID: 1124864455}
+  - {fileID: 29018592}
+  - {fileID: 247939249}
   m_Father: {fileID: 2086156948}
   m_RootOrder: 14
 --- !u!1 &836503319
@@ -11944,6 +11955,7 @@ MonoBehaviour:
   shootingTime: .5
   shotEnds: 0
   shooting: 0
+  shootForce: 120
 --- !u!114 &870886871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12248,6 +12260,7 @@ MonoBehaviour:
   shootingTime: .5
   shotEnds: 0
   shooting: 0
+  shootForce: 120
 --- !u!114 &893435648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14128,7 +14141,7 @@ Transform:
   - {fileID: 340310909}
   - {fileID: 483532704}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
 --- !u!114 &1092515946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14690,6 +14703,7 @@ MonoBehaviour:
   shootingTime: .5
   shotEnds: 0
   shooting: 0
+  shootForce: 120
 --- !u!114 &1115749092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16026,6 +16040,7 @@ MonoBehaviour:
   shootingTime: .5
   shotEnds: 0
   shooting: 0
+  shootForce: 120
 --- !u!114 &1206696343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17133,6 +17148,7 @@ MonoBehaviour:
   shootingTime: .5
   shotEnds: 0
   shooting: 0
+  shootForce: 120
 --- !u!114 &1343500578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17558,6 +17574,7 @@ MonoBehaviour:
   shootingTime: .5
   shotEnds: 0
   shooting: 0
+  shootForce: 120
 --- !u!114 &1365153613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20448,6 +20465,7 @@ MonoBehaviour:
   shootingTime: .5
   shotEnds: 0
   shooting: 0
+  shootForce: 120
 --- !u!114 &1732363693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21428,7 +21446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCooldown: 1
-  bullet: {fileID: 0}
+  bullet: {fileID: 100000, guid: c69c76de297a3e44fa44bd55eb37f84e, type: 2}
   multiplier: 5
   shotForce: 50
 --- !u!114 &1862937729
@@ -21895,6 +21913,7 @@ MonoBehaviour:
   shootingTime: .5
   shotEnds: 0
   shooting: 0
+  shootForce: 120
 --- !u!114 &1914057385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22178,6 +22197,7 @@ MonoBehaviour:
   shootingTime: .5
   shotEnds: 0
   shooting: 0
+  shootForce: 120
 --- !u!114 &1955552775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22937,6 +22957,7 @@ MonoBehaviour:
   shootingTime: .5
   shotEnds: 0
   shooting: 0
+  shootForce: 120
 --- !u!114 &1994335090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23210,7 +23231,7 @@ Transform:
   m_LocalScale: {x: 20, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!1 &2021664557
 GameObject:
   m_ObjectHideFlags: 0
@@ -24212,7 +24233,7 @@ Transform:
   - {fileID: 834190937}
   - {fileID: 1168864666}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
 --- !u!1 &2094077919
 GameObject:
   m_ObjectHideFlags: 0
