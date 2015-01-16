@@ -53,7 +53,7 @@ public class BatMovement : MonoBehaviour {
 		xDir = Random.Range(-0.9f, 0.9f);
 		yDir = Random.Range(-0.9f, 0.9f);
 
-		speed = Random.Range (1,5);
+		speed = Random.Range (1,3);
 
 		// transform.position -= new Vector3 (0.5f, 0.5f, 0.0f);
 	}
