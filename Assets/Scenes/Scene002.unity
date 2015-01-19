@@ -2730,6 +2730,7 @@ GameObject:
   - 61: {fileID: 197428593}
   - 212: {fileID: 197428592}
   - 114: {fileID: 197428591}
+  - 114: {fileID: 197428595}
   m_Layer: 0
   m_Name: AntHill
   m_TagString: Untagged
@@ -2796,6 +2797,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1238409541}
   m_RootOrder: 4
+--- !u!114 &197428595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 5ff7a33d9cef3ed4fa66e69e0f72c0ab,
+    type: 2}
+  m_PrefabInternal: {fileID: 929702768}
+  m_GameObject: {fileID: 197428590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c896bc9d4b4a7438bbd299d9f1147c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  antHills:
+  - {fileID: 21300002, guid: 24cf78074e2fb234fa0adf1708ea4998, type: 3}
+  - {fileID: 21300004, guid: 24cf78074e2fb234fa0adf1708ea4998, type: 3}
+  - {fileID: 21300006, guid: 24cf78074e2fb234fa0adf1708ea4998, type: 3}
+  - {fileID: 21300004, guid: 24cf78074e2fb234fa0adf1708ea4998, type: 3}
+  framesPerSecond: 2
+  antHillRend: {fileID: 0}
+  spriteToShow: 0
 --- !u!1 &202797092
 GameObject:
   m_ObjectHideFlags: 0
@@ -4787,6 +4808,7 @@ GameObject:
   - 61: {fileID: 266889827}
   - 212: {fileID: 266889826}
   - 114: {fileID: 266889825}
+  - 114: {fileID: 266889829}
   m_Layer: 0
   m_Name: AntHill
   m_TagString: Untagged
@@ -4853,6 +4875,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2113036903}
   m_RootOrder: 3
+--- !u!114 &266889829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 5ff7a33d9cef3ed4fa66e69e0f72c0ab,
+    type: 2}
+  m_PrefabInternal: {fileID: 2145858689}
+  m_GameObject: {fileID: 266889824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c896bc9d4b4a7438bbd299d9f1147c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  antHills:
+  - {fileID: 21300002, guid: 24cf78074e2fb234fa0adf1708ea4998, type: 3}
+  - {fileID: 21300004, guid: 24cf78074e2fb234fa0adf1708ea4998, type: 3}
+  - {fileID: 21300006, guid: 24cf78074e2fb234fa0adf1708ea4998, type: 3}
+  - {fileID: 21300004, guid: 24cf78074e2fb234fa0adf1708ea4998, type: 3}
+  framesPerSecond: 2
+  antHillRend: {fileID: 0}
+  spriteToShow: 0
 --- !u!1 &269459070
 GameObject:
   m_ObjectHideFlags: 0

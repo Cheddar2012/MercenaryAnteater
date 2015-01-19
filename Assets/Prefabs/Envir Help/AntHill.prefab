@@ -11,6 +11,7 @@ GameObject:
   - 61: {fileID: 6100000}
   - 212: {fileID: 21200000}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: AntHill
   m_TagString: Untagged
@@ -52,6 +53,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acd797a8e4580034fbe0fdb57c75c867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c896bc9d4b4a7438bbd299d9f1147c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  antHills:
+  - {fileID: 21300002, guid: 24cf78074e2fb234fa0adf1708ea4998, type: 3}
+  - {fileID: 21300004, guid: 24cf78074e2fb234fa0adf1708ea4998, type: 3}
+  - {fileID: 21300006, guid: 24cf78074e2fb234fa0adf1708ea4998, type: 3}
+  - {fileID: 21300004, guid: 24cf78074e2fb234fa0adf1708ea4998, type: 3}
+  framesPerSecond: 2
+  antHillRend: {fileID: 0}
+  spriteToShow: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
