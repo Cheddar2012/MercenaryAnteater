@@ -5,14 +5,19 @@ public class Shooting : MonoBehaviour {
 
 	public GameObject bullet; 	// RS: currently our blue circle sprite
 								// JH changed to a smaller black circle, more like a bullet :-p
-	public GameObject bullet2;
-	public GameObject bullet3;
+	// public GameObject bullet2;
+	// public GameObject bullet3;
+
+	public GameObject grenade;
 
 	public float shotCD = 0.5f;	// RS: can be changed in inspector, may not be the best implementation
 	public KeyCode code = KeyCode.Z;
 
 	// JH adding code for rapid fire gun
 	public KeyCode daka = KeyCode.X;
+
+	// JH adding code for grenade gun
+	public KeyCode boom = KeyCode.C;
 
 	// JH adding code for shotgun
 	public KeyCode shotgun = KeyCode.V;
@@ -151,6 +156,42 @@ public class Shooting : MonoBehaviour {
 
 			// JH costs one bullet to fire rapid fire
 			playerAmmo.rapidFire -=1;
+		}
+
+		if(Input.GetKeyDown (boom) && (! shooting) && (playerAmmo.grenades > 0) &&(health.health > 0) )
+		{
+			GameObject gren1;
+			
+			switch(player.facing)
+			{
+			case 1:
+				gren1 = (GameObject) Instantiate(grenade, (transform.position + firingUpAdj) + 25 * multiplier * Vector3.up , Quaternion.identity);
+				gren1.rigidbody2D.velocity = new Vector2(0, pushForce);
+				gren1.transform.Rotate(new Vector3(0, 0, 1), 270);
+				break;
+			case 2:
+				gren1 = (GameObject) Instantiate(grenade, (transform.position + firingLeftAdj) + multiplier * Vector3.left , Quaternion.identity);
+				gren1.rigidbody2D.velocity = new Vector2(-pushForce, 0);
+				break;
+			case 3:
+				firingDownAdj = new Vector3(5, -35, 0);
+				gren1 = (GameObject) Instantiate(grenade, (transform.position + firingDownAdj) + multiplier * Vector3.down , Quaternion.identity);
+				gren1.rigidbody2D.velocity = new Vector2(0, -pushForce);
+				gren1.transform.Rotate(new Vector3(0, 0, 1), 90);
+				break;
+			case 4:
+				gren1 = (GameObject) Instantiate(grenade, (transform.position + firingRightAdj) + multiplier * Vector3.right , Quaternion.identity);
+				gren1.rigidbody2D.velocity = new Vector2(pushForce, 0);
+				gren1.transform.Rotate(Vector3.up, 180);
+				break;
+			}
+			
+			// RS: means next time player can shoot will be the current time + however long
+			//	the cooldown is
+			shotStamp = Time.time + shotCD;
+			shooting = true;
+
+			playerAmmo.grenades -= 1;
 		}
 
 		// JH created a similar if/switch shotgun attacks

@@ -56,7 +56,7 @@ public class Health : MonoBehaviour {
 				message.guiText.fontSize = 60;
 				message.guiText.color = Color.blue;
 				message.guiText.text = "YOU DIED";
-				
+
 				Application.LoadLevel("Scene002");
 			}
 		}
@@ -64,7 +64,7 @@ public class Health : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (poisoned && Time.time >= poisonedTime) {
+		if ( /* poisoned && */ Time.time >= poisonedTime) {
 			poisoned = false;
 			CancelInvoke("ApplyPoison");
 		}

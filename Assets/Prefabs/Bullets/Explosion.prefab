@@ -8,12 +8,13 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
-  - 61: {fileID: 6100000}
+  - 58: {fileID: 5800000}
   - 212: {fileID: 21200000}
-  - 114: {fileID: 11400000}
   - 114: {fileID: 11400002}
+  - 114: {fileID: 11400000}
+  - 50: {fileID: 5000000}
   m_Layer: 0
-  m_Name: AntHill
+  m_Name: Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,21 +27,36 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 462, y: -1832, z: 0}
-  m_LocalScale: {x: 30, y: 30, z: 1}
+  m_LocalPosition: {x: 200, y: -200, z: 0}
+  m_LocalScale: {x: 40, y: 40, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!61 &6100000
-BoxCollider2D:
+--- !u!50 &5000000
+Rigidbody2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!58 &5800000
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 2, y: 2}
+  m_IsTrigger: 1
+  m_Radius: .5
   m_Center: {x: 0, y: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -50,9 +66,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f64f0774b89eba544b94cd1825a47a7c, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d480c44ff8ffaf40a4d8cd976c69e1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exploder:
+  - {fileID: 21300002, guid: e7614e66e37d40f43b39c69f95177253, type: 3}
+  - {fileID: 21300004, guid: e7614e66e37d40f43b39c69f95177253, type: 3}
+  - {fileID: 21300006, guid: e7614e66e37d40f43b39c69f95177253, type: 3}
+  - {fileID: 21300008, guid: e7614e66e37d40f43b39c69f95177253, type: 3}
+  framesPerSecond: 5
+  explodeRend: {fileID: 0}
+  spriteToShow: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -61,17 +85,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16c896bc9d4b4a7438bbd299d9f1147c, type: 3}
+  m_Script: {fileID: 11500000, guid: cf2f061c43c0069499b8105f542f7101, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  antHills:
-  - {fileID: 21300002, guid: 24cf78074e2fb234fa0adf1708ea4998, type: 3}
-  - {fileID: 21300004, guid: 24cf78074e2fb234fa0adf1708ea4998, type: 3}
-  - {fileID: 21300006, guid: 24cf78074e2fb234fa0adf1708ea4998, type: 3}
-  - {fileID: 21300004, guid: 24cf78074e2fb234fa0adf1708ea4998, type: 3}
-  framesPerSecond: 2
-  antHillRend: {fileID: 0}
-  spriteToShow: 0
+  damage: 20
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -90,9 +107,9 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 1092625971
+  m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b8151d27e33588c4eab1b31898c04b5b, type: 3}
+  m_Sprite: {fileID: 21300002, guid: e7614e66e37d40f43b39c69f95177253, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

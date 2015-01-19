@@ -10,6 +10,7 @@ public class HUD : MonoBehaviour {
 
 	Ammo ammoScript;
 	GameObject rapid;
+	GameObject explosives;
 	GameObject sGun;
 
 	// Use this for initialization
@@ -31,6 +32,12 @@ public class HUD : MonoBehaviour {
 		rapid.guiText.fontSize = 26;
 
 		// an element below Rapid Ammo for Grenades
+		explosives = new GameObject();
+		explosives.AddComponent("GUIText");
+		explosives.name = "Grenades Ammo GUI";
+		explosives.transform.position = new Vector3(0.35f, 0.93f, 0.0f);
+		explosives.guiText.text = "";
+		explosives.guiText.fontSize = 26;
 
 		sGun = new GameObject();
 		sGun.AddComponent("GUIText");
@@ -53,6 +60,8 @@ public class HUD : MonoBehaviour {
 
 		rapid.guiText.color = Color.red;
 		rapid.guiText.text = "Rapid Gun ammo: " + ammoScript.rapidFire;
+		explosives.guiText.color = Color.red;
+		explosives.guiText.text = "Grenades: " + ammoScript.grenades;
 		sGun.guiText.color = Color.red;
 		sGun.guiText.text = "S Gun ammo: " + ammoScript.sGun;
 	}

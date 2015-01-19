@@ -33,6 +33,7 @@ public class AmmoBin : MonoBehaviour
 			}
 
 			thisAmmo.rapidFire += 28;
+			thisAmmo.grenades += 12;
 			Destroy(gameObject);
 		}
 	}

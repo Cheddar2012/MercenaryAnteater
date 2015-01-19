@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AntHill : MonoBehaviour {
+public class AntHillHeal : MonoBehaviour {
 
 	Health thisHealth;
 
@@ -14,7 +14,7 @@ public class AntHill : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-	
+
 	}
 
 	void OnCollisionStay2D(Collision2D col)
