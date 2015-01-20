@@ -38,6 +38,7 @@ public class Shooting : MonoBehaviour {
 	Health health;
 
 	int pushForce = 250;
+	int grenForce = 150;
 
 	// Use this for initialization
 	void Start () {
@@ -166,22 +167,22 @@ public class Shooting : MonoBehaviour {
 			{
 			case 1:
 				gren1 = (GameObject) Instantiate(grenade, (transform.position + firingUpAdj) + 25 * multiplier * Vector3.up , Quaternion.identity);
-				gren1.rigidbody2D.velocity = new Vector2(0, pushForce);
+				gren1.rigidbody2D.velocity = new Vector2(0, grenForce);
 				gren1.transform.Rotate(new Vector3(0, 0, 1), 270);
 				break;
 			case 2:
 				gren1 = (GameObject) Instantiate(grenade, (transform.position + firingLeftAdj) + multiplier * Vector3.left , Quaternion.identity);
-				gren1.rigidbody2D.velocity = new Vector2(-pushForce, 0);
+				gren1.rigidbody2D.velocity = new Vector2(-grenForce, 0);
 				break;
 			case 3:
 				firingDownAdj = new Vector3(5, -35, 0);
 				gren1 = (GameObject) Instantiate(grenade, (transform.position + firingDownAdj) + multiplier * Vector3.down , Quaternion.identity);
-				gren1.rigidbody2D.velocity = new Vector2(0, -pushForce);
+				gren1.rigidbody2D.velocity = new Vector2(0, -grenForce);
 				gren1.transform.Rotate(new Vector3(0, 0, 1), 90);
 				break;
 			case 4:
 				gren1 = (GameObject) Instantiate(grenade, (transform.position + firingRightAdj) + multiplier * Vector3.right , Quaternion.identity);
-				gren1.rigidbody2D.velocity = new Vector2(pushForce, 0);
+				gren1.rigidbody2D.velocity = new Vector2(grenForce, 0);
 				gren1.transform.Rotate(Vector3.up, 180);
 				break;
 			}

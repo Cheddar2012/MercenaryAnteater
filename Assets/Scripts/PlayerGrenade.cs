@@ -7,7 +7,7 @@ public class PlayerGrenade : MonoBehaviour
 	private int direction;
 
 	public Vector3 startPoint;
-	int distanceTraveled;
+	float distanceTraveled;
 
 	public GameObject explode;
 
@@ -23,13 +23,30 @@ public class PlayerGrenade : MonoBehaviour
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
-		speed = transform.rigidbody2D.velocity;
+		distanceTraveled = Vector3.Distance(transform.position, startPoint);
 
-		if(Vector3.Distance(transform.position, startPoint) > 125)
+		speed = transform.rigidbody2D.velocity;
+		transform.Rotate(0, 0, 13.5f);
+
+		if(distanceTraveled > 125)
 		{
 			explode = (GameObject)Instantiate(explode, (transform.position), Quaternion.identity);
-			
 			Destroy (gameObject);
+		}
+
+		// if distance traveled less than 62, scale the grenade to larger by factor of (100 / 62)
+
+		// if distance traveled greater than 62, scale grenade to smaller by factor of (100 / 62)
+
+		if(distanceTraveled < 62)
+			// 
+		{
+			transform.localScale = new Vector3(transform.localScale.x * 1.05f, transform.localScale.y * 1.05f, 1.0f);
+		}
+
+		else
+		{
+			transform.localScale = new Vector3(transform.localScale.x * 0.95f, transform.localScale.y * 0.95f, 1.0f);
 		}
 	}
 

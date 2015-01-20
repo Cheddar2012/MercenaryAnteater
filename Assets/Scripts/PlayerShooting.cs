@@ -21,6 +21,8 @@ public class PlayerShooting : MonoBehaviour {
 	void FixedUpdate () {
 		// RS: if the player wants to shoot, we make sure that it has been 
 		//  long enough of a cooldown
+
+		/*
 		if(Input.GetKeyDown(KeyCode.Z) && timestamp <= Time.time)
 		{
 			GameObject clone;	
@@ -45,5 +47,7 @@ public class PlayerShooting : MonoBehaviour {
 			//	the cooldown is
 			timestamp = Time.time + shotCD;
 		}
+
+*/
 	}
 }

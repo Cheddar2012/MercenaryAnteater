@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: b8151d27e33588c4eab1b31898c04b5b
+guid: e3fcd818ba4e8da4384bb518aa0cdfa1
 TextureImporter:
   fileIDToRecycleName:
-    21300000: AntHill
+    21300000: reticule
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

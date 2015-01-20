@@ -10,7 +10,8 @@ public class BulletScript : MonoBehaviour {
 	public Vector3 speed;
 	
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		// RS: upon creating the bullet, we give it a direction based on the players
 		//  direction which is saved in the "Movement" script
 		direction = GameObject.Find ("Player").GetComponent<Movement> ().facing;
