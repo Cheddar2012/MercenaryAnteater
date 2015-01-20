@@ -34,10 +34,6 @@ public class PlayerGrenade : MonoBehaviour
 			Destroy (gameObject);
 		}
 
-		// if distance traveled less than 62, scale the grenade to larger by factor of (100 / 62)
-
-		// if distance traveled greater than 62, scale grenade to smaller by factor of (100 / 62)
-
 		if(distanceTraveled < 62)
 			// 
 		{
