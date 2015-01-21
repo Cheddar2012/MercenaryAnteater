@@ -8,13 +8,13 @@ public class PlayerShooting : MonoBehaviour {
 	public float multiplier; 	// RS: is the distance between player and bullet's instantiation
 								// 		must be greater than 0.6						
 	 
-	private Movement player; 	// RS: gets the player's movement script for "facing"
-	private float timestamp;
+	// private Movement player; 	// RS: gets the player's movement script for "facing"
+	// private float timestamp;
 	// Use this for initialization
 	void Start () {
 		shotCD = 0.2f;
-		player = GameObject.Find ("Player").GetComponent<Movement> ();
-		timestamp = Time.time;
+		// player = GameObject.Find ("Player").GetComponent<Movement> ();
+		// timestamp = Time.time;
 	}
 	
 	// Update is called once per frame

@@ -19,7 +19,7 @@ public class PlayerAnimator : MonoBehaviour {
 	private float frameTimer;
 
 	// Number of frames in walking animation
-	private float numberOfFrames;
+	// private float numberOfFrames;
 
 	// Which sprite to show in the walking animation
 	public int spriteToShow = 0;
@@ -36,7 +36,7 @@ public class PlayerAnimator : MonoBehaviour {
 
 		ResetFrameTimer();
 
-		CalculateNumberOfFrames();
+		// CalculateNumberOfFrames();
 
 		playerRend.sprite = walkingSprites[0];
 	}
@@ -111,8 +111,10 @@ public class PlayerAnimator : MonoBehaviour {
 		frameTimer = 1.0f / (float)framesPerSecond;
 	}
 
+	/*
 	void CalculateNumberOfFrames() {
 		// Length of walking sprites array divided by four walking directions
 		numberOfFrames = walkingSprites.Length / 4;
 	}
+	*/
 }

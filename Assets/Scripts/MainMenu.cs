@@ -49,5 +49,11 @@ public class MainMenu : MonoBehaviour {
 			// Debug.Log("Clicked the button with text");
 			Application.LoadLevel("credits");
 		}
+
+		if(GUI.Button(new Rect(400,600,100,60),"Quit") )
+		{
+			// Debug.Log("Clicked the button with text");
+			Application.Quit();
+		}
 	}
 }
