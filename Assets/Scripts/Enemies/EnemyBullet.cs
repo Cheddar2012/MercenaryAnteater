@@ -4,10 +4,13 @@ using System.Collections;
 public class EnemyBullet : MonoBehaviour {
 	
 	public float damage = 10;
+	public Vector2 speed;
 	
 	public int direction{ get; set; }
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
+		speed = transform.rigidbody2D.velocity;
 		// direction = transform.parent.gameObject.GetComponent<EnemyMovement>().facing;
 	}
 
@@ -29,7 +32,11 @@ public class EnemyBullet : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update () 
+	{
+		if(transform.rigidbody2D.velocity != speed)
+		{
+			transform.rigidbody2D.velocity = speed;
+		}
 	}
 }

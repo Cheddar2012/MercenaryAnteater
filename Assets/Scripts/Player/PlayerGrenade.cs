@@ -3,8 +3,7 @@ using System.Collections;
 
 public class PlayerGrenade : MonoBehaviour 
 {
-	public Vector3 speed;
-	private int direction;
+	public Vector2 speed;
 
 	public Vector3 startPoint;
 	float distanceTraveled;
@@ -14,10 +13,8 @@ public class PlayerGrenade : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		// RS: upon creating the bullet, we give it a direction based on the players
-		//  direction which is saved in the "Movement" script
-		direction = GameObject.Find ("Player").GetComponent<Movement> ().facing;
 		startPoint = transform.position;
+		speed = transform.rigidbody2D.velocity;
 	}
 	
 	// Update is called once per frame
@@ -25,7 +22,11 @@ public class PlayerGrenade : MonoBehaviour
 	{
 		distanceTraveled = Vector3.Distance(transform.position, startPoint);
 
-		speed = transform.rigidbody2D.velocity;
+		if(transform.rigidbody2D.velocity != speed)
+		{
+			transform.rigidbody2D.velocity = speed;
+		}
+
 		transform.Rotate(0, 0, 13.5f);
 
 		if(distanceTraveled > 125)

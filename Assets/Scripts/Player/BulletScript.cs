@@ -4,17 +4,12 @@ using System.Collections;
 public class BulletScript : MonoBehaviour {
 
 	public float damage = 10;
-
-	private int direction;
-
-	public Vector3 speed;
+	public Vector2 speed;
 	
 	// Use this for initialization
 	void Start () 
 	{
-		// RS: upon creating the bullet, we give it a direction based on the players
-		//  direction which is saved in the "Movement" script
-		direction = GameObject.Find ("Player").GetComponent<Movement> ().facing;
+		speed = transform.rigidbody2D.velocity;
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
@@ -36,6 +31,9 @@ public class BulletScript : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
-		speed = transform.rigidbody2D.velocity;
+		if(transform.rigidbody2D.velocity != speed)
+		{
+			transform.rigidbody2D.velocity = speed;
+		}
 	}
 }

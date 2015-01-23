@@ -593,6 +593,7 @@ MonoBehaviour:
   left: 0
   bottom: 0
   right: 0
+  gamePause: {fileID: 0}
 --- !u!58 &32752528
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2104,6 +2105,7 @@ MonoBehaviour:
   left: 0
   bottom: 0
   right: 0
+  gamePause: {fileID: 0}
 --- !u!58 &148824703
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2414,6 +2416,7 @@ MonoBehaviour:
   left: 0
   bottom: 0
   right: 0
+  gamePause: {fileID: 0}
 --- !u!58 &176011799
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5924,6 +5927,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 584743964}
   m_RootOrder: 0
+--- !u!1 &379912298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 379912301}
+  - 20: {fileID: 379912300}
+  - 92: {fileID: 379912299}
+  m_Layer: 0
+  m_Name: PauseScreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!92 &379912299
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 379912298}
+  m_Enabled: 1
+--- !u!20 &379912300
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 379912298}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: .313725501, g: .588235319, b: .313725501, a: .0196078438}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: .300000012
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: .0219999999
+--- !u!4 &379912301
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 379912298}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -306.5, y: 210, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1092515945}
+  m_RootOrder: 4
 --- !u!1001 &383919078
 Prefab:
   m_ObjectHideFlags: 0
@@ -6059,6 +6130,7 @@ MonoBehaviour:
   left: 0
   bottom: 0
   right: 0
+  gamePause: {fileID: 0}
 --- !u!58 &390236352
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8589,6 +8661,7 @@ MonoBehaviour:
   left: 0
   bottom: 0
   right: 0
+  gamePause: {fileID: 0}
 --- !u!58 &683939610
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8794,6 +8867,7 @@ MonoBehaviour:
   left: 0
   bottom: 0
   right: 0
+  gamePause: {fileID: 0}
 --- !u!58 &711177303
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9128,6 +9202,7 @@ MonoBehaviour:
   left: 0
   bottom: 0
   right: 0
+  gamePause: {fileID: 0}
 --- !u!58 &729775312
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9302,6 +9377,7 @@ MonoBehaviour:
   left: 0
   bottom: 0
   right: 0
+  gamePause: {fileID: 0}
 --- !u!58 &744282706
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10748,6 +10824,7 @@ MonoBehaviour:
   left: 0
   bottom: 0
   right: 0
+  gamePause: {fileID: 0}
 --- !u!58 &858558472
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11306,6 +11383,7 @@ MonoBehaviour:
   left: 0
   bottom: 0
   right: 0
+  gamePause: {fileID: 0}
 --- !u!58 &870666891
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -12710,6 +12788,7 @@ MonoBehaviour:
   left: 0
   bottom: 0
   right: 0
+  gamePause: {fileID: 0}
 --- !u!58 &999399246
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -13063,6 +13142,7 @@ MonoBehaviour:
   left: 0
   bottom: 0
   right: 0
+  gamePause: {fileID: 0}
 --- !u!58 &1074296344
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -13253,6 +13333,7 @@ MonoBehaviour:
   left: 0
   bottom: 0
   right: 0
+  gamePause: {fileID: 0}
 --- !u!58 &1085904612
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -13595,6 +13676,8 @@ Transform:
   - {fileID: 1432224739}
   - {fileID: 340310909}
   - {fileID: 483532704}
+  - {fileID: 1386237899}
+  - {fileID: 379912301}
   m_Father: {fileID: 0}
   m_RootOrder: 5
 --- !u!114 &1092515946
@@ -13700,6 +13783,7 @@ MonoBehaviour:
   left: 0
   bottom: 0
   right: 0
+  gamePause: {fileID: 0}
 --- !u!58 &1099546034
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -14303,6 +14387,7 @@ MonoBehaviour:
   left: 0
   bottom: 0
   right: 0
+  gamePause: {fileID: 0}
 --- !u!58 &1124864453
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -16454,6 +16539,7 @@ MonoBehaviour:
   left: 0
   bottom: 0
   right: 0
+  gamePause: {fileID: 0}
 --- !u!58 &1334739418
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -17159,6 +17245,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 584743964}
   m_RootOrder: 7
+--- !u!1 &1386237898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1386237899}
+  - 114: {fileID: 1386237900}
+  m_Layer: 0
+  m_Name: Pause
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1386237899
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1386237898}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1092515945}
+  m_RootOrder: 3
+--- !u!114 &1386237900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1386237898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978dd07e7fec96c428411012860300be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paused: 0
+  pauseBkgd: {fileID: 0}
 --- !u!1001 &1399558973
 Prefab:
   m_ObjectHideFlags: 0

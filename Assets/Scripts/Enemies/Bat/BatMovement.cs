@@ -28,6 +28,8 @@ public class BatMovement : MonoBehaviour {
 	public float bottom;
 	public float right;
 
+	public PauseScript gamePause;
+
 	// Use this for initialization
 	void Start () {
 		speed = 2;
@@ -47,6 +49,8 @@ public class BatMovement : MonoBehaviour {
 		left = transform.position.x - leftDist;
 		bottom = transform.position.y - downDist;
 		right = transform.position.x + rightDist;
+
+		gamePause = GameObject.Find("Pause").GetComponent<PauseScript>();
 	}
 
 	void ChangeDirection() {
@@ -62,24 +66,24 @@ public class BatMovement : MonoBehaviour {
 	{
 		if(transform.position.y > top)
 		{
-			yDir = -1;
+			yDir = -yDir;
 			// xDir = Random.Range(-0.9f, 0.9f);
 		}
 
 		else if(transform.position.y < bottom)
 		{
-			yDir = 1;
+			yDir = -yDir;
 		}
 
 		if(transform.position.x > right)
 		{
-			xDir = -1;
+			xDir = -xDir;
 			// yDir = Random.Range(-0.9f, 0.9f);
 		}
 
 		else if(transform.position.x < left)
 		{
-			xDir = 1;
+			xDir = -xDir;
 		}
 
 		transform.position += new Vector3 (xDir * speed, yDir * speed, 0);
@@ -127,6 +131,11 @@ public class BatMovement : MonoBehaviour {
 			ChangeDirection();
 			Move ();
 			nextRest = Time.time + moveTime;
+		}
+
+		if(gamePause.paused)
+		{
+			moving = false;
 		}
 	}
 }
