@@ -4,13 +4,11 @@ using System.Collections;
 public class PauseScript : MonoBehaviour 
 {
 	public bool paused;
-	public GameObject pauseBkgd;
 
 	// Use this for initialization
 	void Start () 
 	{
 		paused = false;
-		pauseBkgd = GameObject.Find("PauseScreen");
 	}
 	
 	// Update is called once per frame
@@ -19,13 +17,11 @@ public class PauseScript : MonoBehaviour
 		if(paused)
 		{
 			Time.timeScale = 0;
-			pauseBkgd.active = true;
 		}
 
 		else
 		{
 			Time.timeScale = 1;
-			pauseBkgd.active = false;
 		}
 
 		if(Input.GetKeyDown(KeyCode.Escape))
@@ -48,7 +44,13 @@ public class PauseScript : MonoBehaviour
 			{
 				// Debug.Log("Clicked the button with text");
 				Application.LoadLevel("Scene001");
-			}	
+			}
+
+			GUI.Box(new Rect(0,500,300,120),"Arrow keys up/left/down/right to move \n" +
+			        "Z to Shoot Basic Attack (unlimited) \n" +
+			        "X to Shoot Rapid Gun \n" +
+					"C to Toss Grenade \n" +
+			        "V To Shoot Spread Gun \n");
 		}
 
 	}

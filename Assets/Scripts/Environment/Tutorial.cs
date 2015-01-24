@@ -3,35 +3,27 @@ using System.Collections;
 
 public class Tutorial : MonoBehaviour 
 {
-	public bool collide;
+	private GameObject player;
 
 	// Use this for initialization
 	void Start () 
 	{
-		collide = false;
+		player = GameObject.Find ("Player");
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-	
+		if(Vector3.Distance(transform.position, player.transform.position) > 1000)
+		{
+			Destroy (gameObject);
+		}
 	}
 
 	void OnGUI()
 	{
-		if(collide)
-		{
-			GUI.Box(new Rect(400,400,300,120),"Arrow keys up/down/left/right to move");
-		}
-	}
-
-	void OnCollisionStay2D(Collision2D col)
-	{
-		if(col.gameObject.tag == "Player")
-		{
-			print ("collide");
-
-			collide = true;
-		}
+			GUI.Box(new Rect(400,400,300,120),"Arrow keys up/left/down/right to move \n" +
+				"Z to Shoot Basic Attack (unlimited) \n" + 
+		        "ESC key to pause or view controls");
 	}
 }

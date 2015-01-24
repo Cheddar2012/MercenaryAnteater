@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Movement : MonoBehaviour 
 {
-	public float speed = 1.0f;
+	public float speed = 3.0f;
 
 	/*
 	 * FOR MOVING AND FACING:  
@@ -59,6 +59,7 @@ public class Movement : MonoBehaviour
 		}
 
 		if (moving) {
+
 			switch (facing) {
 			case 1: // Moving Up
 				transform.position = new Vector2(transform.position.x, transform.position.y + speed);
