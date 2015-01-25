@@ -62,7 +62,8 @@ public class Shooting : MonoBehaviour {
 			switch(player.facing)
 			{
 			case 1:
-				shooter = (GameObject) Instantiate(bullet, (transform.position + firingUpAdj) + 25 * multiplier * Vector3.up , Quaternion.identity);
+				// shooter = (GameObject) Instantiate(bullet, (transform.position + firingUpAdj) + 25 * multiplier * Vector3.up , Quaternion.identity);
+				shooter = (GameObject) Instantiate(bullet, (transform.position + firingUpAdj) +100 * multiplier * Vector3.up , Quaternion.identity);
 				shooter.rigidbody2D.velocity = new Vector2(0, pushForce);
 				break;
 			case 2:
