@@ -4,17 +4,19 @@ using System.Collections;
 public class Tutorial : MonoBehaviour 
 {
 	private GameObject player;
+	public int distance;
 
 	// Use this for initialization
 	void Start () 
 	{
 		player = GameObject.Find ("Player");
+		distance = 300; 
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		if(Vector3.Distance(transform.position, player.transform.position) > 1000)
+		if(Vector3.Distance(transform.position, player.transform.position) > distance)
 		{
 			Destroy (gameObject);
 		}

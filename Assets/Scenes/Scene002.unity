@@ -1458,7 +1458,7 @@ Transform:
   m_PrefabInternal: {fileID: 1569650814}
   m_GameObject: {fileID: 109226205}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 295.9086, y: -193.8629, z: 0}
+  m_LocalPosition: {x: 1779.65466, y: -1848.6908, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 1}
   m_Children:
   - {fileID: 1428822260}
@@ -4058,6 +4058,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f3af070825b414880b64e1b0462521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colliding: 0
+  clueTime: 0
 --- !u!61 &242319400
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4101,7 +4103,7 @@ Transform:
   m_GameObject: {fileID: 242319398}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: -.707106829}
   m_LocalPosition: {x: 41.96875, y: -65.9959717, z: 0}
-  m_LocalScale: {x: 30.0011063, y: 30.0011063, z: 1}
+  m_LocalScale: {x: 30.0011139, y: 30.0011139, z: 1}
   m_Children: []
   m_Father: {fileID: 1606080440}
   m_RootOrder: 2
@@ -15434,6 +15436,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d0b9fe50feff2e44ca8378827ef29b4e, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 30.0011139
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d0b9fe50feff2e44ca8378827ef29b4e, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 30.0011139
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d0b9fe50feff2e44ca8378827ef29b4e, type: 2}
   m_RootGameObject: {fileID: 242319398}
@@ -17244,6 +17254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paused: 0
+  pauseScreen: {fileID: 2800000, guid: a5f421057d7014741b3e37cbcec39502, type: 3}
 --- !u!1001 &1399558973
 Prefab:
   m_ObjectHideFlags: 0
@@ -18681,11 +18692,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f41ec5480c0dde04aba843d02e2b4c6b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 295.9086
+      value: 1779.65466
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f41ec5480c0dde04aba843d02e2b4c6b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -193.8629
+      value: -1848.6908
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f41ec5480c0dde04aba843d02e2b4c6b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -20679,6 +20690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0afbc982449f4f44bf38d5b193d6f0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distance: 0
 --- !u!58 &1780222306
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -20688,7 +20700,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Radius: 10
+  m_Radius: 300
   m_Center: {x: 0, y: 0}
 --- !u!1001 &1786442323
 Prefab:
