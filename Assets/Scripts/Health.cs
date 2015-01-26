@@ -9,6 +9,9 @@ public class Health : MonoBehaviour {
 	private float poisonDamage;		// RS: damage to deal over time
 	private float poisonedTime;		// RS: marker for when poison ends
 
+	public Texture death;
+	public float timeReload = 0;
+
 	GameObject message;
 
 	// Use this for initialization
@@ -37,9 +40,12 @@ public class Health : MonoBehaviour {
 	}
 
 	// RS: player takes i damage
-	void ApplyDamage (float i) {
+	void ApplyDamage (float i) 
+	{
 		health -= i;
-		if (health <= 0) { // RS: kill
+
+		if (health <= 0) 
+		{ // RS: kill
 			health = 0;
 
 			if(gameObject.tag != "Player")
@@ -49,32 +55,37 @@ public class Health : MonoBehaviour {
 
 			else
 			{
-				message = new GameObject();
-				message.AddComponent("GUIText");
-				message.transform.position = new Vector3(0.25f, 0.5f, 0);
-				
-				message.guiText.fontSize = 60;
-				message.guiText.color = Color.blue;
-				message.guiText.text = "YOU DIED";
-
-				Application.LoadLevel("Scene002");
+				if(timeReload < 1)
+				{
+					timeReload = Time.time + 5;
+				}
 			}
 		}
 	}
 
 	// Update is called once per frame
-	void Update () {
-		if ( /* poisoned && */ Time.time >= poisonedTime) {
+	void Update () 
+	{
+		if ( Time.time >= poisonedTime) 
+		{
 			poisoned = false;
 			CancelInvoke("ApplyPoison");
 		}
 	}
 
-	/*
-	void OnCollisionEnter2D (Collision2D other) {
-		if (other.gameObject.tag == "Heal") {
-			GetComponent<Health>().health = 50;
+	void OnGUI()
+	{
+		if( (gameObject.tag == "Player") && (health == 0) )
+		{
+			if(Time.time <= timeReload)
+			{
+				GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), death); 
+			}
+
+			else
+			{
+				Application.LoadLevel(Application.loadedLevelName);
+			}
 		}
 	}
-	*/
 }

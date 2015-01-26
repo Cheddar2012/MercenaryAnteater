@@ -63,13 +63,15 @@ public class GiraffeShooting : MonoBehaviour {
 			// JH 
 			// fire the bullet
 			// increment number of shots
-			Vector3 aim = player.transform.position - transform.position;
+			Vector3 aim;
 			if(facing == 2) 
 			{
+				aim = player.transform.position - (transform.position + leftAdj);
 				clone = (GameObject) Instantiate(bullet, (transform.position + leftAdj) + Vector3.left * multiplier, Quaternion.identity);
 			}
 			else
 			{
+				aim = player.transform.position - (transform.position + rightAdj);
 				clone = (GameObject) Instantiate(bullet, (transform.position + rightAdj) + Vector3.right * multiplier, Quaternion.identity);
 			}
 			clone.rigidbody2D.velocity = aim * shotForce / Vector3.Distance (player.transform.position, transform.position);

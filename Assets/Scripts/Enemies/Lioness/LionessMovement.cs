@@ -14,13 +14,12 @@ public class LionessMovement : MonoBehaviour
 
 	private int prevFacing;
 	public int facing{ get; set; }	// RS: direction facing: 2-Left, 4-Right
-	private bool stop;						// RS: whether enemy is stopped or not
 	private GameObject player;
 
 	private LionessShooting ls;
 	// Use this for initialization
 
-	/**********
+	/********** Level 1 boss: 
 	 * transform.position.y will always = 20 for Lioness
 	 * 
 	 * transform.position.x will range from 300 to 600 for Lioness
@@ -28,7 +27,7 @@ public class LionessMovement : MonoBehaviour
 	void Start () 
 	{
 		prevFacing = facing = 2;
-		stop = false;
+		moving = true;
 		player = GameObject.Find ("Player");
 		moving = false;
 		ls = GetComponent<LionessShooting>();
@@ -37,91 +36,78 @@ public class LionessMovement : MonoBehaviour
 	void OnCollisionEnter2D(Collision2D col)
 	{
 		if (col.gameObject.tag == "Player")
-			stop = true;
+			moving = false;
 	}
 	
 	void OnCollisionExit2D(Collision2D col)
 	{
 		if (col.gameObject.tag == "Player")
-			stop = false;
+			moving = true;
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
+		// conditions to handle
+		// if facing character and moving, stop to shoot
+		// if facing character and moving, move forward
+		// go from stop to moving left
+
+		// if facing away from character and moving, stop, turn, shoot
+		// if facing away from character and moving, move forward
+		// go from stop to moving right
+
+		// used when going from stop to moving
 		prevFacing = facing;
 
+		// if time to shoot, stop and face the player (left)
 		if(ls.shooting)
 		{
-			stop = true;
+			moving = false;
 			facing = 2;
 		}
 
-		// RS: just making sure the player isnt dead
-		if (player != null) 
-		{	
-			/*
-			if(player.transform.position.x - transform.position.x < 0)
+		// if moving, then continue moving
+		if(moving)
+		{
+			// facing left
+			if( (facing == 2) && (transform.position.x > 300) )
 			{
-				facing = 2; 	// RS: face left
-
+				transform.position = new Vector2(transform.position.x - speed, transform.position.y);
 			}
-			else
+			else if( (facing == 4) && (transform.position.x < 600) )
 			{
-				facing = 4;		// RS: face right
-			}
-			*/
-
-			if(!stop)
-			{
-				moving = true;
-
-				// facing left
-				if( (facing == 2) && (transform.position.x > 300) )
-				{
-					transform.position = new Vector2(transform.position.x - speed, transform.position.y);
-				}
-
-				else if( (facing == 4) && (transform.position.x < 600) )
-				{
-					transform.position = new Vector2(transform.position.x + speed, transform.position.y);
-				}
-
-				else if(transform.position.x <= 300)
-				{
-					facing = 4;
-				}
-
-				else if(transform.position.x >= 600)
-				{
-					facing = 2;
-				}
+				transform.position = new Vector2(transform.position.x + speed, transform.position.y);
 			}
 
-			else
+			// at edges of bounding box, turn around
+			else if(transform.position.x <= 300)
 			{
-
+				facing = 4;
 			}
-
-			/*
-			if (GetComponent<SnakeAnimator>() != null) 
+			
+			else if(transform.position.x >= 600)
 			{
-				// Debug.Log("playerInAggroRange: " + playerInAggroRange() + ", stop: " + stop + ", speed: " + speed + ", mobile: " + mobile);
+				facing = 2;
 			}
-			*/
+		}
+			
+		/*
+		if(player.transform.position.x - transform.position.x < 0)
+		{
+			facing = 2; 	// RS: face left
+		}
+		else
+		{
+			facing = 4;		// RS: face right
+		}
+		*/
 
-			/*
-			// RS: if within agroRange, enemy will move towards player
-			if (playerInAggroRange() && !stop && speed > 0 && mobile)
-			{
-				float step = speed * Time.deltaTime;
-				transform.position = Vector3.MoveTowards(transform.position, 
-				                                         player.transform.position, step);
-				moving = true;
-			}
-			else
-				moving = false;
-				*/
+
+
+		else
+		{
+
 		}
 	}
 

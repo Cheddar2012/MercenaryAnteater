@@ -56,6 +56,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 200
   poisoned: 0
+  death: {fileID: 0}
+  timeReload: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -64,13 +66,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b0bc68d7442d174990c1c63c5f8a6f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 53adcf33ab18a9f4f9da71d74dd7b380, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   attackCooldown: 1
   bullet: {fileID: 100000, guid: c69c76de297a3e44fa44bd55eb37f84e, type: 2}
   multiplier: 5
   shotForce: 50
+  shooting: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -79,7 +82,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fa18255a4641b04f8b4e0bff2149a94, type: 3}
+  m_Script: {fileID: 11500000, guid: b5316317a5df9dc41a26040be46dbdac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
