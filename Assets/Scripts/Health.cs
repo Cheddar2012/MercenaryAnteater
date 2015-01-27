@@ -58,6 +58,7 @@ public class Health : MonoBehaviour {
 				if(timeReload < 1)
 				{
 					timeReload = Time.time + 5;
+					gameObject.GetComponent<SpriteRenderer>().enabled = false;
 				}
 			}
 		}
