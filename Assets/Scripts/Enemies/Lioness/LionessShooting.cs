@@ -2,12 +2,11 @@
 using System.Collections;
 
 public class LionessShooting : MonoBehaviour {
-	
-	// public int attackRange = 50;
+
 	public int attackCooldown = 4;
+
 	public GameObject bullet;
 	public int multiplier = 5;
-	public int facing{ get; private set; }	// RS: 2 is Left, 4 is Right
 	
 	private LionessMovement em; 			
 	private GameObject player;
@@ -17,12 +16,16 @@ public class LionessShooting : MonoBehaviour {
 
 	public bool shooting;
 
+	public float moveShootCooldown = 0.6f;
+	public float startMovingTime;
+
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		player = GameObject.Find ("Player");
 		em = GetComponent<LionessMovement>();
-		facing = 2;
 		nextShotTime = Time.time;
+		startMovingTime = Time.time;
 	}
 	
 	bool TimeToShoot()
@@ -36,23 +39,35 @@ public class LionessShooting : MonoBehaviour {
 //	}
 	
 	// Update is called once per frame
-	void Update () {
-		facing = em.facing;
-		
-		if (player != null && TimeToShoot()) {
+	void Update () 
+	{
+		if (TimeToShoot() ) 
+		{
+			shooting = true; 
+
 			GameObject clone;
 
 			Vector3 aim = player.transform.position - transform.position;
-			if(facing == 2) 
-				clone = (GameObject) Instantiate(bullet, transform.position + Vector3.left * multiplier, Quaternion.identity);
-			else
-				clone = (GameObject) Instantiate(bullet, transform.position + Vector3.right * multiplier, Quaternion.identity);
+
+			// Lioness only shoots to the left, this time 
+			if(em.facing != 2) 
+			{
+				em.facing = 2;
+			}
+
+			clone = (GameObject) Instantiate(bullet, transform.position + Vector3.left * multiplier, Quaternion.identity);
 			clone.rigidbody2D.velocity = aim * shotForce / Vector3.Distance (player.transform.position, transform.position);
 
-			clone.transform.parent = gameObject.transform;
-			nextShotTime = Time.time + attackCooldown;			
+			// clone.transform.parent = gameObject.transform;
+			nextShotTime = Time.time + attackCooldown;	
+
+			startMovingTime = Time.time + moveShootCooldown;
 		}
-		
+
+		if(Time.time > startMovingTime)
+		{
+			shooting = false;
+		}
 	}
 }
 

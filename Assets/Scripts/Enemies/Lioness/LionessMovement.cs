@@ -13,11 +13,15 @@ public class LionessMovement : MonoBehaviour
 	public bool moving {get; private set;}	// RS: tells if moving
 
 	private int prevFacing;
-	public int facing{ get; set; }	// RS: direction facing: 2-Left, 4-Right
+	public int facing;	// RS: direction facing: 2-Left, 4-Right
 	private GameObject player;
 
 	private LionessShooting ls;
 	// Use this for initialization
+
+	int walkDist = 300;
+	public float rightBound;
+	public float leftBound;
 
 	/********** Level 1 boss: 
 	 * transform.position.y will always = 20 for Lioness
@@ -29,8 +33,10 @@ public class LionessMovement : MonoBehaviour
 		prevFacing = facing = 2;
 		moving = true;
 		player = GameObject.Find ("Player");
-		moving = false;
 		ls = GetComponent<LionessShooting>();
+
+		rightBound = transform.position.x;
+		leftBound = transform.position.x - walkDist;
 	}
 	
 	void OnCollisionEnter2D(Collision2D col)
@@ -67,47 +73,36 @@ public class LionessMovement : MonoBehaviour
 			facing = 2;
 		}
 
+		else if(!moving)
+		{
+			moving = true;
+		}
+
 		// if moving, then continue moving
 		if(moving)
 		{
 			// facing left
-			if( (facing == 2) && (transform.position.x > 300) )
+			if( (facing == 2) && (transform.position.x > leftBound) )
 			{
 				transform.position = new Vector2(transform.position.x - speed, transform.position.y);
 			}
-			else if( (facing == 4) && (transform.position.x < 600) )
+
+			// facing right
+			else if( (facing == 4) && (transform.position.x < rightBound) )
 			{
 				transform.position = new Vector2(transform.position.x + speed, transform.position.y);
 			}
 
 			// at edges of bounding box, turn around
-			else if(transform.position.x <= 300)
+			else if(transform.position.x <= leftBound)
 			{
 				facing = 4;
 			}
 			
-			else if(transform.position.x >= 600)
+			else if(transform.position.x >= rightBound)
 			{
 				facing = 2;
 			}
-		}
-			
-		/*
-		if(player.transform.position.x - transform.position.x < 0)
-		{
-			facing = 2; 	// RS: face left
-		}
-		else
-		{
-			facing = 4;		// RS: face right
-		}
-		*/
-
-
-
-		else
-		{
-
 		}
 	}
 

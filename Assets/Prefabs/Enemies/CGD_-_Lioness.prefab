@@ -27,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 532.776367, y: 30.2541504, z: 0}
+  m_LocalPosition: {x: 550, y: 20, z: 0}
   m_LocalScale: {x: 15, y: 15, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -69,11 +69,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53adcf33ab18a9f4f9da71d74dd7b380, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 1
+  attackCooldown: 4
   bullet: {fileID: 100000, guid: c69c76de297a3e44fa44bd55eb37f84e, type: 2}
   multiplier: 5
   shotForce: 50
   shooting: 0
+  moveShootCooldown: .800000012
+  startMovingTime: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -85,9 +87,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5316317a5df9dc41a26040be46dbdac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
-  aggroRange: 10
+  speed: 2
+  aggroRange: 0
   mobile: 1
+  facing: 0
+  rightBound: 0
+  leftBound: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
