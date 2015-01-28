@@ -32,6 +32,7 @@ public class PlayerGrenade : MonoBehaviour
 		if(distanceTraveled > 125)
 		{
 			explode = (GameObject)Instantiate(explode, (transform.position), Quaternion.identity);
+			explode.GetComponent<Explosion>().hero = true;
 			Destroy (gameObject);
 		}
 

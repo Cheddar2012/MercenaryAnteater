@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400004}
   - 114: {fileID: 11400002}
+  - 114: {fileID: 11400006}
   m_Layer: 0
   m_Name: CGD_-_Lioness
   m_TagString: Enemy
@@ -41,7 +42,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 4.32000017, y: 5.92999983}
+  m_Size: {x: 2, y: 4}
   m_Center: {x: 0, y: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -69,13 +70,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53adcf33ab18a9f4f9da71d74dd7b380, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 4
+  shootCooldown: 40
+  bombCooldown: 7
   bullet: {fileID: 100000, guid: c69c76de297a3e44fa44bd55eb37f84e, type: 2}
   multiplier: 5
-  shotForce: 50
+  shotForce: 75
   shooting: 0
-  moveShootCooldown: .800000012
+  bombing: 0
+  moveShootCooldown: .600000024
   startMovingTime: 0
+  bombAttack: {fileID: 100000, guid: 202869ef11326ff428b0049e5f94ca8a, type: 2}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,10 +93,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   aggroRange: 0
-  mobile: 1
+  mobile: 0
   facing: 0
   rightBound: 0
   leftBound: 0
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24abcdd4a4d09d4e9590c6851a8aaa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lions:
+  - {fileID: 21300004, guid: 0a534c4f02c2d7e4599921e9e0969cc9, type: 3}
+  - {fileID: 21300006, guid: 0a534c4f02c2d7e4599921e9e0969cc9, type: 3}
+  - {fileID: 21300008, guid: 0a534c4f02c2d7e4599921e9e0969cc9, type: 3}
+  - {fileID: 21300010, guid: 0a534c4f02c2d7e4599921e9e0969cc9, type: 3}
+  - {fileID: 21300030, guid: 0a534c4f02c2d7e4599921e9e0969cc9, type: 3}
+  - {fileID: 21300016, guid: 0a534c4f02c2d7e4599921e9e0969cc9, type: 3}
+  - {fileID: 21300018, guid: 0a534c4f02c2d7e4599921e9e0969cc9, type: 3}
+  - {fileID: 21300020, guid: 0a534c4f02c2d7e4599921e9e0969cc9, type: 3}
+  - {fileID: 21300022, guid: 0a534c4f02c2d7e4599921e9e0969cc9, type: 3}
+  - {fileID: 21300024, guid: 0a534c4f02c2d7e4599921e9e0969cc9, type: 3}
+  - {fileID: 21300002, guid: 0a534c4f02c2d7e4599921e9e0969cc9, type: 3}
+  - {fileID: 21300014, guid: 0a534c4f02c2d7e4599921e9e0969cc9, type: 3}
+  - {fileID: 21300032, guid: 0a534c4f02c2d7e4599921e9e0969cc9, type: 3}
+  lionRender: {fileID: 0}
+  lm: {fileID: 0}
+  spriteToShow: 0
+  framesPerSecond: 7
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -113,7 +146,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 1092625971
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0a534c4f02c2d7e4599921e9e0969cc9, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 0a534c4f02c2d7e4599921e9e0969cc9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

@@ -19,7 +19,7 @@ public class LionessMovement : MonoBehaviour
 	private LionessShooting ls;
 	// Use this for initialization
 
-	int walkDist = 300;
+	int walkDist = 200; 
 	public float rightBound;
 	public float leftBound;
 

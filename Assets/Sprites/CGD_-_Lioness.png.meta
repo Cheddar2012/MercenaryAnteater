@@ -1,11 +1,28 @@
 fileFormatVersion: 2
 guid: 0a534c4f02c2d7e4599921e9e0969cc9
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: CGD_-_Lioness
+    21300002: CGD_-_Lioness_0
+    21300004: CGD_-_Lioness_1
+    21300006: CGD_-_Lioness_2
+    21300008: CGD_-_Lioness_3
+    21300010: CGD_-_Lioness_4
+    21300012: CGD_-_Lioness_5
+    21300014: CGD_-_Lioness_6
+    21300016: CGD_-_Lioness_7
+    21300018: CGD_-_Lioness_8
+    21300020: CGD_-_Lioness_9
+    21300022: CGD_-_Lioness_10
+    21300024: CGD_-_Lioness_11
+    21300026: CGD_-_Lioness_12
+    21300028: CGD_-_Lioness_13
+    21300030: CGD_-_Lioness_5
+    21300032: CGD_-_Lioness_12
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -25,13 +42,13 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -42,6 +59,166 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: CGD_-_Lioness_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 572
+        width: 231
+        height: 494
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CGD_-_Lioness_1
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 587
+        width: 269
+        height: 470
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CGD_-_Lioness_2
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 592
+        width: 229
+        height: 468
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CGD_-_Lioness_3
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 592
+        width: 164
+        height: 466
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CGD_-_Lioness_4
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 596
+        width: 187
+        height: 459
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CGD_-_Lioness_5
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 833
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CGD_-_Lioness_6
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 561
+        width: 371
+        height: 497
+      alignment: 9
+      pivot: {x: .699999988, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CGD_-_Lioness_7
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 0
+        width: 188
+        height: 456
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CGD_-_Lioness_8
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 0
+        width: 190
+        height: 459
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CGD_-_Lioness_9
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 0
+        width: 162
+        height: 463
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CGD_-_Lioness_10
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 0
+        width: 228
+        height: 467
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CGD_-_Lioness_11
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 0
+        width: 269
+        height: 470
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CGD_-_Lioness_12
+      rect:
+        serializedVersion: 2
+        x: 1734
+        y: 334
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CGD_-_Lioness_13
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 319
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CGD_-_Lioness_5
+      rect:
+        serializedVersion: 2
+        x: 1637
+        y: 586
+        width: 187
+        height: 457
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CGD_-_Lioness_12
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 3
+        width: 575
+        height: 491
+      alignment: 9
+      pivot: {x: .800000012, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
