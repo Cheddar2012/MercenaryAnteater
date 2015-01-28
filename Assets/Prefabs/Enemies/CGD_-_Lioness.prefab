@@ -70,8 +70,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53adcf33ab18a9f4f9da71d74dd7b380, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootCooldown: 40
-  bombCooldown: 7
+  shootCooldown: 7
+  bombCooldown: 19
   bullet: {fileID: 100000, guid: c69c76de297a3e44fa44bd55eb37f84e, type: 2}
   multiplier: 5
   shotForce: 75
