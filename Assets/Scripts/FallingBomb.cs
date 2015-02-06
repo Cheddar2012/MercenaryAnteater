@@ -8,7 +8,7 @@ public class FallingBomb : MonoBehaviour
 	public int targetY;
 	public int landingY;
 	
-	public int x_range = 30;
+	public int x_range = 20;
 	public int y_range = 100;
 	
 	public GameObject shadow;

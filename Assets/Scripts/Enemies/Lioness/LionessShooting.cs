@@ -81,10 +81,10 @@ public class LionessShooting : MonoBehaviour {
 
 			GameObject[] bombClones = new GameObject[2];
 
-			bombClones[0] = (GameObject)Instantiate(bombAttack, new Vector2(transform.position.x - 250, transform.position.y + 300), Quaternion.identity);
+			bombClones[0] = (GameObject)Instantiate(bombAttack, new Vector2(transform.position.x - 180, transform.position.y + 300), Quaternion.identity);
 			bombClones[0].GetComponent<FallingBomb>().targetY = (int)transform.position.y + 100;
 
-			bombClones[1] = (GameObject)Instantiate(bombAttack, new Vector2(transform.position.x - 250, transform.position.y + 300), Quaternion.identity);
+			bombClones[1] = (GameObject)Instantiate(bombAttack, new Vector2(transform.position.x - 180, transform.position.y + 300), Quaternion.identity);
 			bombClones[1].GetComponent<FallingBomb>().targetY = (int)transform.position.y - 100;
 
 			nextTimeBomb = Time.time + bombCooldown; // 
