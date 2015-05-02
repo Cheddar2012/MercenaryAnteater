@@ -121,6 +121,10 @@ Prefab:
       propertyPath: m_Center.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6ad3b5bc127811246a02ad6117f9168d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ad3b5bc127811246a02ad6117f9168d, type: 2}
   m_RootGameObject: {fileID: 1644802215}
@@ -373,8 +377,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 707f87e051b73fa4b8e387f1236c6776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Mercenary Anteater
-  fontSize: 64
+  text: 
+  fontSize: 0
 --- !u!4 &967268972
 Transform:
   m_ObjectHideFlags: 0
@@ -415,7 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: 
-  fontSize: 32
+  fontSize: 0
 --- !u!4 &1294857367
 Transform:
   m_ObjectHideFlags: 0
@@ -499,7 +503,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1644802216
 MonoBehaviour:
   m_ObjectHideFlags: 0
